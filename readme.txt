@@ -11,7 +11,7 @@ readme.txt
 ##############
 
 Pour faire fonctionner le projet cliquer sur:
-contact.html
+index.html ensuite cliquer sur l'unique Lien
 
 ##############
 
