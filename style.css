@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap");
 /* font-family: 'Manrope', sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-/* font-family: 'Open Sans', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+/* font-family: 'Inter', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 /* font-family: 'Roboto', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
@@ -81,10 +81,15 @@ nav {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 #but {
+  text-decoration: none;
   margin-left: -80px;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   align-items: flex-end;
   width: auto;
   background-color: rgb(36, 36, 36);
@@ -104,8 +109,9 @@ nav {
 }
 
 #but2 {
+  text-decoration: none;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   margin-left: 10px;
   align-items: flex-end;
   background-color: rgba(253, 145, 84, 1);
@@ -133,7 +139,7 @@ h2 {
 #dream {
   cursor: default;
   margin-top: 25px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: black;
   font-size: 20px;
 }
@@ -147,7 +153,7 @@ h2 {
 #ques {
   cursor: default;
   margin-top: 20px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
@@ -210,8 +216,8 @@ textarea::placeholder {
   border: 2px solid white;
 }
 .sec2 {
-  width: 499px;
-  margin-left: 770px;
+  width: 600px;
+  margin-left: 800px;
   margin-top: -660px;
 }
 
@@ -281,26 +287,29 @@ h5 {
 }
 
 #ques2 {
+  width: 450px;
   cursor: default;
   margin-left: 100px;
   margin-top: -75px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
 #ques3 {
+  width: 440px;
   cursor: default;
   margin-left: 100px;
   margin-top: -75px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
 #ques4 {
+  width: 450px;
   cursor: default;
   margin-left: 100px;
   margin-top: -75px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 17px;
 }
 
@@ -396,124 +405,66 @@ footer {
   color: rgb(204, 176, 160);
 }
 
-/* responsive */
+/* responsive  */
 
-/* @media screen and (max-width: 1299px) {
-  header {
-    background-color: rgba(253, 145, 84, 1);
-    width: 100%;
-    height: 790px;
-    text-align: center;
-    display: block;
-    align-items: center;
+@media screen and (max-width: 1399px) {
+  .logo {
+    margin-left: -50px;
   }
 
   nav {
-    display: block;
-  }
-  .logo {
-    width: 250px;
-    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /*padding-top: 34px;*/
   }
 
   .navi {
-    margin-top: -60px;
-    margin-left: 4px;
+    list-style: none;
+    margin-left: -110px;
   }
+
   .navi li {
-    display: block;
+    justify-content: space-between;
+    display: inline-block;
+    align-items: center;
+    padding-left: 45px;
   }
 
   .navi li .ac {
-    font-size: 38px;
-  }
-
-  #conex {
-    margin: 15px auto;
+    margin-top: 40px;
+    font-family: "Manrope", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    justify-content: space-between;
+    display: inline-block;
     align-items: center;
-  }
-
-  #but {
-    font-size: 12px;
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-
-  #but2 {
-    font-size: 13px;
-  }
-
-  h2 {
-    font-size: 60px;
-    margin-top: 50px;
-  }
-
-  #dream {
-    font-size: 20px;
-    margin-top: 20px auto;
+    color: white;
+    transition: all 0.3s ease 0s;
   }
 
   .sec1 {
-    width: 499px;
-    margin: 10px auto;
-    flex-direction: column;
-  }
-
-  #ques {
-    font-family: "Open Sans", sans-serif;
-    font-size: 17px;
-  }
-
-  h4 {
-    margin-top: 30px;
-    color: rgba(47, 174, 215, 1);
-    font-size: 30px;
-  }
-
-  form {
-    margin: 10px auto;
-  }
-
-  input {
-    margin-top: 20px;
-    width: 496px;
-    height: 30px;
-    border-radius: 4px;
-    border: 2px solid;
-    color: #bebebe;
-  }
-
-  textarea {
-    margin-top: 40px;
-    resize: none;
-    width: 496px;
-    height: 120px;
-    border-radius: 4px;
-    border: 2px solid;
-    color: #bebebe;
-  }
-
-  #sub {
-    font-family: "Be Vietnam Pro", sans-serif;
-    background-color: rgba(253, 145, 84, 1);
-    margin-left: 355px;
-    margin-top: 30px;
-    width: 150px;
-    height: 45px;
-    border-radius: 4px;
-    border: 2px solid rgb(243, 150, 96);
-    color: white;
+    width: 520px;
+    margin-left: 60px;
+    margin-top: 70px;
   }
 
   .sec2 {
     width: 499px;
-    flex-direction: column;
-    margin: 10px auto;
+    margin-left: 680px;
+    margin-top: -650px;
   }
 
-  #den {
-    background-color: rgb(56, 56, 56);
-    width: 100%;
-    height: 300px;
+  #but {
+    margin-left: 80px;
+    font-size: 13px;
+    width: 190px;
+    height: 50px;
   }
-} */
+
+  #but2 {
+    font-size: 13px;
+    margin-left: 10px;
+    width: 100px;
+    height: 50px;
+  }
+}
