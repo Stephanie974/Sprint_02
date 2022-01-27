@@ -4,12 +4,12 @@ Par : Julie, Stéphanie et Moina
 ##############
 Le projet comprends les fichiers suivants:
 
-index.html      ## Permet e lancer la page cliquer sur le seul lien
+index.html      ## Permet de lancer la page cliquer sur le seul lien
 contact.html    ## Contient le code HTML
 style.css       ## contient les styles CSS
 Maquette : https://www.figma.com/file/kJK5CrfT9GDNTTuX8KfVJw/wireframe-sprint_02?node-id=0%3A1       ## Contient la maquette Desktop et Mobile
 https://www.canva.com/design/DAE2n7scwrQ/4eO0UPJaocTFaDs5KRfq6w/edit                                 ## Presentation du projet, et details des polices, couleurs etc... utilisés
-readme.txt      ## Ce fichier
+readme.txt      ## Ce fichier-ci
 
 ##############
 
