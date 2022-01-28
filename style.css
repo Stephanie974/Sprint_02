@@ -21,21 +21,6 @@
   margin: 0;
   padding: 0;
 }
-#pres {
-  width: auto;
-  height: 800px;
-  background-color: aliceblue;
-}
-#cont {
-  color: rgb(245, 143, 83);
-  font-family: "Be Vietnam Pro", sans-serif;
-  font-size: 50px;
-  margin-left: 300px;
-}
-#cont:hover {
-  background-color: rgb(128, 172, 207);
-  color: rgb(185, 114, 72);
-}
 
 header {
   background-color: rgb(245, 143, 83);
