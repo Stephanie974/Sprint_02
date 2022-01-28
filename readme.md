@@ -13,8 +13,7 @@ readme.txt      ## Ce fichier-ci
 
 ##############
 
-Pour faire fonctionner le projet cliquer sur:
-index.html ensuite cliquer sur l'unique Lien
+Pour faire fonctionner le projet cliquer sur le lien dans la section "about".
 
 ##############
 
