@@ -383,6 +383,7 @@ h6 {
   border: 2px solid rgba(9, 6, 46, 1);
   border-radius: 10px;
   font-family: "Lato", sans-serif;
+  transition: all 0.5s;
 }
 #create:hover {
   background-color: rgb(207, 148, 113);
