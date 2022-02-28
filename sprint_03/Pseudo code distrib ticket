@@ -1,0 +1,36 @@
+fonction clickHandler sur le bouton "je veux de l'aide" :
+
+  Récupérer la valeur du champ texte d'input
+  Stocker la valeur récupérée dans une variable d'état interne du programme
+  Vider le champ texte d'input
+  Récupérer la date et l'heure du moment où l'utilisateur à clicker sur le bouton
+  Ajouter la valeur récupérée, la date et l'heure du click et un bouton "je passe mon tour" dans un tableau visible par l'utilisateur
+
+fonction clickHandler sur le bouton "Au suivant!" :
+
+  Récupérer la valeur du champ texte d'input
+  Le mettre en deuxieme position
+  Vider le champ texte d'input
+  Récupérer la date et l'heure du moment où l'utilisateur à clicker sur le bouton
+  Ajouter la valeur récupérée, la date et l'heure du click et un bouton "je passe mon tour" dans un tableau visible par l'utilisateur
+
+fonction clickHander sur le bouton "Raffraichir la liste" : 
+
+  Récupérer toutes les valeurs des champs texte et la date + l'heure 
+  Les supprimer du tableau 
+  si localStorage Rajouter deux autres champs texte et date + heure
+sinon deux lignes vierge
+
+
+fonction clickHandler sur le bouton "Je passe mon tour" :
+
+  Récupère la valeur du temps texte a coter de lui 
+  Le raye avec un trait 
+  la valeur rayé se voit et passe ne derniere position  
+  
+
+
+
+
+
+

@@ -1,0 +1,2861 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr" id="vbulletin_html">
+<head>
+<base href="https://www.developpez.net/forums/" /><!--[if IE]></base><![endif]-->
+	<link rel="amphtml" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="https://www.developpez.net/forums" />
+
+<meta name="generator" content="vBulletin 4.2.2" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="https://www.developpez.net/forums/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'https://forum.developpez.be/clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "https://forum.developpez.be/images/misc";
+	var IMGDIR_BUTTON = "https://forum.developpez.be/images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "https://www.developpez.net/forums";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?t=1496753";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "https://www.developpez.net/forums/";
+// -->
+</script>
+<script type="text/javascript" src="https://forum.developpez.be/clientscript/vbulletin-core.js?v=422"></script>
+<script type="text/javascript" src="https://gabarit.developpez.be/scripts/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/anokha_showthread.js?1643642533"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" async="true">
+(function() {
+    var host = 'www.developpez.net';
+    var element = document.createElement('script');
+    var firstScript = document.getElementsByTagName('script')[0];
+    var url = 'https://quantcast.mgr.consensu.org'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
+    var uspTries = 0;
+    var uspTriesLimit = 3;
+    element.async = true;
+    element.type = 'text/javascript';
+    element.src = url;
+
+    firstScript.parentNode.insertBefore(element, firstScript);
+
+    function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+
+        function addFrame() {
+            var doc = win.document;
+            var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+            if (!otherCMP) {
+                if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                } else {
+                    setTimeout(addFrame, 5);
+                }
+            }
+            return !otherCMP;
+        }
+
+        function tcfAPIHandler() {
+            var gdprApplies;
+            var args = arguments;
+
+            if (!args.length) {
+                return queue;
+            } else if (args[0] === 'setGdprApplies') {
+                if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                        args[2]('set', true);
+                    }
+                }
+            } else if (args[0] === 'ping') {
+                var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                };
+
+                if (typeof args[2] === 'function') {
+                    args[2](retr);
+                }
+            } else {
+                queue.push(args);
+            }
+        }
+
+        function postMessageEventHandler(event) {
+            var msgIsString = typeof event.data === 'string';
+            var json = {};
+
+            try {
+                if (msgIsString) {
+                    json = JSON.parse(event.data);
+                } else {
+                    json = event.data;
+                }
+            } catch (ignore) {}
+
+            var payload = json.__tcfapiCall;
+
+            if (payload) {
+                window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                        var returnMsg = {
+                            tcfapiReturn: {
+                                returnValue: retValue,
+                                success: success,
+                                callId: payload.callId
+                            }
+                        };
+                        if (msgIsString) {
+                            returnMsg = JSON.stringify(returnMsg);
+                        }
+                        if (event && event.source && event.source.postMessage) {
+							event.source.postMessage(returnMsg, '*');
+                        }
+                    },
+                    payload.parameter
+                );
+            }
+        }
+
+        while (win) {
+            try {
+                if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                }
+            } catch (ignore) {}
+
+            if (win === window.top) {
+                break;
+            }
+            win = win.parent;
+        }
+        if (!cmpFrame) {
+            addFrame();
+            win.__tcfapi = tcfAPIHandler;
+            win.addEventListener('message', postMessageEventHandler, false);
+        }
+    };
+
+    if (typeof module !== 'undefined') {
+        module.exports = makeStub;
+    } else {
+        makeStub();
+    }
+
+    var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+            setTimeout(function() {
+                if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                }
+            }, 500);
+        }
+    };
+
+    var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+            console.warn('USP is not accessible');
+        } else {
+            clearInterval(uspInterval);
+        }
+    };
+
+    if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+    }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" src="/forums/clientscript/ano_votes.js?2"></script>
+
+
+
+	<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2" />
+	
+		<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro - Général Java - Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2&amp;forumids=22" />
+	
+
+
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+	<script type="text/javascript" src="/template/scripts/gabarit-forum.js?1630596300"></script>
+	<link rel="stylesheet" type="text/css" href="/template/css/gabarit.css?1630596300" />
+	<link rel="stylesheet" type="text/css" href="https://forum.developpez.be/clientscript/kha_blogs.css" />
+
+	<!--[if lt IE 7]>
+	<script src="https://gabarit.developpez.be/ie7/IE7.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie6.css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie7.css" />
+	<![endif]-->
+
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie8.css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://gabarit.developpez.be/kit/html5_ie.js"></script>
+	<![endif]-->
+
+<script type="text/javascript">
+sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;
+function SmartAdServer(sas_pageid,sas_formatid,sas_target) {
+ if (sas_masterflag==1) {sas_masterflag=0;sas_master='M';} else {sas_master='S';};
+ document.write('<scr'+'ipt src="https://www.smartadserver.com/call/pubj/' + sas_pageid + '/' + sas_formatid + '/' + sas_master + '/' + sas_tmstp + '/' + escape(sas_target) + '?"></scr'+'ipt>');
+}
+</script>
+	<meta name="keywords" content="déterminer,nombre,jours,d,mois,mois, string, ok.nextline, system.out.printlnveiller, public, args, @param, import, saisir, scanner, system.out.printlnmonth.ofi.getlengthyear.isleapj, stub, auto-generated, method, integer.parseintannee, todo, integer.parseintmois, lannee, annee, scannersystem.in, year, voici, programme, java, jour, déterminer, nombre, corrigez-moi, package, comment, static, void, nbre_d_jr_du_mw, class, com.iam.exo15, java.time., java.util.scanner, mainstring[]" />
+	<meta name="description" content="Je voudrais écrire un programme qui demande à l’ utilisateur de saisir un mois et une année. Puis le programme affiche le nombre de jours de ce mois." />
+
+	<title> Comment déterminer le nombre de jours d'un mois ? - Java</title>
+	<script type="application/ld+json">[{"@context":"https://schema.org","@type":"DiscussionForumPosting","@id":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/","headline":"Comment d\u00e9terminer le nombre de jours d'un mois ? - Java","image":"https://www.developpez.com/images/logos/java.png","datePublished":"2015-02-01T23:52:45+01:00","dateModified":"2015-02-04T01:27:08+01:00","discussionUrl":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/","sameAs":["https://twitter.com/Developpez","https://fr.linkedin.com/company/developpez.com","https://www.facebook.com/Developpez"],"articleSection":"Comment d\u00e9terminer le nombre de jours d'un mois ?","articleBody":"Bonsoir,<br />\r\n<br />\r\nJe voudrais \u00e9crire un programme qui demande \u00e0 l\u0092 utilisateur de saisir un mois et une ann\u00e9e. Puis le programme affiche le nombre de jours de ce mois.","author":{"@type":"Person","@id":"https://www.developpez.net/forums/u847938/bambadji/","name":"BAMBADJI"},"publisher":{"@type":"Organization","name":"Developpez.com","logo":{"@type":"ImageObject","url":"https://www.developpez.com/logos/images_actu/logo-dvp-150x43-fond-blanc.png"}},"interactionStatistic":{"@type":"InteractionCounter","interactionType":"https://schema.org/ReplyAction","userInteractionCount":"11"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.developpez.net/forums/f22/java/general-java/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forum","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/"},{"@type":"ListItem","position":2,"name":"Java","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f6/java/"},{"@type":"ListItem","position":3,"name":"G\u00e9n\u00e9ral Java","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f22/java/general-java/"}]},{"@context":"https://schema.org","@type":"ItemList","numberOfItems":11,"itemListElement":[{"@type":"Comment","position":1,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8118922","dateCreated":"2015-02-02T00:23:43+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u4358/gloax29/","name":"gloax29"},"text":"Bonjour,<br />\r\nLa librairie Calendar, est un bon d\u00e9but.<br />\r\n<a href=\"http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html\" target=\"_blank\">http://docs.oracle.com/javase/7/docs.../Calendar.html</a><br />\r\nCordialement"},{"@type":"Comment","position":2,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8118925","dateCreated":"2015-02-02T00:30:31+01:00","upvoteCount":1,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u327969/joel-drigo/","name":"joel.drigo"},"text":"Salut,<br />\r\n<br />\r\nTr\u00e8s bien, et, donc, quels probl\u00e8mes rencontres-tu pour r\u00e9aliser ce programme ?<br />\r\n<br />\r\nSi c'est our la saisie, regarde la classe Scanner. Pour le reste, tout d\u00e9pend ce que tu peux utiliser ou pas : \u00e0 la base, il n'y a que des calculs \u00e0 faire (1 mois sur 2 \u00e0 30 jours ou 31 jours, sauf le mois de f\u00e9vrier qui en a 28, ou 29, les ann\u00e9es bissextiles (quelques calculs et tests sur l'ann\u00e9e pour le savoir). Si tu peux utiliser des classes toutes faites de Java, les classes Calendar ou LocalDate Month et Year pourront t'aider."},{"@type":"Comment","position":3,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119084","dateCreated":"2015-02-02T10:00:09+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u188305/tchize_/","name":"tchize_"},"text":"Si tu es en java 8 et que tu t'en fous de ce qui se passait avant 1920 en Russie, java.time a d\u00e9j\u00e0 tout ce qu'il faut:<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:84px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br />4<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\"><span style=\"color: #0000ff;\">import</span> java.time.*;\n<span style=\"color: #0000ff;\">int</span> mois = ....;\n<span style=\"color: #0000ff;\">int</span> anneee = ....;\nMonth.of<span class=\"br0\">&#40;</span>mois<span class=\"br0\">&#41;</span>.getLength<span class=\"br0\">&#40;</span>Year.isLeap<span class=\"br0\">&#40;</span>annee<span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span>;</pre></td></tr></table></pre>\r\n</div>par exemple"},{"@type":"Comment","position":4,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119150","dateCreated":"2015-02-02T10:35:25+01:00","upvoteCount":1,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u250189/jeffray03/","name":"jeffray03"},"text":"salut, <br />\r\n<div class=\"bbcode_container\">\r\n\t<div class=\"bbcode_quote\">\r\n\t\t<div class=\"quote_container\">\r\n\t\t\t<div class=\"bbcode_quote_container\"></div>\r\n\t\t\t\r\n\t\t\t\t  Month.of(mois).getLength(Year.isLeap(annee));\r\n\t\t\t\r\n\t\t</div>\r\n\t</div>\r\n</div>n\u00b4est pas plutot :<br />\r\n<div class=\"bbcode_container\">\r\n\t<div class=\"bbcode_quote\">\r\n\t\t<div class=\"quote_container\">\r\n\t\t\t<div class=\"bbcode_quote_container\"></div>\r\n\t\t\t\r\n\t\t\t\t  Month.of(mois).length(Year.isLeap(annee))\r\n\t\t\t\r\n\t\t</div>\r\n\t</div>\r\n</div>Eric"},{"@type":"Comment","position":5,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119270","dateCreated":"2015-02-02T11:37:53+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u188305/tchize_/","name":"tchize_"},"text":"oui <img src=\"images/smilies/icon_smile.gif\" border=\"0\" alt=\"\" title=\":)\" class=\"inlineimg\" />"},{"@type":"Comment","position":6,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119317","dateCreated":"2015-02-02T12:00:24+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u4358/gloax29/","name":"gloax29"},"text":"Bonjour,<br />\r\n<br />\r\nmoi j'ai ca en 1.7 :<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:108px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br />4<br />5<br />6<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">int</span> annee = ...;\n<span style=\"color: #0000ff;\">int</span> mois = ... ;\nCalendar cal = Calendar.getInstance<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span> ;\ncal.set<span class=\"br0\">&#40;</span>annee, mois-<span style=\"color: #cc66cc;\">1</span> <span style=\"color: #808080;\">/* -1 car mois vont de  0 &agrave; 11 */</span> , <span style=\"color: #cc66cc;\">1</span><span class=\"br0\">&#41;</span> ;\ncal.getActualMaximum<span class=\"br0\">&#40;</span>Calendar.DAY_OF_MONTH<span class=\"br0\">&#41;</span>;</pre></td></tr></table></pre>\r\n</div>"},{"@type":"Comment","position":7,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120243","dateCreated":"2015-02-03T02:56:53+01:00","upvoteCount":0,"downvoteCount":1,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u847938/bambadji/","name":"BAMBADJI"},"text":"Voici mon programme java. Corrigez-moi.<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:204px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"33\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\"><span style=\"color: #0000ff;\">package</span> com.iam.EXO15;\n<span style=\"color: #0000ff;\">import</span> java.time.*;\n<span style=\"color: #0000ff;\">import</span> java.util.Scanner;\n&nbsp;\n&nbsp;\n<span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">class</span> Nbre_d_jr_du_mw <span class=\"br0\">&#123;</span>\n\t<span style=\"color: #808080; font-weight: bold;\">/**</span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style=\"color: #0000ff;\">@param</span><span style=\"color: #800000;\"> args</span></span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style=\"color: #0000ff;\">@param</span><span style=\"color: #800000;\"> Year</span> </span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span>\n\t<span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span> main<span class=\"br0\">&#40;</span>String<span class=\"br0\">&#91;</span><span class=\"br0\">&#93;</span> args<span class=\"br0\">&#41;</span> <span class=\"br0\">&#123;</span>\n\t\t<span style=\"color: #808080;\">// TODO Auto-generated method stub</span>\n\t\tScanner ok = <span style=\"color: #0000ff;\">new</span> Scanner<span class=\"br0\">&#40;</span>System.in<span class=\"br0\">&#41;</span>;\n\t\tSystem.out.println<span class=\"br0\">&#40;</span><span style=\"color: #FF0000;\">&quot;veiller saisir le mois&quot;</span><span class=\"br0\">&#41;</span>;\n\t\tString mois = ok.nextLine<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span>;\n\t\t<span style=\"color: #0000ff;\">int</span> i = Integer.parseInt<span class=\"br0\">&#40;</span>mois<span class=\"br0\">&#41;</span>;\n\t\tSystem.out.println<span class=\"br0\">&#40;</span><span style=\"color: #FF0000;\">&quot;veiller saisir l'annee&quot;</span><span class=\"br0\">&#41;</span>;\n\t\tString annee = ok.nextLine<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span>;\n\t\t<span style=\"color: #0000ff;\">int</span> j = Integer.parseInt<span class=\"br0\">&#40;</span>annee<span class=\"br0\">&#41;</span>;\n\t\tSystem.out.println<span class=\"br0\">&#40;</span>Month.of<span class=\"br0\">&#40;</span>i<span class=\"br0\">&#41;</span>.getLength<span class=\"br0\">&#40;</span>Year.isLeap<span class=\"br0\">&#40;</span>j<span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span>;\n&nbsp;\n\t<span class=\"br0\">&#125;</span>\n&nbsp;\n<span class=\"br0\">&#125;</span></pre></td></tr></table></pre>\r\n</div>"},{"@type":"Comment","position":8,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120376","dateCreated":"2015-02-03T09:38:59+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u250189/jeffray03/","name":"jeffray03"},"text":"salut,<br />\r\nune petite modification:<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:204px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"33\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n  <span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">class</span> Nbre_d_jr_du_mw <span class=\"br0\">&#123;</span>\n    <span style=\"color: #808080; font-weight: bold;\">/**</span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style=\"color: #0000ff;\">@param</span><span style=\"color: #800000;\"> args</span></span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style=\"color: #0000ff;\">@param</span><span style=\"color: #800000;\"> Year</span> </span>\n<span style=\"color: #808080; font-weight: bold;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span>\n\t<span style=\"color: #0000ff;\">public</span> <span style=\"color: #0000ff;\">static</span> <span style=\"color: #0000ff;\">void</span> main<span class=\"br0\">&#40;</span>String<span class=\"br0\">&#91;</span><span class=\"br0\">&#93;</span> args<span class=\"br0\">&#41;</span> <span class=\"br0\">&#123;</span>\n<span style=\"color: #808080;\">// TODO Auto-generated method stub</span>\n\t\t\tScanner ok = <span style=\"color: #0000ff;\">new</span> Scanner<span class=\"br0\">&#40;</span>System.in<span class=\"br0\">&#41;</span>;\n\t\t\tSystem.out.println<span class=\"br0\">&#40;</span><span style=\"color: #FF0000;\">&quot;veiller saisir le mois&quot;</span><span class=\"br0\">&#41;</span>;\n\t\t\tString mois = ok.nextLine<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span>;\n\t\t\t<span style=\"color: #0000ff;\">int</span> i = Integer.parseInt<span class=\"br0\">&#40;</span>mois<span class=\"br0\">&#41;</span>;\n\t\t\tSystem.out.println<span class=\"br0\">&#40;</span><span style=\"color: #FF0000;\">&quot;veiller saisir l'annee&quot;</span><span class=\"br0\">&#41;</span>;\n\t\t\tString annee = ok.nextLine<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span>;\n\t\t\t<span style=\"color: #0000ff;\">int</span> j = Integer.parseInt<span class=\"br0\">&#40;</span>annee<span class=\"br0\">&#41;</span>;\n\t\t\tSystem.out.println<span class=\"br0\">&#40;</span>Month.of<span class=\"br0\">&#40;</span>i<span class=\"br0\">&#41;</span>.length<span class=\"br0\">&#40;</span>Year.isLeap<span class=\"br0\">&#40;</span>j<span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span>;\n\t<span class=\"br0\">&#125;</span>\n&nbsp;\n<span class=\"br0\">&#125;</span></pre></td></tr></table></pre>\r\n</div>"},{"@type":"Comment","position":9,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120462","dateCreated":"2015-02-03T10:20:37+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u45357/thelvin/","name":"thelvin"},"text":"Moi j'aurais fait<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:36px;\">YearMonth.of<span class=\"br0\">&#40;</span>year, month<span class=\"br0\">&#41;</span>.lengthOfMonth<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span></pre>\r\n</div>Mais c'est juste parce que je trouve \u00e7a un peu plus direct.<br />\r\n<br />\r\nEt pour info, il est possible d'appeler directement nextInt() sur un Scanner, au lieu de nextLine() suivi de Integer.parseInt().<br />\r\n(Du coup year, month et scanner seraient des noms de variables plus appropri\u00e9s que j, i et ok.)"},{"@type":"Comment","position":10,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8121648","dateCreated":"2015-02-04T01:07:41+01:00","upvoteCount":0,"downvoteCount":1,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u847938/bambadji/","name":"BAMBADJI"},"text":"Exception in thread &quot;main&quot; java.lang.Error: Unresolved compilation problem: <br />\r\n\tYear cannot be resolved<br />\r\n<br />\r\n\tat com.iam.EXO15.Nbre_d_jr_du_mw.main(Nbre_d_jr_du_mw.java:21)"},{"@type":"Comment","position":11,"url":"https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8121654","dateCreated":"2015-02-04T01:27:08+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u327969/joel-drigo/","name":"joel.drigo"},"text":"Salut,<br />\r\n<br />\r\nAs-tu import\u00e9 la classe java.time.Year (ou le package java.time.*) ?"}]}]</script>
+	<link rel="canonical" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=additional.css" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools.css,toolsmenu.css" />
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools-ie.css" />
+<![endif]-->
+</head>
+
+<body>
+
+	<header>
+
+	<div id="gabarit_b1">
+		<div id="gabarit_connexion">
+	<form>
+		<div><span>Identifiant</span><input type="text" class="form_input form-control" id="formloginConnexion" /><span>Mot de passe</span><input type="password" class="form_input form-control" id="formpassConnexion"/><input type="button" value="Connexion" id="formbuttonConnexion" class="btn btn-primary" /><div id="loadingConnexion" class="spinner-border text-light" role="status"><span class="sr-only">Loading...</span></div></div><a rel="nofollow" id="mdpoublier" href="http://www.developpez.net/forums/login.php?do=lostpw">Mot de passe oublié ?</a><a id="inscriptionConnexion" href="https://www.developpez.net/forums/inscription/" class="btn btn-primary">Je m'inscris ! (gratuit)</a>	
+	</form>
+</div>		<div id="gabarit-barreRecherche" style="display:none;"><form action="https://www.google.fr" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-8110924381468607:6449306375" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="12" />
+    <input type="submit" name="sa" value="Rechercher" />
+  </div>
+</form></div>
+<div id="gabarit-new-logo" role="gabarit-accueil">
+	<a href="https://www.developpez.com"><img src="/template/images/logo-dvp-h55.png" alt="logo dvp" width="48" height="55" /></a>
+	<a href="https://www.developpez.com"><span class="dvp"></span></a>
+	<span class="triangle"></span>
+</div>
+<div id="gabarit_recherche">
+	<div class="gabarit-btn-menu profil dn" role="gabarit-profil"></div>
+	<div class="gabarit-btn-menu profil dn" role="gabarit-connecter"><span></span><a id="gabaritRepereLogout" class="btn btn-primary"></a></div>
+	<div class="gabarit-btn-menu contacts" role="gabarit-contacts"></div>
+	<div class="gabarit-btn-menu recherche" role="gabarit-recherche"></div>
+</div>
+
+<div id="gabarit_superieur">
+	<nav>
+	<ul>
+		<li><a href="https://www.developpez.net/forums/" title="">Forums</a></li>
+		<li><a href="https://general.developpez.com/cours/" title="">Tutoriels</a></li>
+		<li><a href="https://general.developpez.com/faq/" title="">FAQ</a></li>
+		<li><a href="https://www.developpez.net/forums/blogs/" title="">Blogs</a></li>
+		<li><a href="https://chat.developpez.com/" title="">Chat</a></li>
+		<li><a href="https://www.developpez.com/newsletter/">Newsletter</a></li>
+		<li><a href="https://emploi.developpez.com/" title="">Emploi</a></li>
+		<li><a href="https://etudes.developpez.com/">Études</a></li>
+		<li><a href="https://droit.developpez.com/" title="">Droit</a></li>
+		<li><a href="https://club.developpez.com/">Club</a></li>
+	</ul>
+	</nav>
+</div>	</div>
+	<nav>
+
+<ul id="gabarit_menu" style="padding-left:56px;">
+	<li><a href="https://www.developpez.com" data-idrub="1" data-niv="1" style="padding:0;"><div id="gabarit_home"></div></a>
+			</li>
+	<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="1">DI/DSI Solutions d&#039;entreprise<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="2">DI/DSI Solutions d&#039;entreprise</a></li>
+				<li><a href="https://abbyy.developpez.com" data-idrub="147" data-niv="2">ABBYY</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://bpm.developpez.com" data-idrub="134" data-niv="2">BPM</a></li>
+				<li><a href="https://business-intelligence.developpez.com" data-idrub="61" data-niv="2">Business Intelligence</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://solutions-entreprise.developpez.com/erp-pgi/presentation-erp-pgi/" data-idrub="91" data-niv="2">ERP / PGI</a></li>
+				<li><a href="https://crm.developpez.com" data-idrub="92" data-niv="2">CRM</a></li>
+				<li><a href="https://sas.developpez.com" data-idrub="93" data-niv="2">SAS</a></li>
+				<li><a href="https://sap.developpez.com" data-idrub="106" data-niv="2">SAP</a></li>
+				<li><a href="https://www.developpez.net/forums/f1664/systemes/windows/windows-serveur/biztalk-server/" data-idrub="115" data-niv="2">Microsoft BizTalk Server</a></li>
+				<li><a href="https://talend.developpez.com" data-idrub="118" data-niv="2">Talend</a></li>
+				<li><a href="https://droit.developpez.com" data-idrub="132" data-niv="2">Droit informatique et entreprise</a></li>
+			</ul></li>
+	<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="1">Cloud<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="2">Cloud Computing</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+				<li><a href="https://ibmcloud.developpez.com" data-idrub="135" data-niv="2">IBM Cloud</a></li>
+			</ul></li>
+	<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="1">IA<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="2">Intelligence artificielle</a></li>
+			</ul></li>
+	<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="1">ALM<!--<span class="gabarit_tooltip">Cycle de vie du logiciel</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="2">ALM</a></li>
+				<li><a href="https://agile.developpez.com" data-idrub="146" data-niv="2">Agile</a></li>
+				<li><a href="https://merise.developpez.com" data-idrub="43" data-niv="2">Merise</a></li>
+				<li><a href="https://uml.developpez.com" data-idrub="12" data-niv="2">UML</a></li>
+			</ul></li>
+	<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="1">Microsoft<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="2">Microsoft</a></li>
+				<li><a href="https://dotnet.developpez.com" data-idrub="20" data-niv="2">.NET</a></li>
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://dotnet.developpez.com/aspnet/" data-idrub="83" data-niv="2">ASP.NET</a></li>
+				<li><a href="https://dotnet.developpez.com/csharp/" data-idrub="81" data-niv="2">C#</a></li>
+				<li><a href="https://dotnet.developpez.com/vbnet/" data-idrub="82" data-niv="2">VB.NET</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+			</ul></li>
+	<li><a href="https://java.developpez.com" data-idrub="4" data-niv="1" class="gabarit_selection">Java<!--<span class="gabarit_tooltip">Plateforme et langage Java</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://java.developpez.com" data-idrub="4" data-niv="2">Java</a></li>
+				<li><a href="https://javaweb.developpez.com" data-idrub="97" data-niv="2">Java Web</a></li>
+				<li><a href="https://spring.developpez.com" data-idrub="87" data-niv="2">Spring</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+			</ul></li>
+	<li><a href="https://web.developpez.com" data-idrub="8" data-niv="1">Dév. Web<!--<span class="gabarit_tooltip">Développement Web et Webmarketing</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://web.developpez.com" data-idrub="8" data-niv="2">Développement et hébergement Web</a></li>
+				<li><a href="https://ajax.developpez.com" data-idrub="85" data-niv="2">AJAX</a></li>
+				<li><a href="https://apache.developpez.com" data-idrub="71" data-niv="2">Apache</a></li>
+				<li><a href="https://asp.developpez.com" data-idrub="10" data-niv="2">ASP</a></li>
+				<li><a href="https://css.developpez.com" data-idrub="51" data-niv="2">CSS</a></li>
+				<li><a href="https://dart.developpez.com" data-idrub="125" data-niv="2">Dart</a></li>
+				<li><a href="https://flash.developpez.com" data-idrub="41" data-niv="2">Flash / Flex</a></li>
+				<li><a href="https://javascript.developpez.com" data-idrub="45" data-niv="2">JavaScript</a></li>
+				<li><a href="https://nodejs.developpez.com" data-idrub="141" data-niv="2">NodeJS</a></li>
+				<li><a href="https://php.developpez.com" data-idrub="9" data-niv="2">PHP</a></li>
+				<li><a href="https://ruby.developpez.com" data-idrub="53" data-niv="2">Ruby &amp; Rails</a></li>
+				<li><a href="https://typescript.developpez.com" data-idrub="127" data-niv="2">TypeScript</a></li>
+				<li><a href="https://web-semantique.developpez.com" data-idrub="111" data-niv="2">Web sémantique</a></li>
+				<li><a href="https://webmarketing.developpez.com" data-idrub="80" data-niv="2">Webmarketing</a></li>
+				<li><a href="https://xhtml.developpez.com" data-idrub="50" data-niv="2">(X)HTML</a></li>
+			</ul></li>
+	<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="1">EDI<!--<span class="gabarit_tooltip">Environnements de Développement Intégré</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="2">EDI</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://delphi.developpez.com" data-idrub="2" data-niv="2">Delphi</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://jetbrains.developpez.com" data-idrub="144" data-niv="2">JetBrains</a></li>
+				<li><a href="https://labview.developpez.com" data-idrub="72" data-niv="2">LabVIEW</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+				<li><a href="https://matlab.developpez.com" data-idrub="58" data-niv="2">MATLAB</a></li>
+				<li><a href="https://scilab.developpez.com" data-idrub="120" data-niv="2">Scilab</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://wind.developpez.com" data-idrub="74" data-niv="2">WinDev</a></li>
+				<li><a href="https://vb.developpez.com" data-idrub="5" data-niv="2">Visual Basic 6</a></li>
+				<li><a href="https://lazarus.developpez.com" data-idrub="96" data-niv="2">Lazarus</a></li>
+				<li><a href="https://qt-creator.developpez.com" data-idrub="109" data-niv="2">Qt Creator</a></li>
+			</ul></li>
+	<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="1">Programmation<!--<span class="gabarit_tooltip">Programmation et langages de programmation applicatifs</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="2">Programmation</a></li>
+				<li><a href="https://algo.developpez.com" data-idrub="47" data-niv="2">Débuter - Algorithmique</a></li>
+				<li><a href="https://jeux.developpez.com" data-idrub="38" data-niv="2">2D - 3D - Jeux</a></li>
+				<li><a href="https://asm.developpez.com" data-idrub="16" data-niv="2">Assembleur</a></li>
+				<li><a href="https://c.developpez.com" data-idrub="3" data-niv="2">C</a></li>
+				<li><a href="https://cpp.developpez.com" data-idrub="59" data-niv="2">C++</a></li>
+				<li><a href="https://d.developpez.com" data-idrub="123" data-niv="2">D</a></li>
+				<li><a href="https://go.developpez.com" data-idrub="124" data-niv="2">Go</a></li>
+				<li><a href="https://kotlin.developpez.com" data-idrub="145" data-niv="2">Kotlin</a></li>
+				<li><a href="https://objective-c.developpez.com" data-idrub="117" data-niv="2">Objective C</a></li>
+				<li><a href="https://pascal.developpez.com" data-idrub="7" data-niv="2">Pascal</a></li>
+				<li><a href="https://perl.developpez.com" data-idrub="29" data-niv="2">Perl</a></li>
+				<li><a href="https://python.developpez.com" data-idrub="27" data-niv="2">Python</a></li>
+				<li><a href="https://rust.developpez.com" data-idrub="137" data-niv="2">Rust</a></li>
+				<li><a href="https://swift.developpez.com" data-idrub="128" data-niv="2">Swift</a></li>
+				<li><a href="https://qt.developpez.com" data-idrub="65" data-niv="2">Qt</a></li>
+				<li><a href="https://xml.developpez.com" data-idrub="11" data-niv="2">XML</a></li>
+				<li><a href="https://general.developpez.com/cours/" data-idrub="21" data-niv="2">Autres</a></li>
+			</ul></li>
+	<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="1">SGBD<!--<span class="gabarit_tooltip">Systèmes de Gestion de Bases de Données</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="2">SGBD &amp; SQL</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://db2.developpez.com" data-idrub="36" data-niv="2">DB2</a></li>
+				<li><a href="https://firebird.developpez.com" data-idrub="73" data-niv="2">Firebird</a></li>
+				<li><a href="https://interbase.developpez.com" data-idrub="32" data-niv="2">InterBase</a></li>
+				<li><a href="https://mysql.developpez.com" data-idrub="31" data-niv="2">MySQL</a></li>
+				<li><a href="https://nosql.developpez.com" data-idrub="114" data-niv="2">NoSQL</a></li>
+				<li><a href="https://postgresql.developpez.com" data-idrub="33" data-niv="2">PostgreSQL</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://sybase.developpez.com" data-idrub="37" data-niv="2">Sybase</a></li>
+				<li><a href="https://sqlserver.developpez.com" data-idrub="34" data-niv="2">SQL-Server</a></li>
+				<li><a href="https://mongodb.developpez.com" data-idrub="148" data-niv="2">MongoDB</a></li>
+			</ul></li>
+	<li><a href="https://office.developpez.com" data-idrub="54" data-niv="1">Office<!--<span class="gabarit_tooltip">Bureautique pour l'entreprise</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://excel.developpez.com" data-idrub="75" data-niv="2">Excel</a></li>
+				<li><a href="https://word.developpez.com" data-idrub="76" data-niv="2">Word</a></li>
+				<li><a href="https://outlook.developpez.com" data-idrub="77" data-niv="2">Outlook</a></li>
+				<li><a href="https://powerpoint.developpez.com" data-idrub="78" data-niv="2">PowerPoint</a></li>
+				<li><a href="https://sharepoint.developpez.com" data-idrub="79" data-niv="2">SharePoint</a></li>
+				<li><a href="https://project.developpez.com" data-idrub="99" data-niv="2">Microsoft Project</a></li>
+				<li><a href="https://openoffice-libreoffice.developpez.com" data-idrub="116" data-niv="2">OpenOffice &amp; LibreOffice</a></li>
+			</ul></li>
+	<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="1">Mobiles<!--<span class="gabarit_tooltip">Logiciels et matériels mobiles</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="2">Mobiles</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://ios.developpez.com" data-idrub="101" data-niv="2">iOS</a></li>
+			</ul></li>
+	<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="1">Systèmes<!--<span class="gabarit_tooltip">Logiciels et matériels systèmes</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="2">Systèmes</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://linux.developpez.com" data-idrub="18" data-niv="2">Linux</a></li>
+				<li><a href="https://arduino.developpez.com" data-idrub="142" data-niv="2">Arduino</a></li>
+				<li><a href="https://securite.developpez.com" data-idrub="40" data-niv="2">Sécurité</a></li>
+				<li><a href="https://hardware.developpez.com" data-idrub="64" data-niv="2">Hardware</a></li>
+				<li><a href="https://hpc.developpez.com" data-idrub="139" data-niv="2">HPC</a></li>
+				<li><a href="https://mac.developpez.com" data-idrub="57" data-niv="2">Mac</a></li>
+				<li><a href="https://raspberry-pi.developpez.com" data-idrub="131" data-niv="2">Raspberry Pi</a></li>
+				<li><a href="https://reseau.developpez.com" data-idrub="70" data-niv="2">Réseau</a></li>
+				<li><a href="https://green-it.developpez.com" data-idrub="104" data-niv="2">Green IT</a></li>
+				<li><a href="https://embarque.developpez.com" data-idrub="110" data-niv="2">Systèmes embarqués</a></li>
+				<li><a href="https://virtualisation.developpez.com" data-idrub="108" data-niv="2">Virtualisation</a></li>
+			</ul></li>
+</ul>
+
+<ul id="gabarit_barre1"><li class="gabarit_selection"><a href="https://java.developpez.com">Java</a></li><li><a href="https://javaweb.developpez.com">Java Web</a></li><li><a href="https://spring.developpez.com">Spring</a></li><li><a href="https://android.developpez.com">Android</a></li><li><a href="https://eclipse.developpez.com">Eclipse</a></li><li><a href="https://netbeans.developpez.com">NetBeans</a></li></ul>
+
+<div id="gabarit_barre2">
+	<a rel="nofollow" class="gabarit_social gabarit_facebook" href="http://www.facebook.com/pages/Java/368176262168" target="_blank" title="Retrouver Developpez sur Facebook"></a>
+	<a rel="nofollow" class="gabarit_social gabarit_twitter" href="http://twitter.com/javaDeveloppez" target="_blank" title="Retrouver Developpez sur Twitter"></a>
+	<a class="gabarit_social gabarit_rss" href="http://java.developpez.com/index/rss" target="_blank" title="Flux RSS"></a>
+	<ul>
+<li><a href="https://www.developpez.net/forums/f6/java/">Forums Java</a></li><li><a href="https://java.developpez.com/faq/">FAQ Java</a></li><li><a href="https://java.developpez.com/cours/">Tutoriels Java</a></li><li><a href="https://java.developpez.com/livres/">Livres Java</a></li><li><a href="https://java.developpez.com/videos/">Vidéos Java</a></li><li><a href="https://java.developpez.com/telecharger/index/categorie/43/Sources-Java">Sources Java</a></li><li><a href="https://java.developpez.com/outils/">Outils, EDI &amp; API Java</a></li><li><a href="http://javasearch.developpez.com">JavaSearch</a></li>	</ul>
+</div>
+
+</nav>
+
+
+	</header>
+	<section>
+
+
+	<div class="contenuPage">
+
+
+<style type="text/css">
+	.body_wrapper { width: calc(100% - 214px) !important; }
+	#ano_colonne_droite { position: absolute; right: 20px; top: 415px; width: 160px; display: none; }
+	#ano_colonne_liens { background-color: #293a4e; border: 3px solid #293a4e; border-radius: .25rem .25rem 0 0; -webkit-border-radius: .25rem .25rem 0 0; padding-top: 20px; margin-bottom: 1rem; }
+	#ano_colonne_contenu { background: #fff; }
+	#ano_colonne_droite p { color: #5a7f97; text-align: center; padding: 4px 0.2rem; }
+	#ano_colonne_droite p:first-child { padding-top:16px; }
+	#ano_colonne_droite p:last-child { padding-bottom:16px; }
+	#ano_colonne_titre { background: none !important; height: 21px; line-height: 21px; position: absolute; top: 0; left: 0; width: 160px; color: #fff !important; padding: 0 !important; margin: 0; text-align:center !important; font-size:.8rem; text-shadow: 1px 1px 0px #385263; }
+</style>
+<div id="ano_colonne_droite">
+<div id="ano_colonne_liens">
+<div id="ano_colonne_titre">Navigation</div>
+<div id="ano_colonne_contenu">
+<p style="padding-top:10px; padding-bottom:0;"><b>Inscrivez-vous gratuitement</b><br />pour pouvoir participer, suivre les réponses en temps réel, voter pour les messages, poser vos propres questions et recevoir la newsletter<br /><br />
+<a href="https://www.developpez.net/forums/inscription/">
+<img src="https://www.developpez.com/images/dvp/inscris-bkgnone.png" />
+</a></p></div></div><div id="ci4dq4l" class="dvpb4" style="display: inline-block; width: 160px; height: 600px"></div><div id="gabarit_pub4"></div>
+</div>
+<script type="text/javascript">
+$(function() {
+	var bloc = $("#ano_colonne_droite");
+	var intr = false;
+	var y = $("#breadcrumb").offset().top;
+	bloc.css("top", y + "px").show();
+
+	$(window).on("scroll", function() {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollTop < y) {
+			if (intr) {
+				bloc.css("position", "");
+				bloc.css("top", y + "px");
+				intr = false;
+			}
+		} else {
+			if (! intr) {
+				bloc.css("position", "fixed");
+				bloc.css("top", "5px");
+				intr = true;
+			}
+		}
+	});
+});
+</script>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="https://www.developpez.net/forums/inscription/" rel="nofollow">S'inscrire</a></li>
+			
+				<li><a rel="help" href="https://www.developpez.net/forums/faq.php">Aide</a></li>
+				<li>
+			<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/vbulletin_md5.js?v=422"></script>
+			<form id="navbar_loginform" action="https://www.developpez.net/forums/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Identifiant" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Mot de passe" style="display:none;" />
+					<input type="hidden" name="cookieuser" value="1" />
+					<input type="submit" class="loginbutton" tabindex="104" value="S'identifier" title="Insérez votre identifiant et mot de passe dans les cases correspondantes pour vous connecter, ou cliquez sur le bouton « S'inscrire » pour créer un profil personnel." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'Identifiant')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='Identifiant';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="https://www.developpez.net/forums/activity.php">Quoi de neuf ?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="http://www.developpez.net/forums/">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a rel="nofollow" href="https://www.developpez.net/forums/search.php?do=getnew&amp;contenttype=vBForum_Post">Derniers messages</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a rel="nofollow" href="https://www.developpez.net/forums/forumdisplay.php?do=markread&amp;markreadhash=guest">Marquer les forums comme lus</a></li>
+								
+									<li id="vbqlink_posts"><a href="https://www.developpez.net/forums/search.php?do=getdaily&amp;contenttype=vBForum_Post">Messages du jour</a></li>
+								
+									<li id="link_mtg4_835"><a href="http://www.developpez.net/forums/project.php">Bugs & Suggestions</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Réseau social</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_groups"><a href="https://www.developpez.net/forums/group.php">Groupes</a></li>
+								
+									<li id="vbflink_faq"><a href="https://www.developpez.net/forums/faq.php">FAQ forum</a></li>
+								
+									<li id="vbclink_members"><a href="https://www.developpez.net/forums/memberlist.php">Liste des utilisateurs</a></li>
+								
+									<li id="vbqlink_leaders"><a href="https://www.developpez.net/forums/showgroups.php">Voir l'équipe du site</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						
+							<li id="link_nde2_515"><a href="http://www.developpez.net/forums/blogs/">Blogs</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="https://www.developpez.net/forums/agenda/">Agenda</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_newposts"><a target="_blank" href="http://chat.developpez.com/">Chat (7)</a></li>
+						
+					
+				
+					
+						
+							<li id="link_nta3_958"><a target="_blank" href="http://club.developpez.com/regles/">Règles</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="https://www.developpez.net/forums/blogs/">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_project">
+			<a class="navtab" href="https://www.developpez.net/forums/project.php">Projets</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="https://www.developpez.net/forums/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="https://forum.developpez.be/images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="https://www.developpez.net/forums/search.php" accesskey="4">Recherche avancée</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/" accesskey="1"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" width="12" height="12" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f6/java/">Java</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f22/java/general-java/">Général Java</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Comment déterminer le nombre de jours d'un mois ?</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+
+
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=8121654&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Répondre à la discussion</a>
+			<img style="display:none" id="progress_newreplylink_top" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+
+		
+		<div id="pagination_top" class="pagination_top">
+		
+
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+        <img src="https://www.developpez.com/images/logos/java.png" alt="Java">
+        <span class="threadtitle threadtitle_anoheader">Discussion :</span>
+		<h1>
+			<span class="threadtitle"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/" title="Recharger cette page">Comment déterminer le nombre de jours d'un mois ?</a></span>
+		</h1>
+
+<br />Sujet :
+<h2>Java</h2>
+
+
+<style type="text/css">.above_body { margin: -3px -.5rem .5rem; }</style><center style="margin-top: .5rem"><div id="gabarit_pub0"></div><div id="nm4pc0u" class="dvpb0" style="display: inline-block; width: 728px; height: 90px"></div></center>
+
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<span><a class="popupctrl" href="javascript://">Outils de la discussion</a></span>
+				<ul class="popupbody popuphover">
+					<li><a href="https://www.developpez.net/forums/i1496753/java/general-java/determiner-nombre-jours-d-mois/" accesskey="3" rel="nofollow">Afficher une version imprimable</a></li>
+					
+					<li>
+						
+							<a href="https://www.developpez.net/forums/subscription.php?do=addsubscription&amp;t=1496753" rel="nofollow">S'abonner à cette discussion&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<span><a class="popupctrl" href="javascript://">Affichage</a></span>
+					<ul class="popupbody popuphover">
+						<li><label>Mode linéaire</label></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/?mode=hybrid"> Choisir le mode hybride</a></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/?mode=threaded#post8118902"> Choisir le mode arborescent</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_8118902">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">00h52</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8118902" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8118902" class="postcounter">#1</a><a id="postcount8118902" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u847938/bambadji/" title="BAMBADJI est déconnecté"><strong>BAMBADJI</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="BAMBADJI est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Nouveau Candidat au Club
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-barre-2.png" alt="" border="" /></span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/senegal.gif" title="Sénégal" />  <img src="/forums/images/ranks/female.png" alt="Femme" /> <a href="https://www.developpez.com/user/profil/847938/BAMBADJI"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Étudiant</div><dt>Inscrit en</dt><dd>décembre 2014</dd><dt>Messages</dt><dd>3</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="847938" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="847938"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/female.png" alt="Femme" /></div><div>Localisation : Sénégal</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Étudiant</div><div>Secteur : High Tech - Électronique et micro-électronique</div><div><br /><b>Informations forums :</b></div><div>Inscription : décembre 2014</div><div>Messages : 3</div><div>Points : 0</div></div></div><dt>Points</dt><dd><span role="points" userid="847938">0</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> Comment déterminer le nombre de jours d'un mois ?
+				</span>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_8118902">
+						<blockquote class="postcontent restore ">
+							Bonsoir,<br />
+<br />
+Je voudrais écrire un programme qui demande à l’ utilisateur de saisir un mois et une année. Puis le programme affiche le nombre de jours de ce mois.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8118902" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8118902" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8118902" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8118902" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118902> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118902> 1</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8118922">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">01h23</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8118922" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8118922" class="postcounter">#2</a><a id="postcount8118922" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u4358/gloax29/" title="gloax29 est déconnecté"><strong>gloax29</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="gloax29 est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre régulier
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-carres-3.png" alt="" border="" /></span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u4358/gloax29/" title="gloax29 est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/4358-gloax29.gif?dateline=1537547543" alt="Avatar de gloax29" title="Avatar de gloax29" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/4358/gloax29"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Développeur informatique</div><dt>Inscrit en</dt><dd>juin 2002</dd><dt>Messages</dt><dd>55</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="4358" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="4358"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 48</div><div>Localisation : France, Finistère (Bretagne)</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Développeur informatique</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : juin 2002</div><div>Messages : 55</div><div>Points : 70</div></div></div><dt>Points</dt><dd><span role="points" userid="4358">70</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8118922">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br />
+La librairie Calendar, est un bon début.<br />
+<a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/api/java/util/Calendar.html" target="_blank">http://docs.oracle.com/javase/7/docs.../Calendar.html</a><br />
+Cordialement
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8118922" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8118922" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8118922" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8118922" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118922> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118922> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8118925">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">01h30</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8118925" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8118925" class="postcounter">#3</a><a id="postcount8118925" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u327969/joel-drigo/" title="joel.drigo est déconnecté"><strong><span style="text-decoration: underline; color: #008D00">joel.drigo</span></strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="joel.drigo est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<div style="text-align: center; font-weight: bold">Modérateur</div>
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-equipe-6.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-moderateur.png" title="Modérateur" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-uploadeur.png" title="Posteur de sources - 3 sources postées" user="327969" role="uploads" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-blogueur.png" title="2 billets blog publiés sur Developpez" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-trophee1.png" role="trophees" userid="327969" title="3 trophées reçus" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u327969/joel-drigo/" title="joel.drigo est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/327969-joel-drigo.gif?dateline=1420855918" alt="Avatar de joel.drigo" title="Avatar de joel.drigo" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/327969/joel-drigo"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Ingénieur R&amp;D - Développeur Java</div><dt>Inscrit en</dt><dd>septembre 2009</dd><dt>Messages</dt><dd>12&nbsp;430</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="327969" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="327969"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 52</div><div>Localisation : France, Paris (Île de France)</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Ingénieur R&amp;D - Développeur Java</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : septembre 2009</div><div>Messages : 12&nbsp;430</div><div>Points : 29 095</div></div></div><dt>Points</dt><dd><span role="points" userid="327969">29 095</span></dd><dt>Billets dans le blog</dt><dd><a href="https://www.developpez.net/forums/blogs/327969-joel-drigo/">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8118925">
+						<blockquote class="postcontent restore ">
+							Salut,<br />
+<br />
+Très bien, et, donc, quels problèmes rencontres-tu pour réaliser ce programme ?<br />
+<br />
+Si c'est our la saisie, regarde la classe Scanner. Pour le reste, tout dépend ce que tu peux utiliser ou pas : à la base, il n'y a que des calculs à faire (1 mois sur 2 à 30 jours ou 31 jours, sauf le mois de février qui en a 28, ou 29, les années bissextiles (quelques calculs et tests sur l'année pour le savoir). Si tu peux utiliser des classes toutes faites de Java, les classes Calendar ou LocalDate Month et Year pourront t'aider.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><u><b>L'expression &quot;ça marche pas&quot; ne veut rien dire. Indiquez l'erreur, et/ou les comportements attendus et obtenus, et donnez un Exemple Complet Minimal qui permet de reproduire le problème.</b><br />
+</u><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> La plupart des réponses à vos questions sont déjà dans les <a href="http://java.developpez.com/faq/" target="_blank"><b>FAQs</b></a> ou les <a href="http://java.developpez.com/cours/" target="_blank"><b>Tutoriels</b></a>, ou peut-être dans une autre discussion&nbsp;: utilisez la recherche interne.<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Des questions sur Java&nbsp;: consultez le <a href="http://www.developpez.net/forums/f6/java/" target="_blank"><b>Forum Java</b></a>. Des questions sur l'EDI Eclipse ou la plateforme Eclipse RCP&nbsp;: consultez le <a href="http://www.developpez.net/forums/f696/environnements-developpement/eclipse/" target="_blank"><b>Forum Eclipse</b></a>.<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Une question correctement posée et rédigée et vous aurez plus de chances de réponses adaptées et rapides. <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> N'oubliez pas de mettre vos extraits de code entre balises CODE (Voir <a href="http://www.developpez.net/forums/d571866/club-professionnels-informatique/mode-d-emploi-aide-aux-nouveaux/aide-l-utilisation-boutons/" target="_blank">Mode d'emploi de l'éditeur de messages</a>).<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Nouveau sur le forum&nbsp;? Consultez <a href="http://club.developpez.com/regles/" target="_blank">Les Règles du Club</a>.</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8118925" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8118925" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8118925" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8118925" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118925> 1</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8118925> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8119084">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">11h00</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8119084" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119084" class="postcounter">#4</a><a id="postcount8119084" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u188305/tchize_/" title="tchize_ est déconnecté"><strong>tchize_</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="tchize_ est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Expert éminent sénior
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-6-0.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-redacteur.png" title="Rédacteur - 3 articles publiés" user="188305" role="publications" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-chroniqueur.png" title="2 actualités publiées" user="188305" role="news" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="3 Q/R de FAQ rédigées" user="188305" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-blogueur.png" title="10 billets blog publiés sur Developpez" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u188305/tchize_/" title="tchize_ est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/188305-tchize_.gif?dateline=1416139110" alt="Avatar de tchize_" title="Avatar de tchize_" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/belgique.gif" title="Belgique" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/188305/tchize"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Ingénieur développement logiciels</div><dt>Inscrit en</dt><dd>avril 2007</dd><dt>Messages</dt><dd>25&nbsp;481</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="188305" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="188305"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 42</div><div>Localisation : Belgique</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Ingénieur développement logiciels</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : avril 2007</div><div>Messages : 25&nbsp;481</div><div>Points : 48 796</div></div></div><dt>Points</dt><dd><span role="points" userid="188305">48 796</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    <a href="javascript://" onclick="imwindow('skype', '188305', 500, 340); return false;"><img src="https://forum.developpez.be/images/misc/im_skype.gif" alt="Envoyer un message via Skype&trade; à tchize_" /></a>
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8119084">
+						<blockquote class="postcontent restore ">
+							Si tu es en java 8 et que tu t'en fous de ce qui se passait avant 1920 en Russie, java.time a déjà tout ce qu'il faut:<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:84px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br />4<br /></div></td><td valign="top"><pre style="margin: 0"><span style="color: #0000ff;">import</span> java.time.*;
+<span style="color: #0000ff;">int</span> mois = ....;
+<span style="color: #0000ff;">int</span> anneee = ....;
+Month.of<span class="br0">&#40;</span>mois<span class="br0">&#41;</span>.getLength<span class="br0">&#40;</span>Year.isLeap<span class="br0">&#40;</span>annee<span class="br0">&#41;</span><span class="br0">&#41;</span>;</pre></td></tr></table></pre>
+</div>par exemple
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><a rel="nofollow" href="https://be.linkedin.com/in/daviddelbecq?trk=profile-badge-cta" target="_blank">David Delbecq</a> Java developer chez <a rel="nofollow" href="https://www.hms-networks.com" target="_blank">HMS Industrial Networks AB</a>. &#12288;&#12288;&#12288;<a rel="nofollow" href="https://be.linkedin.com/in/daviddelbecq?trk=profile-badge-name" target="_blank"><b><font color="#000080">LinkedIn</font></b></a> | <a rel="nofollow" href="https://plus.google.com/u/0/+DavidDelbecq" target="_blank"><font color="#B22222"><b>Google+</b></font></a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8119084" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8119084" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8119084" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8119084" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119084> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119084> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8119150">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">11h35</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8119150" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119150" class="postcounter">#5</a><a id="postcount8119150" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u250189/jeffray03/" title="jeffray03 est déconnecté"><strong>jeffray03</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="jeffray03 est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre chevronné
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-3-5.png" alt="" border="" /></span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u250189/jeffray03/" title="jeffray03 est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/250189-jeffray03.gif?dateline=1393923306" alt="Avatar de jeffray03" title="Avatar de jeffray03" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/allemagne.gif" title="Allemagne" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/250189/jeffray03"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Développeur informatique</div><dt>Inscrit en</dt><dd>juillet 2008</dd><dt>Messages</dt><dd>1&nbsp;497</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="250189" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="250189"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Localisation : Allemagne</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Développeur informatique</div><div><br /><b>Informations forums :</b></div><div>Inscription : juillet 2008</div><div>Messages : 1&nbsp;497</div><div>Points : 2 112</div></div></div><dt>Points</dt><dd><span role="points" userid="250189">2 112</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					   <a href="javascript://" onclick="imwindow('yahoo', '250189', 400, 200); return false;"><img src="https://forum.developpez.be/images/misc/im_yahoo.gif" alt="Envoyer un message via Yahoo à jeffray03" /></a> 
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8119150">
+						<blockquote class="postcontent restore ">
+							salut, <br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				  Month.of(mois).getLength(Year.isLeap(annee));
+			
+		</div>
+	</div>
+</div>n´est pas plutot :<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				  Month.of(mois).length(Year.isLeap(annee))
+			
+		</div>
+	</div>
+</div>Eric
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8119150" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8119150" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8119150" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8119150" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119150> 1</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119150> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8119270">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">12h37</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8119270" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119270" class="postcounter">#6</a><a id="postcount8119270" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u188305/tchize_/" title="tchize_ est déconnecté"><strong>tchize_</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="tchize_ est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Expert éminent sénior
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-6-0.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-redacteur.png" title="Rédacteur - 3 articles publiés" user="188305" role="publications" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-chroniqueur.png" title="2 actualités publiées" user="188305" role="news" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="3 Q/R de FAQ rédigées" user="188305" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-blogueur.png" title="10 billets blog publiés sur Developpez" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u188305/tchize_/" title="tchize_ est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/188305-tchize_.gif?dateline=1416139110" alt="Avatar de tchize_" title="Avatar de tchize_" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/belgique.gif" title="Belgique" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/188305/tchize"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Ingénieur développement logiciels</div><dt>Inscrit en</dt><dd>avril 2007</dd><dt>Messages</dt><dd>25&nbsp;481</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="188305" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="188305"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 42</div><div>Localisation : Belgique</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Ingénieur développement logiciels</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : avril 2007</div><div>Messages : 25&nbsp;481</div><div>Points : 48 796</div></div></div><dt>Points</dt><dd><span role="points" userid="188305">48 796</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    <a href="javascript://" onclick="imwindow('skype', '188305', 500, 340); return false;"><img src="https://forum.developpez.be/images/misc/im_skype.gif" alt="Envoyer un message via Skype&trade; à tchize_" /></a>
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8119270">
+						<blockquote class="postcontent restore ">
+							oui <img src="https://www.developpez.net/forums/images/smilies/icon_smile.gif" border="0" alt="" title=":)" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><a rel="nofollow" href="https://be.linkedin.com/in/daviddelbecq?trk=profile-badge-cta" target="_blank">David Delbecq</a> Java developer chez <a rel="nofollow" href="https://www.hms-networks.com" target="_blank">HMS Industrial Networks AB</a>. &#12288;&#12288;&#12288;<a rel="nofollow" href="https://be.linkedin.com/in/daviddelbecq?trk=profile-badge-name" target="_blank"><b><font color="#000080">LinkedIn</font></b></a> | <a rel="nofollow" href="https://plus.google.com/u/0/+DavidDelbecq" target="_blank"><font color="#B22222"><b>Google+</b></font></a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8119270" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8119270" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8119270" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8119270" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119270> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119270> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8119317">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/02/2015,&nbsp;<span class="time">13h00</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8119317" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8119317" class="postcounter">#7</a><a id="postcount8119317" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u4358/gloax29/" title="gloax29 est déconnecté"><strong>gloax29</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="gloax29 est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre régulier
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-carres-3.png" alt="" border="" /></span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u4358/gloax29/" title="gloax29 est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/4358-gloax29.gif?dateline=1537547543" alt="Avatar de gloax29" title="Avatar de gloax29" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/4358/gloax29"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Développeur informatique</div><dt>Inscrit en</dt><dd>juin 2002</dd><dt>Messages</dt><dd>55</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="4358" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="4358"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 48</div><div>Localisation : France, Finistère (Bretagne)</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Développeur informatique</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : juin 2002</div><div>Messages : 55</div><div>Points : 70</div></div></div><dt>Points</dt><dd><span role="points" userid="4358">70</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8119317">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br />
+<br />
+moi j'ai ca en 1.7 :<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:108px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br />4<br />5<br />6<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">int</span> annee = ...;
+<span style="color: #0000ff;">int</span> mois = ... ;
+Calendar cal = Calendar.getInstance<span class="br0">&#40;</span><span class="br0">&#41;</span> ;
+cal.set<span class="br0">&#40;</span>annee, mois-<span style="color: #cc66cc;">1</span> <span style="color: #808080;">/* -1 car mois vont de  0 &agrave; 11 */</span> , <span style="color: #cc66cc;">1</span><span class="br0">&#41;</span> ;
+cal.getActualMaximum<span class="br0">&#40;</span>Calendar.DAY_OF_MONTH<span class="br0">&#41;</span>;</pre></td></tr></table></pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8119317" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8119317" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8119317" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8119317" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119317> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8119317> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8120243">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">03/02/2015,&nbsp;<span class="time">03h56</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8120243" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120243" class="postcounter">#8</a><a id="postcount8120243" name="8"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u847938/bambadji/" title="BAMBADJI est déconnecté"><strong>BAMBADJI</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="BAMBADJI est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Nouveau Candidat au Club
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-barre-2.png" alt="" border="" /></span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/senegal.gif" title="Sénégal" />  <img src="/forums/images/ranks/female.png" alt="Femme" /> <a href="https://www.developpez.com/user/profil/847938/BAMBADJI"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Étudiant</div><dt>Inscrit en</dt><dd>décembre 2014</dd><dt>Messages</dt><dd>3</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="847938" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="847938"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/female.png" alt="Femme" /></div><div>Localisation : Sénégal</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Étudiant</div><div>Secteur : High Tech - Électronique et micro-électronique</div><div><br /><b>Informations forums :</b></div><div>Inscription : décembre 2014</div><div>Messages : 3</div><div>Points : 0</div></div></div><dt>Points</dt><dd><span role="points" userid="847938">0</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8120243">
+						<blockquote class="postcontent restore ">
+							Voici mon programme java. Corrigez-moi.<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:204px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="33"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br /></div></td><td valign="top"><pre style="margin: 0"><span style="color: #0000ff;">package</span> com.iam.EXO15;
+<span style="color: #0000ff;">import</span> java.time.*;
+<span style="color: #0000ff;">import</span> java.util.Scanner;
+&nbsp;
+&nbsp;
+<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> Nbre_d_jr_du_mw <span class="br0">&#123;</span>
+	<span style="color: #808080; font-weight: bold;">/**</span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style="color: #0000ff;">@param</span><span style="color: #800000;"> args</span></span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style="color: #0000ff;">@param</span><span style="color: #800000;"> Year</span> </span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span>
+	<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span> main<span class="br0">&#40;</span>String<span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+		<span style="color: #808080;">// TODO Auto-generated method stub</span>
+		Scanner ok = <span style="color: #0000ff;">new</span> Scanner<span class="br0">&#40;</span>System.in<span class="br0">&#41;</span>;
+		System.out.println<span class="br0">&#40;</span><span style="color: #FF0000;">&quot;veiller saisir le mois&quot;</span><span class="br0">&#41;</span>;
+		String mois = ok.nextLine<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span style="color: #0000ff;">int</span> i = Integer.parseInt<span class="br0">&#40;</span>mois<span class="br0">&#41;</span>;
+		System.out.println<span class="br0">&#40;</span><span style="color: #FF0000;">&quot;veiller saisir l'annee&quot;</span><span class="br0">&#41;</span>;
+		String annee = ok.nextLine<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+		<span style="color: #0000ff;">int</span> j = Integer.parseInt<span class="br0">&#40;</span>annee<span class="br0">&#41;</span>;
+		System.out.println<span class="br0">&#40;</span>Month.of<span class="br0">&#40;</span>i<span class="br0">&#41;</span>.getLength<span class="br0">&#40;</span>Year.isLeap<span class="br0">&#40;</span>j<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+&nbsp;
+	<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#125;</span></pre></td></tr></table></pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8120243" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8120243" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8120243" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8120243" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120243> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120243> 1</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8120376">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">03/02/2015,&nbsp;<span class="time">10h38</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8120376" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120376" class="postcounter">#9</a><a id="postcount8120376" name="9"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u250189/jeffray03/" title="jeffray03 est déconnecté"><strong>jeffray03</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="jeffray03 est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre chevronné
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-3-5.png" alt="" border="" /></span>
+			
+			
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u250189/jeffray03/" title="jeffray03 est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/250189-jeffray03.gif?dateline=1393923306" alt="Avatar de jeffray03" title="Avatar de jeffray03" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/allemagne.gif" title="Allemagne" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/250189/jeffray03"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Développeur informatique</div><dt>Inscrit en</dt><dd>juillet 2008</dd><dt>Messages</dt><dd>1&nbsp;497</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="250189" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="250189"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Localisation : Allemagne</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Développeur informatique</div><div><br /><b>Informations forums :</b></div><div>Inscription : juillet 2008</div><div>Messages : 1&nbsp;497</div><div>Points : 2 112</div></div></div><dt>Points</dt><dd><span role="points" userid="250189">2 112</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					   <a href="javascript://" onclick="imwindow('yahoo', '250189', 400, 200); return false;"><img src="https://forum.developpez.be/images/misc/im_yahoo.gif" alt="Envoyer un message via Yahoo à jeffray03" /></a> 
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8120376">
+						<blockquote class="postcontent restore ">
+							salut,<br />
+une petite modification:<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:204px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="33"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+  <span style="color: #0000ff;">public</span> <span style="color: #0000ff;">class</span> Nbre_d_jr_du_mw <span class="br0">&#123;</span>
+    <span style="color: #808080; font-weight: bold;">/**</span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style="color: #0000ff;">@param</span><span style="color: #800000;"> args</span></span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* <span style="color: #0000ff;">@param</span><span style="color: #800000;"> Year</span> </span>
+<span style="color: #808080; font-weight: bold;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span>
+	<span style="color: #0000ff;">public</span> <span style="color: #0000ff;">static</span> <span style="color: #0000ff;">void</span> main<span class="br0">&#40;</span>String<span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+<span style="color: #808080;">// TODO Auto-generated method stub</span>
+			Scanner ok = <span style="color: #0000ff;">new</span> Scanner<span class="br0">&#40;</span>System.in<span class="br0">&#41;</span>;
+			System.out.println<span class="br0">&#40;</span><span style="color: #FF0000;">&quot;veiller saisir le mois&quot;</span><span class="br0">&#41;</span>;
+			String mois = ok.nextLine<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span style="color: #0000ff;">int</span> i = Integer.parseInt<span class="br0">&#40;</span>mois<span class="br0">&#41;</span>;
+			System.out.println<span class="br0">&#40;</span><span style="color: #FF0000;">&quot;veiller saisir l'annee&quot;</span><span class="br0">&#41;</span>;
+			String annee = ok.nextLine<span class="br0">&#40;</span><span class="br0">&#41;</span>;
+			<span style="color: #0000ff;">int</span> j = Integer.parseInt<span class="br0">&#40;</span>annee<span class="br0">&#41;</span>;
+			System.out.println<span class="br0">&#40;</span>Month.of<span class="br0">&#40;</span>i<span class="br0">&#41;</span>.length<span class="br0">&#40;</span>Year.isLeap<span class="br0">&#40;</span>j<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>;
+	<span class="br0">&#125;</span>
+&nbsp;
+<span class="br0">&#125;</span></pre></td></tr></table></pre>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8120376" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8120376" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8120376" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8120376" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120376> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120376> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8120462">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">03/02/2015,&nbsp;<span class="time">11h20</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8120462" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8120462" class="postcounter">#10</a><a id="postcount8120462" name="10"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u45357/thelvin/" title="thelvin est déconnecté"><strong><span style="text-decoration: underline; color: #008D00">thelvin</span></strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="thelvin est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<div style="text-align: center; font-weight: bold">Modérateur</div>
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-equipe-6.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-moderateur.png" title="Modérateur" /></div>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/45357/thelvin"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>septembre 2004</dd><dt>Messages</dt><dd>12&nbsp;358</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="45357" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="45357"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : septembre 2004</div><div>Messages : 12&nbsp;358</div><div>Points : 20 916</div></div></div><dt>Points</dt><dd><span role="points" userid="45357">20 916</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    <a href="javascript://" onclick="imwindow('skype', '45357', 500, 340); return false;"><img src="https://forum.developpez.be/images/misc/im_skype.gif" alt="Envoyer un message via Skype&trade; à thelvin" /></a>
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8120462">
+						<blockquote class="postcontent restore ">
+							Moi j'aurais fait<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:36px;">YearMonth.of<span class="br0">&#40;</span>year, month<span class="br0">&#41;</span>.lengthOfMonth<span class="br0">&#40;</span><span class="br0">&#41;</span></pre>
+</div>Mais c'est juste parce que je trouve ça un peu plus direct.<br />
+<br />
+Et pour info, il est possible d'appeler directement nextInt() sur un Scanner, au lieu de nextLine() suivi de Integer.parseInt().<br />
+(Du coup year, month et scanner seraient des noms de variables plus appropriés que j, i et ok.)
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer">N'oubliez pas de consulter les <a href="http://java.developpez.com/faq/" target="_blank">FAQ Java</a> et les <a href="http://java.developpez.com/cours/" target="_blank">cours et tutoriels Java</a> <img src="https://www.developpez.net/forums/images/smilies/icon_wink.gif" border="0" alt="" title=";)" class="inlineimg" /></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8120462" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8120462" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8120462" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8120462" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120462> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8120462> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8121648">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">04/02/2015,&nbsp;<span class="time">02h07</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8121648" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8121648" class="postcounter">#11</a><a id="postcount8121648" name="11"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u847938/bambadji/" title="BAMBADJI est déconnecté"><strong>BAMBADJI</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="BAMBADJI est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Nouveau Candidat au Club
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-barre-2.png" alt="" border="" /></span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/senegal.gif" title="Sénégal" />  <img src="/forums/images/ranks/female.png" alt="Femme" /> <a href="https://www.developpez.com/user/profil/847938/BAMBADJI"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Étudiant</div><dt>Inscrit en</dt><dd>décembre 2014</dd><dt>Messages</dt><dd>3</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="847938" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="847938"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/female.png" alt="Femme" /></div><div>Localisation : Sénégal</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Étudiant</div><div>Secteur : High Tech - Électronique et micro-électronique</div><div><br /><b>Informations forums :</b></div><div>Inscription : décembre 2014</div><div>Messages : 3</div><div>Points : 0</div></div></div><dt>Points</dt><dd><span role="points" userid="847938">0</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> Pourquoi cet ereur
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_8121648">
+						<blockquote class="postcontent restore ">
+							Exception in thread &quot;main&quot; java.lang.Error: Unresolved compilation problem: <br />
+	Year cannot be resolved<br />
+<br />
+	at com.iam.EXO15.Nbre_d_jr_du_mw.main(Nbre_d_jr_du_mw.java:21)
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8121648" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8121648" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8121648" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8121648" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8121648> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8121648> 1</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_8121654">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">04/02/2015,&nbsp;<span class="time">02h27</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post8121654" href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#post8121654" class="postcounter">#12</a><a id="postcount8121654" name="12"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u327969/joel-drigo/" title="joel.drigo est déconnecté"><strong><span style="text-decoration: underline; color: #008D00">joel.drigo</span></strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="joel.drigo est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				<div style="text-align: center; font-weight: bold">Modérateur</div>
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-equipe-6.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-moderateur.png" title="Modérateur" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-uploadeur.png" title="Posteur de sources - 3 sources postées" user="327969" role="uploads" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-blogueur.png" title="2 billets blog publiés sur Developpez" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-trophee1.png" role="trophees" userid="327969" title="3 trophées reçus" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u327969/joel-drigo/" title="joel.drigo est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/327969-joel-drigo.gif?dateline=1420855918" alt="Avatar de joel.drigo" title="Avatar de joel.drigo" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />  <img src="/forums/images/ranks/male.png" alt="Homme" /> <a href="https://www.developpez.com/user/profil/327969/joel-drigo"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><div>Ingénieur R&amp;D - Développeur Java</div><dt>Inscrit en</dt><dd>septembre 2009</dd><dt>Messages</dt><dd>12&nbsp;430</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="327969" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="327969"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Sexe : <img src="/forums/images/ranks/male.png" alt="Homme" /></div><div>Âge : 52</div><div>Localisation : France, Paris (Île de France)</div><div><br /><b>Informations professionnelles :</b></div><div>Activité : Ingénieur R&amp;D - Développeur Java</div><div>Secteur : High Tech - Éditeur de logiciels</div><div><br /><b>Informations forums :</b></div><div>Inscription : septembre 2009</div><div>Messages : 12&nbsp;430</div><div>Points : 29 095</div></div></div><dt>Points</dt><dd><span role="points" userid="327969">29 095</span></dd><dt>Billets dans le blog</dt><dd><a href="https://www.developpez.net/forums/blogs/327969-joel-drigo/">2</a></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_8121654">
+						<blockquote class="postcontent restore ">
+							Salut,<br />
+<br />
+As-tu importé la classe java.time.Year (ou le package java.time.*) ?
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><u><b>L'expression &quot;ça marche pas&quot; ne veut rien dire. Indiquez l'erreur, et/ou les comportements attendus et obtenus, et donnez un Exemple Complet Minimal qui permet de reproduire le problème.</b><br />
+</u><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> La plupart des réponses à vos questions sont déjà dans les <a href="http://java.developpez.com/faq/" target="_blank"><b>FAQs</b></a> ou les <a href="http://java.developpez.com/cours/" target="_blank"><b>Tutoriels</b></a>, ou peut-être dans une autre discussion&nbsp;: utilisez la recherche interne.<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Des questions sur Java&nbsp;: consultez le <a href="http://www.developpez.net/forums/f6/java/" target="_blank"><b>Forum Java</b></a>. Des questions sur l'EDI Eclipse ou la plateforme Eclipse RCP&nbsp;: consultez le <a href="http://www.developpez.net/forums/f696/environnements-developpement/eclipse/" target="_blank"><b>Forum Eclipse</b></a>.<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Une question correctement posée et rédigée et vous aurez plus de chances de réponses adaptées et rapides. <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> N'oubliez pas de mettre vos extraits de code entre balises CODE (Voir <a href="http://www.developpez.net/forums/d571866/club-professionnels-informatique/mode-d-emploi-aide-aux-nouveaux/aide-l-utilisation-boutons/" target="_blank">Mode d'emploi de l'éditeur de messages</a>).<br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> Nouveau sur le forum&nbsp;? Consultez <a href="http://club.developpez.com/regles/" target="_blank">Les Règles du Club</a>.</div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_8121654" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_8121654" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=8121654" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_8121654" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8121654> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=8121654> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=8121654&amp;noquote=1 "class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Répondre à la discussion</a>
+
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+<div class="above_threadlist_controls toolsmenu"><center><table style="width: 75%"><tr><td><a href="http://java.developpez.com/" target="_blank">Actualités</a></td><td><a href="http://java.developpez.com/faq/" target="_blank">FAQs Java</a></td><td><a href="http://java.developpez.com/cours/" target="_blank">Tutoriels Java</a></td><td><a href="http://java.developpez.com/livres/" target="_blank">Livres Java</a></td><td><a href="http://java.developpez.com/videos/" target="_blank"></a></td><td><a href="http://java.developpez.com/telecharger/index/categorie/43/Sources-Java" target="_blank">Sources Java</a></td><td><a href="http://java.developpez.com/outils/" target="_blank">Outils, EDI &amp; API Java</a></td><td><a href="http://javasearch.developpez.com" target="_blank">JavaSearch</a></td></tr></table></center></div>
+<div style="clear: both"></div>
+<div class="breadcrumb breadcrumb2">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f6/java/">Java</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f22/java/general-java/">Général Java</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Comment déterminer le nombre de jours d'un mois ?</span></li>
+
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="https://www.developpez.net/forums/d1496753-precedent/java/general-java/determiner-nombre-jours-d-mois/" rel="nofollow">Discussion précédente</a>
+			|
+			<a href="https://www.developpez.net/forums/d1496753-suivant/java/general-java/determiner-nombre-jours-d-mois/" rel="nofollow">Discussion suivante</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<center><div id="qf4zx5s" class="dvpb5" style="display: inline-block; width: 728px; height: 90px"></div><div id="gabarit_pub5"></div></center>
+<div id="gabarit_voiraussi"></div>
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Discussions similaires</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d485740/logiciels/microsoft-office/access/requetes-sql/definir-nombre-jours-entre-2-dates/" title="Bonsoir à vous tous ! 
+...">Comment définir le nombre de jours entre 2 dates</a></span>
+    <div class="starter_forum">
+      Par Bouom771 dans le forum Requêtes et SQL.
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 05/02/2008, <span class="time">01h35</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d155622/dotnet/langages/csharp/csharp-connaitre-nombre-jours-entre-dates/" title="Bonjour, 
+  
+j'ai utilisé le...">[C#] Comment connaître le nombre de jours entre deux dates ?</a></span>
+    <div class="starter_forum">
+      Par luimême dans le forum C#
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 29/05/2006, <span class="time">20h16</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d75553/bases-donnees/db2/week-ajouter-nombre-jours-date/" title="Bonjour. 
+J'utilise depuis...">[Week()] Comment ajouter un nombre de jours à une date ?</a></span>
+    <div class="starter_forum">
+      Par MadCat34 dans le forum DB2
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 03/01/2006, <span class="time">15h58</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d64954/bases-donnees/mysql/requetes/convertir-nombre-jours-decimal-date/" title="--Bonjour à tous les PRO de...">Comment convertir un nombre de jours décimal en date</a></span>
+    <div class="starter_forum">
+      Par Soutou dans le forum Requêtes
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 03/11/2005, <span class="time">01h57</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d45720/environnements-developpement/delphi/composants-vcl/obtenir-nombre-jours-entre-timedatepicker/" title="Bonjour 
+ 
+J'ai deux...">Comment obtenir le nombre de jours entre deux timedatepicker</a></span>
+    <div class="starter_forum">
+      Par bertrand_declerck dans le forum Composants VCL
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 12/08/2005, <span class="time">12h59</span>
+      </div>
+  </div>
+</li>
+			</ol>
+		</div>
+	</div>
+
+
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead options_correct">Partager</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer options_correct">
+				<h5 class="blocksubhead">Partager</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.viadeo.com/shareit/share/?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;title=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_viadeo.gif" alt="Envoyer la discussion sur Viadeo" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://twitter.com/timeline/home?status=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F+https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_twitter.png" alt="Envoyer la discussion sur Twitter" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;title=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_google.gif" alt="Envoyer la discussion sur Google" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_facebook.gif" alt="Envoyer la discussion sur Facebook" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://digg.com/submit?phrase=2&amp;url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;title=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_digg.gif" alt="Envoyer la discussion sur Digg" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://del.icio.us/post?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;title=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_delicious.gif" alt="Envoyer la discussion sur Delicious" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;t=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_myspace.gif" alt="Envoyer la discussion sur MySpace" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://bookmarks.yahoo.com/toolbar/savebm?opener=&amp;u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D1496753&amp;t=Comment+d%E9terminer+le+nombre+de+jours+d%27un+mois+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_yahoo.gif" alt="Envoyer la discussion sur Yahoo" /></a>
+	
+</li></ul>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="https://www.developpez.net/forums/" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="https://www.developpez.net/forums/sendmessage.php" rel="nofollow" accesskey="9">Nous contacter</a></li>
+		<li><a href="https://www.developpez.com">Developpez.com</a></li>
+		
+		
+		
+		
+		
+		
+		<li><a href="https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/#top" onclick="document.location.hash='top'; return false;">Haut de page</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+</div>
+ 
+
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28115938-2']);
+  _gaq.push(['_setCustomVar', 1, 'rubrique', 'java', 3]);
+  _gaq.push(['_setCustomVar', 2, 'type', 'Autre', 3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<img src="https://compteur.developpez.com/compter-4" alt="" width="1" height="1"><img src="https://compteur.developpez.com/show_i.php/4/0" alt="" width="1" height="1"><img src="https://compt.developpez.com/compter-4" alt="" width="1" height="1"><script>$(function(){$("#nm4pc0u").load("/template/nm4pc0u"+'0'+".jpg");$("#qf4zx5s").load("/template/qf4zx5s"+'0'+".jpg");$("#ci4dq4l").load("/template/ci4dq4l"+'0'+".jpg");});</script>
+
+<script type="text/javascript">
+$(function() {
+	$("#gabarit_voiraussi").load("https://www.developpez.com/voiraussi/index/rubrique/4/");
+});
+</script>
+<div id="Ab512b74139fa8e30e406c8879584B" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); visibility: hidden">
+	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 1rem 1.5rem; width: 32rem; border-radius: 0.5rem">
+		<span style="float: right; width: 1.5rem; line-height: 1.5rem; text-align: center; cursor: pointer; border-radius: 0.25rem; background: lightgray">&times;</span>
+		<p><b>Vous avez un bloqueur de publicit&eacute;s install&eacute;.</b></p>
+		<p>Le Club Developpez.com n'affiche que des publicit&eacute;s IT, discr&egrave;tes et non intrusives.</p>
+		<p>Afin que nous puissions continuer &agrave; vous fournir gratuitement du contenu de qualit&eacute;,
+	merci de nous soutenir en d&eacute;sactivant votre bloqueur de publicit&eacute;s sur Developpez.com.</p>
+	</div>
+</div>
+<script type="text/javascript" src="https://altsysimg.developpez.com/show_i.php?tstnew"></script>
+<script type="text/javascript">
+if (!document.getElementById("A11d26cB") && document.cookie.indexOf("warnadb=") == -1) {
+	document.cookie = "warnadb=1;max-age=28800";
+	document.getElementById("Ab512b74139fa8e30e406c8879584B").style.visibility = "visible";
+	document.querySelector("#Ab512b74139fa8e30e406c8879584B span").addEventListener("click", function() {
+		document.getElementById("Ab512b74139fa8e30e406c8879584B").style.visibility = "hidden";
+	});
+}</script></div>
+
+	</section>
+
+	<div id="gabarit_megaban_bas"><pub-megabanbas /></div>
+	<div id="gabarit_voiraussi"></div>
+	<div id="gabarit_encartemploi_desactive"></div>
+
+	<footer>
+
+	<div id="gabarit_responsable">
+				<a href="https://club.developpez.com/contacts/contribuer">Contacter</a> le responsable de la rubrique Java
+			</div>
+
+	<ul id="gabarit_pied">
+		<li><a href="https://club.developpez.com/contacts/">Nous contacter</a>
+		<li><a href="https://www.developpez.com/participez/">Participez</a>
+	<li><a href="https://www.developpez.com/hebergement/">H&eacute;bergement</a>
+	<li><a href="https://www.developpez.com/advertising/">Publicit&eacute; / Advertising</a>
+	<li><a href="https://www.developpez.com/legal/">Informations l&eacute;gales</a>
+			<li>Partenaire : <a href="https://www.planethoster.com/fr/" target="_blank" rel="noopener">H&eacute;bergement Web</a>
+		</ul>
+
+<p id="gabarit_copyright">&copy; 2000-2022 - www.developpez.com</p>
+
+
+	</footer>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('https://www.developpez.net/forums/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html>ÈóúÊ      brqbu2CûÙjbrt   ‰    O^partitionKey=%28https%2Cdeveloppez.net%29,:https://www.developpez.net/forums/d1496753/java/general-java/determiner-nombre-jours-d-mois/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Tue, 22 Feb 2022 05:19:48 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Content-Type: text/html; charset=ISO-8859-1
+ original-response-headers Date: Tue, 22 Feb 2022 05:19:48 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Set-Cookie: bb_sessionhash=9341c9300802bd877e06c488926a3ddb; path=/; HttpOnly
+Set-Cookie: bb_lastvisit=1645183559; expires=Wed, 22-Feb-2023 05:19:48 GMT; path=/; secure
+Set-Cookie: bb_lastactivity=0; expires=Wed, 22-Feb-2023 05:19:48 GMT; path=/; secure
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+ ctid 1 uncompressed-len 0 net-response-time-onstart 2880 net-response-time-onstop 3678  o

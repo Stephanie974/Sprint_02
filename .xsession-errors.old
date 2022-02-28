@@ -1,0 +1,426 @@
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting SHELL=/bin/bash
+dbus-update-activation-environment: setting QT_ACCESSIBILITY=1
+dbus-update-activation-environment: setting XDG_CONFIG_DIRS=/etc/xdg/xdg-cinnamon:/etc/xdg
+dbus-update-activation-environment: setting XDG_SESSION_PATH=/org/freedesktop/DisplayManager/Session0
+dbus-update-activation-environment: setting LANGUAGE=fr_FR
+dbus-update-activation-environment: setting MANDATORY_PATH=/usr/share/gconf/cinnamon.mandatory.path
+dbus-update-activation-environment: setting DESKTOP_SESSION=cinnamon
+dbus-update-activation-environment: setting GTK_MODULES=gail:atk-bridge
+dbus-update-activation-environment: setting PWD=/home/steph
+dbus-update-activation-environment: setting XDG_SESSION_DESKTOP=cinnamon
+dbus-update-activation-environment: setting LOGNAME=steph
+dbus-update-activation-environment: setting XDG_SESSION_TYPE=x11
+dbus-update-activation-environment: setting GPG_AGENT_INFO=/run/user/1001/gnupg/S.gpg-agent:0:1
+dbus-update-activation-environment: setting XAUTHORITY=/home/steph/.Xauthority
+dbus-update-activation-environment: setting XDG_GREETER_DATA_DIR=/var/lib/lightdm-data/steph
+dbus-update-activation-environment: setting GDM_LANG=fr_FR
+dbus-update-activation-environment: setting HOME=/home/steph
+dbus-update-activation-environment: setting IM_CONFIG_PHASE=1
+dbus-update-activation-environment: setting LANG=fr_FR.UTF-8
+dbus-update-activation-environment: setting XDG_SEAT_PATH=/org/freedesktop/DisplayManager/Seat0
+dbus-update-activation-environment: setting XDG_SESSION_CLASS=user
+dbus-update-activation-environment: setting DEFAULTS_PATH=/usr/share/gconf/cinnamon.default.path
+dbus-update-activation-environment: setting USER=steph
+dbus-update-activation-environment: setting DISPLAY=:0
+dbus-update-activation-environment: setting SHLVL=1
+dbus-update-activation-environment: setting XDG_RUNTIME_DIR=/run/user/1001
+dbus-update-activation-environment: setting GTK3_MODULES=xapp-gtk3-module
+dbus-update-activation-environment: setting XDG_DATA_DIRS=/usr/share/cinnamon:/usr/share/gnome:/home/steph/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+dbus-update-activation-environment: setting PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+dbus-update-activation-environment: setting GDMSESSION=cinnamon
+dbus-update-activation-environment: setting DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+dbus-update-activation-environment: setting _=/usr/bin/dbus-update-activation-environment
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+[cinnamon-settings-daemon-smartcard] Failed to start: impossible de trouver un pilote de carte à puce adapté
+** Message: 08:45:09.809: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found at startup. Looking for legacy configuration (monitors.xml)
+Cjs-Message: 08:45:10.846: Profiler is disabled. Not setting up signals.
+Clutter-Message: 08:45:10.892: Sync method: PRESENTATION TIME
+Cjs-Message: 08:45:11.391: JS LOG: About to start Cinnamon
+
+(nm-applet:1373): libnotify-WARNING **: 08:45:11.432: Failed to connect to proxy
+
+(nm-applet:1373): nm-applet-WARNING **: 08:45:11.434: Failed to show notification: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.Notifications” on object at path /org/freedesktop/Notifications
+Cjs-Message: 08:45:11.662: JS LOG: [LookingGlass/info] Cinnamon.AppSystem.get_default() started in 251 ms
+Cjs-Message: 08:45:11.680: JS LOG: [LookingGlass/info] loading user theme: /usr/share/themes/Mint-Y-Dark/cinnamon/cinnamon.css
+Cjs-Message: 08:45:11.719: JS LOG: [LookingGlass/info] added icon directory: /usr/share/themes/Mint-Y-Dark/cinnamon
+cinnamon-session[1070]: WARNING: t+3,79516s: Detected that screensaver has appeared on the bus
+Cjs-Message: 08:45:11.967: JS LOG: [LookingGlass/info] loaded at Thu Feb 17 2022 08:45:11 GMT+0400 (heure de La Réunion)
+Cjs-Message: 08:45:11.967: JS LOG: Cinnamon started at Thu Feb 17 2022 08:45:11 GMT+0400 (heure de La Réunion)
+Cjs-Message: 08:45:11.987: JS LOG: [LookingGlass/info] ExtensionSystem started in 2 ms
+Cjs-Message: 08:45:11.987: JS LOG: [LookingGlass/info] NaNms
+Cjs-Message: 08:45:11.987: JS LOG: [LookingGlass/info] SearchProviderManager started in 1 ms
+openGL version 4.2 detected (GL3 Cogl Driver)
+MetaSyncRing disabled: couldn't find required GL extensions, or the minimum safe openGL version was not met
+Cjs-Message: 08:45:12.048: JS LOG: [LookingGlass/info] Role locked: tray
+Cjs-Message: 08:45:12.052: JS LOG: [LookingGlass/info] Loaded applet systray@cinnamon.org in 31 ms
+** Message: 08:45:12.060: nemo-desktop: session is cinnamon, establishing proxy
+Cjs-Message: 08:45:12.082: JS LOG: [LookingGlass/info] Loaded applet show-desktop@cinnamon.org in 29 ms
+Cjs-Message: 08:45:12.094: JS LOG: [LookingGlass/info] Loaded applet favorites@cinnamon.org in 12 ms
+Cjs-Message: 08:45:12.102: JS LOG: [LookingGlass/info] Loaded applet removable-drives@cinnamon.org in 8 ms
+St-Message: 08:45:12.106: cogl npot texture sizes SUPPORTED
+Cjs-Message: 08:45:12.114: JS LOG: [LookingGlass/info] Role locked: notifications
+Cjs-Message: 08:45:12.126: JS LOG: [LookingGlass/info] Loaded applet notifications@cinnamon.org in 24 ms
+Cjs-Message: 08:45:12.148: JS LOG: [LookingGlass/info] Loaded applet printers@cinnamon.org in 22 ms
+Cjs-Message: 08:45:12.176: JS LOG: [LookingGlass/info] Loaded applet keyboard@cinnamon.org in 28 ms
+Cjs-Message: 08:45:12.189: JS LOG: [LookingGlass/info] Loaded applet xapp-status@cinnamon.org in 13 ms
+Cjs-Message: 08:45:12.245: JS LOG: [LookingGlass/info] Loaded applet calendar@cinnamon.org in 56 ms
+Cjs-Message: 08:45:12.260: JS LOG: [LookingGlass/info] Role locked: panellauncher
+Cjs-Message: 08:45:12.274: JS LOG: [LookingGlass/info] Loaded applet grouped-window-list@cinnamon.org in 29 ms
+Cjs-Message: 08:45:12.309: JS LOG: [LookingGlass/info] Loaded applet power@cinnamon.org in 35 ms
+Cjs-Message: 08:45:12.323: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: nm-applet (:1.51/org/x/StatusIcon/Icon)
+
+** (csd-power:1185): CRITICAL **: 08:45:12.354: abs_to_percentage: assertion 'max > min' failed
+Cjs-Message: 08:45:12.385: JS LOG: [LookingGlass/info] Loaded applet sound@cinnamon.org in 75 ms
+Cjs-Message: 08:45:12.433: JS LOG: [LookingGlass/info] Hiding XAppStatusIcon (we have an applet): nm-applet (:1.51/org/x/StatusIcon/Icon)
+Cjs-Message: 08:45:12.447: JS LOG: [LookingGlass/info] Loaded applet network@cinnamon.org in 62 ms
+Cjs-Message: 08:45:12.626: JS LOG: [LookingGlass/info] Loaded applet menu@cinnamon.org in 179 ms
+Cjs-Message: 08:45:12.627: JS LOG: [LookingGlass/info] AppletManager started in 659 ms
+Cjs-Message: 08:45:12.631: JS LOG: [LookingGlass/info] Cinnamon took 1240 ms to start
+Cjs-Message: 08:45:12.666: JS LOG: Unknown network device type, is 14
+Cjs-Message: 08:45:15.961: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: blueberry (:1.72/org/x/StatusIcon/Icon)
+cinnamon-session[1070]: WARNING: t+13,79762s: Detected that screensaver has left the bus
+Cjs-Message: 08:45:32.443: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintUpdate.py (:1.75/org/x/StatusIcon/Icon)
+Cjs-Message: 08:45:52.023: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: mintreport (:1.78/org/x/StatusIcon/Icon)
+libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+Cjs-Message: 08:54:31.564: JS LOG: [LookingGlass/info] Adding XAppStatusIcon: :1.83 (:1.48/org/x/StatusIcon/Icon)
+(node:2801) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 spellcheck-result listeners added to [EventEmitter]. Use emitter.setMaxListeners() to increase limit
+(Use `exe --trace-warnings ...` to show where the warning was created)
+cinnamon-session[1070]: WARNING: t+5500,44137s: Detected that screensaver has appeared on the bus
+cinnamon-session[1070]: WARNING: t+6156,13989s: Detected that screensaver has left the bus
+Cjs-Message: 11:03:08.751: JS LOG: pushModal: invocation of begin_modal failed
+cinnamon-session[1070]: WARNING: t+11855,51498s: Detected that screensaver has appeared on the bus
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+cinnamon-session[1070]: WARNING: t+15429,05186s: Detected that screensaver has left the bus
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+cinnamon-session[1070]: WARNING: t+23590,27919s: Detected that screensaver has appeared on the bus
+cinnamon-session[1070]: WARNING: t+23693,80589s: Detected that screensaver has left the bus
+Cjs-Message: 15:38:56.674: JS LOG: [LookingGlass/error] ssid is null
+Cjs-Message: 15:38:56.675: JS LOG: [LookingGlass/trace] 
+<----------------
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+setActiveConnection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:438:14
+_syncActiveConnections@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2102:34
+_updateIcon@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2240:18
+---------------->
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:56.683: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:56.691: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:56.744: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:59.789: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:59.801: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 15:38:59.809: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+** Message: 15:53:39.855: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found during hotplug or laptop lid event. Looking for legacy configuration (monitors.xml)
+cinnamon-session[1070]: WARNING: t+25711,17102s: Detected that screensaver has appeared on the bus
+** Message: 08:48:40.288: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found during hotplug or laptop lid event. Looking for legacy configuration (monitors.xml)
+Cjs-Message: 08:48:43.842: JS LOG: [LookingGlass/error] ssid is null
+Cjs-Message: 08:48:43.842: JS LOG: [LookingGlass/trace] 
+<----------------
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+setActiveConnection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:438:14
+_syncActiveConnections@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2102:34
+_updateIcon@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2240:18
+---------------->
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:43.847: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:43.854: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:43.891: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:47.018: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:47.026: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 08:48:47.031: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+cinnamon-session[1070]: WARNING: t+25739,76219s: Detected that screensaver has left the bus
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+[Updates] Error fetching https://discord.com/api/updates/stable?platform=linux&version=0.0.16: Hostname/IP does not match certificate's altnames: Host: discord.com. is not in the cert's altnames: DNS:controller.access.network, DNS:central.access.network, DNS:wifiaccess.co
+cinnamon-session[1070]: WARNING: t+30933,43654s: Detected that screensaver has appeared on the bus
+** Message: 10:28:16.885: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found during hotplug or laptop lid event. Looking for legacy configuration (monitors.xml)
+** Message: 10:29:51.456: Existing monitor config (/home/steph/.config/cinnamon-monitors.xml) not found during hotplug or laptop lid event. Looking for legacy configuration (monitors.xml)
+Cjs-Message: 10:29:55.016: JS LOG: [LookingGlass/error] ssid is null
+Cjs-Message: 10:29:55.016: JS LOG: [LookingGlass/trace] 
+<----------------
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+setActiveConnection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:438:14
+_syncActiveConnections@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2102:34
+_updateIcon@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:2240:18
+---------------->
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:55.020: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:55.024: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:55.095: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:58.126: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:58.131: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+
+(cinnamon:1345): Cjs-CRITICAL **: 10:29:58.135: JS ERROR: TypeError: ssid is null
+ssidToLabel@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:87:17
+_init@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:113:21
+NMNetworkMenuItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:94:16
+_createAPItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1409:20
+_createNetworkItem@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1596:35
+_createSection@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:1650:18
+_deviceStateChanged@/usr/share/cinnamon/applets/network@cinnamon.org/applet.js:672:14
+
+cinnamon-session[1070]: WARNING: t+31713,77087s: Detected that screensaver has left the bus
+cinnamon-session[1070]: WARNING: t+37208,22477s: Detected that screensaver has appeared on the bus
+cinnamon-session[1070]: WARNING: t+40346,75692s: Detected that screensaver has left the bus
+libva error: /usr/lib/x86_64-linux-gnu/dri/iHD_drv_video.so init failed
+cinnamon-session[1070]: WARNING: t+47936,19526s: Detected that screensaver has appeared on the bus
+cinnamon-session[1070]: WARNING: t+48705,45878s: Detected that screensaver has left the bus
+Cjs-Message: 15:55:13.470: JS LOG: [LookingGlass/info] Removing XAppStatusIcon: discord (:1.48/org/x/StatusIcon/Icon)
+cinnamon-session[1070]: WARNING: t+51216,43381s: Playing logout sound '/usr/share/mint-artwork/sounds/logout.ogg'
+Cjs-Message: 15:55:13.523: JS LOG: [LookingGlass/info] Removing XAppStatusIcon: blueberry (:1.72/org/x/StatusIcon/Icon)
+cinnamon-session[1070]: WARNING: t+51216,53537s: Finished playing logout sound
+cinnamon-session[1070]: WARNING: t+51216,53549s: Resuming logout sequence...
+Cjs-Message: 15:55:13.817: JS LOG: [LookingGlass/info] Adding systray: discord1 (24x24px)
+Cjs-Message: 15:55:13.818: JS LOG: [LookingGlass/info] Resized discord1 with normalized size (24x24px)
+cinnamon-session[1070]: WARNING: t+51217,48515s: Requesting system shutdown...
+cinnamon-session[1070]: WARNING: t+51217,48535s: Attempting to shutdown using systemd...
+cinnamon-session[1070]: WARNING: t+51217,62476s: Application 'cinnamon-settings-daemon-clipboard.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78935s: Application 'cinnamon-settings-daemon-housekeeping.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78947s: Application 'cinnamon-settings-daemon-power.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78951s: Application 'cinnamon-settings-daemon-mouse.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78954s: Application 'cinnamon-settings-daemon-background.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78957s: Application 'cinnamon-settings-daemon-orientation.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78961s: Application 'cinnamon-settings-daemon-print-notifications.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78964s: Application 'cinnamon-settings-daemon-a11y-keyboard.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78968s: Application 'cinnamon-settings-daemon-media-keys.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78972s: Application 'cinnamon-settings-daemon-automount.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,78975s: Application 'cinnamon-settings-daemon-xsettings.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79755s: Application 'cinnamon-settings-daemon-keyboard.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79761s: Application 'cinnamon-settings-daemon-screensaver-proxy.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79764s: Application 'cinnamon-settings-daemon-a11y-settings.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79767s: Application 'cinnamon-settings-daemon-sound.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79771s: Application 'cinnamon-settings-daemon-wacom.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,79774s: Application 'cinnamon-settings-daemon-xrandr.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,80400s: Application 'cinnamon-settings-daemon-cursor.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,81449s: Application 'cinnamon-settings-daemon-color.desktop' killed by signal 15
+cinnamon-session[1070]: WARNING: t+51217,81458s: Application 'cinnamon.desktop' killed by signal 15
+[2676:0218/155515.046359:FATAL:gpu_data_manager_impl_private.cc(415)] GPU process isn't usable. Goodbye.
+--2022-02-18 15:55:15--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Résolution de sentry.io (sentry.io)... 35.188.42.15
+Connexion vers sentry.io (sentry.io)|35.188.42.15|:443... connecté.
+ERREUR : le nom alternatif du certificat ne concorde pas
+	avec le nom de l'hôte demandé «sentry.io».
+Pour établir une connexion à sentry.io non sécurisée, utiliser `--no-check-certificate'.
+
+Unexpected crash report id length
+Failed to get crash dump id.
+Report Id: 
+--2022-02-18 15:55:15--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Résolution de sentry.io (sentry.io)... 35.188.42.15
+Connexion vers sentry.io (sentry.io)|35.188.42.15|:443... connecté.
+ERREUR : le nom alternatif du certificat ne concorde pas
+	avec le nom de l'hôte demandé «sentry.io».
+Pour établir une connexion à sentry.io non sécurisée, utiliser `--no-check-certificate'.
+
+Unexpected crash report id length
+Failed to get crash dump id.
+Report Id: 
+Unable to init server: Could not connect: Connection refused
+Unable to init server: Impossible de se connecter : Connection refused
+Unable to init server: Impossible de se connecter : Connexion refusée
+Cinnamon error: Unable to open X display :0
+
+(metacity:37562): metacity-CRITICAL **: 15:55:16.211: Unable to open X display :0
+Unable to init server: Impossible de se connecter : Connexion refusée
+
+(mate-panel:37564): Gtk-WARNING **: 15:55:16.211: cannot open display: :0
+Traceback (most recent call last):
+  File "/usr/bin/cinnamon-launcher", line 120, in confirm_restart
+    d = Gtk.MessageDialog(title=None, parent=None, flags=0, message_type=Gtk.MessageType.WARNING)
+  File "/usr/lib/python3/dist-packages/gi/overrides/__init__.py", line 319, in new_init
+    return super_init_func(self, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/Gtk.py", line 577, in __init__
+    self._init(*args, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/__init__.py", line 319, in new_init
+    return super_init_func(self, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/Gtk.py", line 520, in __init__
+    raise RuntimeError(
+RuntimeError: Gtk couldn't be initialized. Use Gtk.init_check() if you want to handle this case.
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 153, in apport_excepthook
+    with os.fdopen(os.open(pr_filename,
+FileNotFoundError: [Errno 2] Aucun fichier ou dossier de ce type: '/var/crash/_usr_bin_cinnamon-launcher.1001.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/usr/bin/cinnamon-launcher", line 120, in confirm_restart
+    d = Gtk.MessageDialog(title=None, parent=None, flags=0, message_type=Gtk.MessageType.WARNING)
+  File "/usr/lib/python3/dist-packages/gi/overrides/__init__.py", line 319, in new_init
+    return super_init_func(self, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/Gtk.py", line 577, in __init__
+    self._init(*args, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/__init__.py", line 319, in new_init
+    return super_init_func(self, **new_kwargs)
+  File "/usr/lib/python3/dist-packages/gi/overrides/Gtk.py", line 520, in __init__
+    raise RuntimeError(
+RuntimeError: Gtk couldn't be initialized. Use Gtk.init_check() if you want to handle this case.

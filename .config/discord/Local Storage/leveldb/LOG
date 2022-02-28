@@ -1,0 +1,69 @@
+2022/02/21-11:50:28.793 4279 Reusing MANIFEST /home/steph/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2022/02/21-11:50:28.793 4279 Recovering log #74
+2022/02/21-11:50:28.793 4279 Reusing old log /home/steph/.config/discord/Local Storage/leveldb/000074.log 
+2022/02/21-11:57:23.080 4319 Level-0 table #78: started
+2022/02/21-11:57:23.116 4319 Level-0 table #78: 331262 bytes OK
+2022/02/21-11:57:23.121 4319 Delete type=0 #74
+2022/02/21-15:20:06.854 4319 Level-0 table #80: started
+2022/02/21-15:20:06.861 4319 Level-0 table #80: 9730 bytes OK
+2022/02/21-15:20:06.865 4319 Delete type=0 #77
+2022/02/22-09:33:44.763 4316 Level-0 table #82: started
+2022/02/22-09:33:44.785 4316 Level-0 table #82: 12244 bytes OK
+2022/02/22-09:33:44.788 4316 Delete type=0 #79
+2022/02/22-09:33:44.788 4316 Compacting 4@0 + 1@1 files
+2022/02/22-09:33:44.796 4316 Generated table #83@0: 68 keys, 334245 bytes
+2022/02/22-09:33:44.796 4316 Compacted 4@0 + 1@1 files => 334245 bytes
+2022/02/22-09:33:44.799 4316 compacted to: files[ 0 1 0 0 0 0 0 ]
+2022/02/22-09:33:44.800 4316 Delete type=2 #72
+2022/02/22-09:33:44.800 4316 Delete type=2 #75
+2022/02/22-09:33:44.800 4316 Delete type=2 #80
+2022/02/22-09:33:44.800 4316 Delete type=2 #82
+2022/02/22-09:33:44.800 4316 Delete type=2 #78
+2022/02/22-10:26:15.030 4313 Level-0 table #85: started
+2022/02/22-10:26:15.037 4313 Level-0 table #85: 11052 bytes OK
+2022/02/22-10:26:15.041 4313 Delete type=0 #81
+2022/02/22-11:42:03.098 4313 Level-0 table #87: started
+2022/02/22-11:42:03.104 4313 Level-0 table #87: 9959 bytes OK
+2022/02/22-11:42:03.108 4313 Delete type=0 #84
+2022/02/22-14:00:17.136 4319 Level-0 table #89: started
+2022/02/22-14:00:17.141 4319 Level-0 table #89: 11676 bytes OK
+2022/02/22-14:00:17.145 4319 Delete type=0 #86
+2022/02/22-15:24:28.391 4319 Level-0 table #91: started
+2022/02/22-15:24:28.398 4319 Level-0 table #91: 9283 bytes OK
+2022/02/22-15:24:28.401 4319 Delete type=0 #88
+2022/02/22-15:24:28.401 4319 Compacting 4@0 + 1@1 files
+2022/02/22-15:24:28.410 4319 Generated table #92@0: 68 keys, 334339 bytes
+2022/02/22-15:24:28.410 4319 Compacted 4@0 + 1@1 files => 334339 bytes
+2022/02/22-15:24:28.414 4319 compacted to: files[ 0 1 0 0 0 0 0 ]
+2022/02/22-15:24:28.415 4319 Delete type=2 #91
+2022/02/22-15:24:28.415 4319 Delete type=2 #85
+2022/02/22-15:24:28.415 4319 Delete type=2 #87
+2022/02/22-15:24:28.415 4319 Delete type=2 #89
+2022/02/22-15:24:28.415 4319 Delete type=2 #83
+2022/02/23-08:24:51.980 4319 Level-0 table #94: started
+2022/02/23-08:24:51.986 4319 Level-0 table #94: 10067 bytes OK
+2022/02/23-08:24:51.991 4319 Delete type=0 #90
+2022/02/23-09:16:09.727 4319 Level-0 table #96: started
+2022/02/23-09:16:09.776 4319 Level-0 table #96: 11513 bytes OK
+2022/02/23-09:16:09.780 4319 Delete type=0 #93
+2022/02/23-10:36:41.680 4316 Level-0 table #98: started
+2022/02/23-10:36:41.726 4316 Level-0 table #98: 9762 bytes OK
+2022/02/23-10:36:41.730 4316 Delete type=0 #95
+2022/02/23-11:53:02.688 4316 Level-0 table #100: started
+2022/02/23-11:53:02.694 4316 Level-0 table #100: 10279 bytes OK
+2022/02/23-11:53:02.697 4316 Delete type=0 #97
+2022/02/23-11:53:02.698 4316 Compacting 4@0 + 1@1 files
+2022/02/23-11:53:02.708 4316 Generated table #101@0: 72 keys, 334693 bytes
+2022/02/23-11:53:02.708 4316 Compacted 4@0 + 1@1 files => 334693 bytes
+2022/02/23-11:53:02.712 4316 compacted to: files[ 0 1 0 0 0 0 0 ]
+2022/02/23-11:53:02.712 4316 Delete type=2 #96
+2022/02/23-11:53:02.712 4316 Delete type=2 #94
+2022/02/23-11:53:02.712 4316 Delete type=2 #98
+2022/02/23-11:53:02.712 4316 Delete type=2 #100
+2022/02/23-11:53:02.712 4316 Delete type=2 #92
+2022/02/25-08:42:18.331 4313 Level-0 table #103: started
+2022/02/25-08:42:18.342 4313 Level-0 table #103: 339533 bytes OK
+2022/02/25-08:42:18.346 4313 Delete type=0 #99
+2022/02/25-11:03:58.348 4319 Level-0 table #105: started
+2022/02/25-11:03:58.354 4319 Level-0 table #105: 10465 bytes OK
+2022/02/25-11:03:58.358 4319 Delete type=0 #102

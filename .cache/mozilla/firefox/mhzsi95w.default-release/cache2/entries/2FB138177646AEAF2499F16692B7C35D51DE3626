@@ -1,0 +1,1730 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr" id="vbulletin_html">
+<head>
+<base href="https://www.developpez.net/forums/" /><!--[if IE]></base><![endif]-->
+	<link rel="amphtml" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="https://www.developpez.net/forums" />
+
+<meta name="generator" content="vBulletin 4.2.2" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="https://www.developpez.net/forums/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'https://forum.developpez.be/clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "s=560e66431b298dc1dec42cbba3d80f00&";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "https://forum.developpez.be/images/misc";
+	var IMGDIR_BUTTON = "https://forum.developpez.be/images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "https://www.developpez.net/forums";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?t=274746";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "https://www.developpez.net/forums/";
+// -->
+</script>
+<script type="text/javascript" src="https://forum.developpez.be/clientscript/vbulletin-core.js?v=422"></script>
+<script type="text/javascript" src="https://gabarit.developpez.be/scripts/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/anokha_showthread.js?=1643642533"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" async="true">
+(function() {
+    var host = 'www.developpez.net';
+    var element = document.createElement('script');
+    var firstScript = document.getElementsByTagName('script')[0];
+    var url = 'https://quantcast.mgr.consensu.org'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
+    var uspTries = 0;
+    var uspTriesLimit = 3;
+    element.async = true;
+    element.type = 'text/javascript';
+    element.src = url;
+
+    firstScript.parentNode.insertBefore(element, firstScript);
+
+    function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+
+        function addFrame() {
+            var doc = win.document;
+            var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+            if (!otherCMP) {
+                if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                } else {
+                    setTimeout(addFrame, 5);
+                }
+            }
+            return !otherCMP;
+        }
+
+        function tcfAPIHandler() {
+            var gdprApplies;
+            var args = arguments;
+
+            if (!args.length) {
+                return queue;
+            } else if (args[0] === 'setGdprApplies') {
+                if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                        args[2]('set', true);
+                    }
+                }
+            } else if (args[0] === 'ping') {
+                var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                };
+
+                if (typeof args[2] === 'function') {
+                    args[2](retr);
+                }
+            } else {
+                queue.push(args);
+            }
+        }
+
+        function postMessageEventHandler(event) {
+            var msgIsString = typeof event.data === 'string';
+            var json = {};
+
+            try {
+                if (msgIsString) {
+                    json = JSON.parse(event.data);
+                } else {
+                    json = event.data;
+                }
+            } catch (ignore) {}
+
+            var payload = json.__tcfapiCall;
+
+            if (payload) {
+                window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                        var returnMsg = {
+                            tcfapiReturn: {
+                                returnValue: retValue,
+                                success: success,
+                                callId: payload.callId
+                            }
+                        };
+                        if (msgIsString) {
+                            returnMsg = JSON.stringify(returnMsg);
+                        }
+                        if (event && event.source && event.source.postMessage) {
+							event.source.postMessage(returnMsg, '*');
+                        }
+                    },
+                    payload.parameter
+                );
+            }
+        }
+
+        while (win) {
+            try {
+                if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                }
+            } catch (ignore) {}
+
+            if (win === window.top) {
+                break;
+            }
+            win = win.parent;
+        }
+        if (!cmpFrame) {
+            addFrame();
+            win.__tcfapi = tcfAPIHandler;
+            win.addEventListener('message', postMessageEventHandler, false);
+        }
+    };
+
+    if (typeof module !== 'undefined') {
+        module.exports = makeStub;
+    } else {
+        makeStub();
+    }
+
+    var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+            setTimeout(function() {
+                if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                }
+            }, 500);
+        }
+    };
+
+    var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+            console.warn('USP is not accessible');
+        } else {
+            clearInterval(uspInterval);
+        }
+    };
+
+    if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+    }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" src="/forums/clientscript/ano_votes.js?2"></script>
+
+
+
+	<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2" />
+	
+		<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro - Général JavaScript - Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2&amp;forumids=23" />
+	
+
+
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+	<script type="text/javascript" src="/template/scripts/gabarit-forum.js?1630596300"></script>
+	<link rel="stylesheet" type="text/css" href="/template/css/gabarit.css?1630596300" />
+	<link rel="stylesheet" type="text/css" href="https://forum.developpez.be/clientscript/kha_blogs.css" />
+
+	<!--[if lt IE 7]>
+	<script src="https://gabarit.developpez.be/ie7/IE7.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie6.css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie7.css" />
+	<![endif]-->
+
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie8.css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://gabarit.developpez.be/kit/html5_ie.js"></script>
+	<![endif]-->
+
+<script type="text/javascript">
+sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;
+function SmartAdServer(sas_pageid,sas_formatid,sas_target) {
+ if (sas_masterflag==1) {sas_masterflag=0;sas_master='M';} else {sas_master='S';};
+ document.write('<scr'+'ipt src="https://www.smartadserver.com/call/pubj/' + sas_pageid + '/' + sas_formatid + '/' + sas_master + '/' + sas_tmstp + '/' + escape(sas_target) + '?"></scr'+'ipt>');
+}
+</script>
+	<meta name="keywords" content="DEBUTANT,soustraction,javascript,parseintthis.rng.nextint255, this.randombyte, aussi, rien, tout, retoiurne, quelauun, idee, absolument, valeur, marche, =parseintthis.rng.nextint255, paraitre, question, peut, essaye, salut, [debutant], soustraction, parseint128, javascript, this.randombyte-=128" />
+	<meta name="description" content="La question peut paraitre con mais j'ai essaye Code : - 1 2 &nbsp; this .randomByte = parseInt &#40; this .rng. nextInt &#40; 255 &#41; &#41; - parseInt &#40; &quot;128&quot; &#41; et aussi : Code : - 1 2 &nbsp;" />
+
+	<title> [DEBUTANT] soustraction en javascript ? - JavaScript</title>
+	<script type="application/ld+json">[{"@context":"https://schema.org","@type":"DiscussionForumPosting","@id":"https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/","headline":"[DEBUTANT] soustraction en javascript ? - JavaScript","image":"https://www.developpez.com/images/logos/js.png","datePublished":"2007-02-05T18:51:29+01:00","dateModified":"2007-02-06T10:19:50+01:00","discussionUrl":"https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/","sameAs":["https://twitter.com/Developpez","https://fr.linkedin.com/company/developpez.com","https://www.facebook.com/Developpez"],"articleSection":"[DEBUTANT] soustraction en javascript ?","articleBody":"Salut,<br />\r\nLa question peut paraitre con mais j'ai essaye<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:60px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">this</span>.randomByte = <span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span> - <span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #FF0000;\">&quot;128&quot;</span><span class=\"br0\">&#41;</span></pre></td></tr></table></pre>\r\n</div>et aussi :<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:60px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">this</span>.randomByte = <span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span> - <span style=\"color: #cc66cc;\">128</span></pre></td></tr></table></pre>\r\n</div>et aussi :<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:60px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">this</span>.randomByte = <span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span> + <span class=\"br0\">&#40;</span>- <span style=\"color: #cc66cc;\">128</span><span class=\"br0\">&#41;</span></pre></td></tr></table></pre>\r\n</div>et aussi :<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:60px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">this</span>.randomByte = <span style=\"color: #cc66cc;\">-128</span> + <span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span></pre></td></tr></table></pre>\r\n</div>et aussi :<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:72px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"26\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">this</span>.randomByte =<span style=\"color: #0080ff;\">parseInt</span><span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span><span class=\"br0\">&#41;</span>  \n<span style=\"color: #0000ff;\">this</span>.randomByte-=<span style=\"color: #cc66cc;\">128</span></pre></td></tr></table></pre>\r\n</div>Absolument rien de tout ca ne marche !<br />\r\n<br />\r\nparseInt(this.rng.nextInt(255))  retoiurne une valeur int de 0 a 255<br />\r\n quelau'un a une idee ?","author":{"@type":"Person","@id":"https://www.developpez.net/forums/u/-/","name":"Battosaiii"},"publisher":{"@type":"Organization","name":"Developpez.com","logo":{"@type":"ImageObject","url":"https://www.developpez.com/logos/images_actu/logo-dvp-150x43-fond-blanc.png"}},"interactionStatistic":{"@type":"InteractionCounter","interactionType":"https://schema.org/ReplyAction","userInteractionCount":"3"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.developpez.net/forums/f23/javascript/general-javascript/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forum","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/"},{"@type":"ListItem","position":2,"name":"JavaScript","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f2000/javascript/"},{"@type":"ListItem","position":3,"name":"G\u00e9n\u00e9ral JavaScript","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f23/javascript/general-javascript/"}]},{"@context":"https://schema.org","@type":"ItemList","numberOfItems":3,"itemListElement":[{"@type":"Comment","position":1,"url":"https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1731618","dateCreated":"2007-02-05T22:12:41+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u36505/auteur/","name":"Auteur"},"text":"bonjour,<br />\r\n<br />\r\npeux-tu nous dire ce qu'est :<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:36px;\"><span style=\"color: #0000ff;\">this</span>.rng.<span style=\"color: #0080ff;\">nextInt</span><span class=\"br0\">&#40;</span><span style=\"color: #cc66cc;\">255</span><span class=\"br0\">&#41;</span></pre>\r\n</div><img src=\"images/smilies/icon_question.gif\" border=\"0\" alt=\"\" title=\":question:\" class=\"inlineimg\" /><br />\r\nd'apr\u00e8s mes recherches nextInt est une instruction Java et non Javascript."},{"@type":"Comment","position":2,"url":"https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1732231","dateCreated":"2007-02-06T09:54:36+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u/-/","name":"Battosaiii"},"text":"A l'aide de Rhino on peut inclure des objets java en javascript... mais l'interieur de parseInt n'a pas d'importance ..."},{"@type":"Comment","position":3,"url":"https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1732340","dateCreated":"2007-02-06T10:19:50+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u/-/","name":"Battosaiii"},"text":"La solution nc'etait de faire : parseInt(this.rng.nextInt(255) - 128)"}]}]</script>
+	<link rel="canonical" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=additional.css" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools.css,toolsmenu.css" />
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools-ie.css" />
+<![endif]-->
+</head>
+
+<body>
+
+	<header>
+
+	<div id="gabarit_b1">
+		<div id="gabarit_connexion">
+	<form>
+		<div><span>Identifiant</span><input type="text" class="form_input form-control" id="formloginConnexion" /><span>Mot de passe</span><input type="password" class="form_input form-control" id="formpassConnexion"/><input type="button" value="Connexion" id="formbuttonConnexion" class="btn btn-primary" /><div id="loadingConnexion" class="spinner-border text-light" role="status"><span class="sr-only">Loading...</span></div></div><a rel="nofollow" id="mdpoublier" href="http://www.developpez.net/forums/login.php?do=lostpw">Mot de passe oublié ?</a><a id="inscriptionConnexion" href="https://www.developpez.net/forums/inscription/" class="btn btn-primary">Je m'inscris ! (gratuit)</a>	
+	</form>
+</div>		<div id="gabarit-barreRecherche" style="display:none;"><form action="https://www.google.fr" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-8110924381468607:6449306375" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="12" />
+    <input type="submit" name="sa" value="Rechercher" />
+  </div>
+</form></div>
+<div id="gabarit-new-logo" role="gabarit-accueil">
+	<a href="https://www.developpez.com"><img src="/template/images/logo-dvp-h55.png" alt="logo dvp" width="48" height="55" /></a>
+	<a href="https://www.developpez.com"><span class="dvp"></span></a>
+	<span class="triangle"></span>
+</div>
+<div id="gabarit_recherche">
+	<div class="gabarit-btn-menu profil dn" role="gabarit-profil"></div>
+	<div class="gabarit-btn-menu profil dn" role="gabarit-connecter"><span></span><a id="gabaritRepereLogout" class="btn btn-primary"></a></div>
+	<div class="gabarit-btn-menu contacts" role="gabarit-contacts"></div>
+	<div class="gabarit-btn-menu recherche" role="gabarit-recherche"></div>
+</div>
+
+<div id="gabarit_superieur">
+	<nav>
+	<ul>
+		<li><a href="https://www.developpez.net/forums/" title="">Forums</a></li>
+		<li><a href="https://general.developpez.com/cours/" title="">Tutoriels</a></li>
+		<li><a href="https://general.developpez.com/faq/" title="">FAQ</a></li>
+		<li><a href="https://www.developpez.net/forums/blogs/" title="">Blogs</a></li>
+		<li><a href="https://chat.developpez.com/" title="">Chat</a></li>
+		<li><a href="https://www.developpez.com/newsletter/">Newsletter</a></li>
+		<li><a href="https://emploi.developpez.com/" title="">Emploi</a></li>
+		<li><a href="https://etudes.developpez.com/">Études</a></li>
+		<li><a href="https://droit.developpez.com/" title="">Droit</a></li>
+		<li><a href="https://club.developpez.com/">Club</a></li>
+	</ul>
+	</nav>
+</div>	</div>
+	<nav>
+
+<ul id="gabarit_menu" style="padding-left:56px;">
+	<li><a href="https://www.developpez.com" data-idrub="1" data-niv="1" style="padding:0;"><div id="gabarit_home"></div></a>
+			</li>
+	<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="1">DI/DSI Solutions d&#039;entreprise<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="2">DI/DSI Solutions d&#039;entreprise</a></li>
+				<li><a href="https://abbyy.developpez.com" data-idrub="147" data-niv="2">ABBYY</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://bpm.developpez.com" data-idrub="134" data-niv="2">BPM</a></li>
+				<li><a href="https://business-intelligence.developpez.com" data-idrub="61" data-niv="2">Business Intelligence</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://solutions-entreprise.developpez.com/erp-pgi/presentation-erp-pgi/" data-idrub="91" data-niv="2">ERP / PGI</a></li>
+				<li><a href="https://crm.developpez.com" data-idrub="92" data-niv="2">CRM</a></li>
+				<li><a href="https://sas.developpez.com" data-idrub="93" data-niv="2">SAS</a></li>
+				<li><a href="https://sap.developpez.com" data-idrub="106" data-niv="2">SAP</a></li>
+				<li><a href="https://www.developpez.net/forums/f1664/systemes/windows/windows-serveur/biztalk-server/" data-idrub="115" data-niv="2">Microsoft BizTalk Server</a></li>
+				<li><a href="https://talend.developpez.com" data-idrub="118" data-niv="2">Talend</a></li>
+				<li><a href="https://droit.developpez.com" data-idrub="132" data-niv="2">Droit informatique et entreprise</a></li>
+			</ul></li>
+	<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="1">Cloud<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="2">Cloud Computing</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+				<li><a href="https://ibmcloud.developpez.com" data-idrub="135" data-niv="2">IBM Cloud</a></li>
+			</ul></li>
+	<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="1">IA<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="2">Intelligence artificielle</a></li>
+			</ul></li>
+	<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="1">ALM<!--<span class="gabarit_tooltip">Cycle de vie du logiciel</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="2">ALM</a></li>
+				<li><a href="https://agile.developpez.com" data-idrub="146" data-niv="2">Agile</a></li>
+				<li><a href="https://merise.developpez.com" data-idrub="43" data-niv="2">Merise</a></li>
+				<li><a href="https://uml.developpez.com" data-idrub="12" data-niv="2">UML</a></li>
+			</ul></li>
+	<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="1">Microsoft<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="2">Microsoft</a></li>
+				<li><a href="https://dotnet.developpez.com" data-idrub="20" data-niv="2">.NET</a></li>
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://dotnet.developpez.com/aspnet/" data-idrub="83" data-niv="2">ASP.NET</a></li>
+				<li><a href="https://dotnet.developpez.com/csharp/" data-idrub="81" data-niv="2">C#</a></li>
+				<li><a href="https://dotnet.developpez.com/vbnet/" data-idrub="82" data-niv="2">VB.NET</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+			</ul></li>
+	<li><a href="https://java.developpez.com" data-idrub="4" data-niv="1">Java<!--<span class="gabarit_tooltip">Plateforme et langage Java</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://java.developpez.com" data-idrub="4" data-niv="2">Java</a></li>
+				<li><a href="https://javaweb.developpez.com" data-idrub="97" data-niv="2">Java Web</a></li>
+				<li><a href="https://spring.developpez.com" data-idrub="87" data-niv="2">Spring</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+			</ul></li>
+	<li><a href="https://web.developpez.com" data-idrub="8" data-niv="1" class="gabarit_selection">Dév. Web<!--<span class="gabarit_tooltip">Développement Web et Webmarketing</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://web.developpez.com" data-idrub="8" data-niv="2">Développement et hébergement Web</a></li>
+				<li><a href="https://ajax.developpez.com" data-idrub="85" data-niv="2">AJAX</a></li>
+				<li><a href="https://apache.developpez.com" data-idrub="71" data-niv="2">Apache</a></li>
+				<li><a href="https://asp.developpez.com" data-idrub="10" data-niv="2">ASP</a></li>
+				<li><a href="https://css.developpez.com" data-idrub="51" data-niv="2">CSS</a></li>
+				<li><a href="https://dart.developpez.com" data-idrub="125" data-niv="2">Dart</a></li>
+				<li><a href="https://flash.developpez.com" data-idrub="41" data-niv="2">Flash / Flex</a></li>
+				<li><a href="https://javascript.developpez.com" data-idrub="45" data-niv="2">JavaScript</a></li>
+				<li><a href="https://nodejs.developpez.com" data-idrub="141" data-niv="2">NodeJS</a></li>
+				<li><a href="https://php.developpez.com" data-idrub="9" data-niv="2">PHP</a></li>
+				<li><a href="https://ruby.developpez.com" data-idrub="53" data-niv="2">Ruby &amp; Rails</a></li>
+				<li><a href="https://typescript.developpez.com" data-idrub="127" data-niv="2">TypeScript</a></li>
+				<li><a href="https://web-semantique.developpez.com" data-idrub="111" data-niv="2">Web sémantique</a></li>
+				<li><a href="https://webmarketing.developpez.com" data-idrub="80" data-niv="2">Webmarketing</a></li>
+				<li><a href="https://xhtml.developpez.com" data-idrub="50" data-niv="2">(X)HTML</a></li>
+			</ul></li>
+	<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="1">EDI<!--<span class="gabarit_tooltip">Environnements de Développement Intégré</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="2">EDI</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://delphi.developpez.com" data-idrub="2" data-niv="2">Delphi</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://jetbrains.developpez.com" data-idrub="144" data-niv="2">JetBrains</a></li>
+				<li><a href="https://labview.developpez.com" data-idrub="72" data-niv="2">LabVIEW</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+				<li><a href="https://matlab.developpez.com" data-idrub="58" data-niv="2">MATLAB</a></li>
+				<li><a href="https://scilab.developpez.com" data-idrub="120" data-niv="2">Scilab</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://wind.developpez.com" data-idrub="74" data-niv="2">WinDev</a></li>
+				<li><a href="https://vb.developpez.com" data-idrub="5" data-niv="2">Visual Basic 6</a></li>
+				<li><a href="https://lazarus.developpez.com" data-idrub="96" data-niv="2">Lazarus</a></li>
+				<li><a href="https://qt-creator.developpez.com" data-idrub="109" data-niv="2">Qt Creator</a></li>
+			</ul></li>
+	<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="1">Programmation<!--<span class="gabarit_tooltip">Programmation et langages de programmation applicatifs</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="2">Programmation</a></li>
+				<li><a href="https://algo.developpez.com" data-idrub="47" data-niv="2">Débuter - Algorithmique</a></li>
+				<li><a href="https://jeux.developpez.com" data-idrub="38" data-niv="2">2D - 3D - Jeux</a></li>
+				<li><a href="https://asm.developpez.com" data-idrub="16" data-niv="2">Assembleur</a></li>
+				<li><a href="https://c.developpez.com" data-idrub="3" data-niv="2">C</a></li>
+				<li><a href="https://cpp.developpez.com" data-idrub="59" data-niv="2">C++</a></li>
+				<li><a href="https://d.developpez.com" data-idrub="123" data-niv="2">D</a></li>
+				<li><a href="https://go.developpez.com" data-idrub="124" data-niv="2">Go</a></li>
+				<li><a href="https://kotlin.developpez.com" data-idrub="145" data-niv="2">Kotlin</a></li>
+				<li><a href="https://objective-c.developpez.com" data-idrub="117" data-niv="2">Objective C</a></li>
+				<li><a href="https://pascal.developpez.com" data-idrub="7" data-niv="2">Pascal</a></li>
+				<li><a href="https://perl.developpez.com" data-idrub="29" data-niv="2">Perl</a></li>
+				<li><a href="https://python.developpez.com" data-idrub="27" data-niv="2">Python</a></li>
+				<li><a href="https://rust.developpez.com" data-idrub="137" data-niv="2">Rust</a></li>
+				<li><a href="https://swift.developpez.com" data-idrub="128" data-niv="2">Swift</a></li>
+				<li><a href="https://qt.developpez.com" data-idrub="65" data-niv="2">Qt</a></li>
+				<li><a href="https://xml.developpez.com" data-idrub="11" data-niv="2">XML</a></li>
+				<li><a href="https://general.developpez.com/cours/" data-idrub="21" data-niv="2">Autres</a></li>
+			</ul></li>
+	<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="1">SGBD<!--<span class="gabarit_tooltip">Systèmes de Gestion de Bases de Données</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="2">SGBD &amp; SQL</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://db2.developpez.com" data-idrub="36" data-niv="2">DB2</a></li>
+				<li><a href="https://firebird.developpez.com" data-idrub="73" data-niv="2">Firebird</a></li>
+				<li><a href="https://interbase.developpez.com" data-idrub="32" data-niv="2">InterBase</a></li>
+				<li><a href="https://mysql.developpez.com" data-idrub="31" data-niv="2">MySQL</a></li>
+				<li><a href="https://nosql.developpez.com" data-idrub="114" data-niv="2">NoSQL</a></li>
+				<li><a href="https://postgresql.developpez.com" data-idrub="33" data-niv="2">PostgreSQL</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://sybase.developpez.com" data-idrub="37" data-niv="2">Sybase</a></li>
+				<li><a href="https://sqlserver.developpez.com" data-idrub="34" data-niv="2">SQL-Server</a></li>
+				<li><a href="https://mongodb.developpez.com" data-idrub="148" data-niv="2">MongoDB</a></li>
+			</ul></li>
+	<li><a href="https://office.developpez.com" data-idrub="54" data-niv="1">Office<!--<span class="gabarit_tooltip">Bureautique pour l'entreprise</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://excel.developpez.com" data-idrub="75" data-niv="2">Excel</a></li>
+				<li><a href="https://word.developpez.com" data-idrub="76" data-niv="2">Word</a></li>
+				<li><a href="https://outlook.developpez.com" data-idrub="77" data-niv="2">Outlook</a></li>
+				<li><a href="https://powerpoint.developpez.com" data-idrub="78" data-niv="2">PowerPoint</a></li>
+				<li><a href="https://sharepoint.developpez.com" data-idrub="79" data-niv="2">SharePoint</a></li>
+				<li><a href="https://project.developpez.com" data-idrub="99" data-niv="2">Microsoft Project</a></li>
+				<li><a href="https://openoffice-libreoffice.developpez.com" data-idrub="116" data-niv="2">OpenOffice &amp; LibreOffice</a></li>
+			</ul></li>
+	<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="1">Mobiles<!--<span class="gabarit_tooltip">Logiciels et matériels mobiles</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="2">Mobiles</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://ios.developpez.com" data-idrub="101" data-niv="2">iOS</a></li>
+			</ul></li>
+	<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="1">Systèmes<!--<span class="gabarit_tooltip">Logiciels et matériels systèmes</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="2">Systèmes</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://linux.developpez.com" data-idrub="18" data-niv="2">Linux</a></li>
+				<li><a href="https://arduino.developpez.com" data-idrub="142" data-niv="2">Arduino</a></li>
+				<li><a href="https://securite.developpez.com" data-idrub="40" data-niv="2">Sécurité</a></li>
+				<li><a href="https://hardware.developpez.com" data-idrub="64" data-niv="2">Hardware</a></li>
+				<li><a href="https://hpc.developpez.com" data-idrub="139" data-niv="2">HPC</a></li>
+				<li><a href="https://mac.developpez.com" data-idrub="57" data-niv="2">Mac</a></li>
+				<li><a href="https://raspberry-pi.developpez.com" data-idrub="131" data-niv="2">Raspberry Pi</a></li>
+				<li><a href="https://reseau.developpez.com" data-idrub="70" data-niv="2">Réseau</a></li>
+				<li><a href="https://green-it.developpez.com" data-idrub="104" data-niv="2">Green IT</a></li>
+				<li><a href="https://embarque.developpez.com" data-idrub="110" data-niv="2">Systèmes embarqués</a></li>
+				<li><a href="https://virtualisation.developpez.com" data-idrub="108" data-niv="2">Virtualisation</a></li>
+			</ul></li>
+</ul>
+
+<ul id="gabarit_barre1"><li><a href="https://web.developpez.com">Dév. Web</a></li><li><a href="https://ajax.developpez.com">AJAX</a></li><li><a href="https://apache.developpez.com">Apache</a></li><li><a href="https://asp.developpez.com">ASP</a></li><li><a href="https://css.developpez.com">CSS</a></li><li><a href="https://dart.developpez.com">Dart</a></li><li><a href="https://flash.developpez.com">Flash / Flex</a></li><li class="gabarit_selection"><a href="https://javascript.developpez.com">JavaScript</a></li><li><a href="https://nodejs.developpez.com">NodeJS</a></li><li><a href="https://php.developpez.com">PHP</a></li><li><a href="https://ruby.developpez.com">Ruby</a></li><li><a href="https://typescript.developpez.com">TypeScript</a></li><li><a href="https://web-semantique.developpez.com">Web sémantique</a></li><li><a href="https://webmarketing.developpez.com">Webmarketing</a></li><li><a href="https://xhtml.developpez.com">(X)HTML</a></li></ul>
+
+<div id="gabarit_barre2">
+	<a rel="nofollow" class="gabarit_social gabarit_facebook" href="http://www.facebook.com/pages/JavaScript/113358848680524" target="_blank" title="Retrouver Developpez sur Facebook"></a>
+	<a rel="nofollow" class="gabarit_social gabarit_twitter" href="http://twitter.com/javascript_DVP" target="_blank" title="Retrouver Developpez sur Twitter"></a>
+	<a class="gabarit_social gabarit_rss" href="http://javascript.developpez.com/index/rss" target="_blank" title="Flux RSS"></a>
+	<ul>
+<li><a href="https://javascript.developpez.com">ACCUEIL JS</a></li><li><a href="https://www.developpez.net/forums/f2000/javascript/">FORUM JS</a></li><li><a href="https://javascript.developpez.com/faq/">F.A.Q JS</a></li><li><a href="https://javascript.developpez.com/cours/">TUTORIELS JS</a></li><li><a href="https://javascript.developpez.com/telecharger/index/categorie/251/Sources-JavaScript">SOURCES JS</a></li><li><a href="https://javascript.developpez.com/exercices/">EXERCICES JS</a></li><li><a href="https://javascript.developpez.com/livres/">LIVRES JS</a></li><li><a href="https://javascript.developpez.com/quizz/">QUIZZ JS</a></li>	</ul>
+</div>
+
+</nav>
+
+
+	</header>
+	<section>
+
+
+	<div class="contenuPage">
+
+
+<style type="text/css">
+	.body_wrapper { width: calc(100% - 214px) !important; }
+	#ano_colonne_droite { position: absolute; right: 20px; top: 415px; width: 160px; display: none; }
+	#ano_colonne_liens { background-color: #293a4e; border: 3px solid #293a4e; border-radius: .25rem .25rem 0 0; -webkit-border-radius: .25rem .25rem 0 0; padding-top: 20px; margin-bottom: 1rem; }
+	#ano_colonne_contenu { background: #fff; }
+	#ano_colonne_droite p { color: #5a7f97; text-align: center; padding: 4px 0.2rem; }
+	#ano_colonne_droite p:first-child { padding-top:16px; }
+	#ano_colonne_droite p:last-child { padding-bottom:16px; }
+	#ano_colonne_titre { background: none !important; height: 21px; line-height: 21px; position: absolute; top: 0; left: 0; width: 160px; color: #fff !important; padding: 0 !important; margin: 0; text-align:center !important; font-size:.8rem; text-shadow: 1px 1px 0px #385263; }
+</style>
+<div id="ano_colonne_droite">
+<div id="ano_colonne_liens">
+<div id="ano_colonne_titre">Navigation</div>
+<div id="ano_colonne_contenu">
+<p style="padding-top:10px; padding-bottom:0;"><b>Inscrivez-vous gratuitement</b><br />pour pouvoir participer, suivre les réponses en temps réel, voter pour les messages, poser vos propres questions et recevoir la newsletter<br /><br />
+<a href="https://www.developpez.net/forums/inscription/">
+<img src="https://www.developpez.com/images/dvp/inscris-bkgnone.png" />
+</a></p></div></div><div id="mc45jm4f" class="dvpb4" style="display: inline-block; width: 160px; height: 600px"></div><div id="gabarit_pub4"></div>
+</div>
+<script type="text/javascript">
+$(function() {
+	var bloc = $("#ano_colonne_droite");
+	var intr = false;
+	var y = $("#breadcrumb").offset().top;
+	bloc.css("top", y + "px").show();
+
+	$(window).on("scroll", function() {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollTop < y) {
+			if (intr) {
+				bloc.css("position", "");
+				bloc.css("top", y + "px");
+				intr = false;
+			}
+		} else {
+			if (! intr) {
+				bloc.css("position", "fixed");
+				bloc.css("top", "5px");
+				intr = true;
+			}
+		}
+	});
+});
+</script>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="https://www.developpez.net/forums/inscription/" rel="nofollow">S'inscrire</a></li>
+			
+				<li><a rel="help" href="https://www.developpez.net/forums/faq.php">Aide</a></li>
+				<li>
+			<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/vbulletin_md5.js?v=422"></script>
+			<form id="navbar_loginform" action="https://www.developpez.net/forums/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Identifiant" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Mot de passe" style="display:none;" />
+					<input type="hidden" name="cookieuser" value="1" />
+					<input type="submit" class="loginbutton" tabindex="104" value="S'identifier" title="Insérez votre identifiant et mot de passe dans les cases correspondantes pour vous connecter, ou cliquez sur le bouton « S'inscrire » pour créer un profil personnel." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+
+				<input type="hidden" name="s" value="560e66431b298dc1dec42cbba3d80f00" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'Identifiant')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='Identifiant';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="https://www.developpez.net/forums/activity.php">Quoi de neuf ?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="http://www.developpez.net/forums/">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a rel="nofollow" href="https://www.developpez.net/forums/search.php?do=getnew&amp;contenttype=vBForum_Post">Derniers messages</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a rel="nofollow" href="https://www.developpez.net/forums/forumdisplay.php?do=markread&amp;markreadhash=guest">Marquer les forums comme lus</a></li>
+								
+									<li id="vbqlink_posts"><a href="https://www.developpez.net/forums/search.php?do=getdaily&amp;contenttype=vBForum_Post">Messages du jour</a></li>
+								
+									<li id="link_mtg4_835"><a href="http://www.developpez.net/forums/project.php">Bugs & Suggestions</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Réseau social</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_groups"><a href="https://www.developpez.net/forums/group.php">Groupes</a></li>
+								
+									<li id="vbflink_faq"><a href="https://www.developpez.net/forums/faq.php">FAQ forum</a></li>
+								
+									<li id="vbclink_members"><a href="https://www.developpez.net/forums/memberlist.php">Liste des utilisateurs</a></li>
+								
+									<li id="vbqlink_leaders"><a href="https://www.developpez.net/forums/showgroups.php">Voir l'équipe du site</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						
+							<li id="link_nde2_515"><a href="http://www.developpez.net/forums/blogs/">Blogs</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="https://www.developpez.net/forums/agenda/">Agenda</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_newposts"><a target="_blank" href="http://chat.developpez.com/">Chat (8)</a></li>
+						
+					
+				
+					
+						
+							<li id="link_nta3_958"><a target="_blank" href="http://club.developpez.com/regles/">Règles</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="https://www.developpez.net/forums/blogs/">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_project">
+			<a class="navtab" href="https://www.developpez.net/forums/project.php">Projets</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="https://www.developpez.net/forums/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="https://forum.developpez.be/images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="https://www.developpez.net/forums/search.php" accesskey="4">Recherche avancée</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/" accesskey="1"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" width="12" height="12" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f2000/javascript/">JavaScript</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f23/javascript/general-javascript/">Général JavaScript</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> [DEBUTANT] soustraction en javascript ?</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+
+
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=1732340&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Répondre à la discussion</a>
+			<img style="display:none" id="progress_newreplylink_top" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+
+		
+		<div id="pagination_top" class="pagination_top">
+		
+
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+        <img src="https://www.developpez.com/images/logos/js.png" alt="JavaScript">
+        <span class="threadtitle threadtitle_anoheader">Discussion :</span>
+		<h1>
+			<span class="threadtitle"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/" title="Recharger cette page">[DEBUTANT] soustraction en javascript ?</a></span>
+		</h1>
+
+<br />Sujet :
+<h2>JavaScript</h2>
+
+
+<style type="text/css">.above_body { margin: -3px -.5rem .5rem; }</style><center style="margin-top: .5rem"><div id="gabarit_pub0"></div><div id="vi45cn0n" class="dvpb0" style="display: inline-block; width: 728px; height: 90px"></div></center>
+
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<span><a class="popupctrl" href="javascript://">Outils de la discussion</a></span>
+				<ul class="popupbody popuphover">
+					<li><a href="https://www.developpez.net/forums/i274746/javascript/general-javascript/debutant-soustraction-javascript/" accesskey="3" rel="nofollow">Afficher une version imprimable</a></li>
+					
+					<li>
+						
+							<a href="https://www.developpez.net/forums/subscription.php?do=addsubscription&amp;t=274746" rel="nofollow">S'abonner à cette discussion&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<span><a class="popupctrl" href="javascript://">Affichage</a></span>
+					<ul class="popupbody popuphover">
+						<li><label>Mode linéaire</label></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/?mode=hybrid"> Choisir le mode hybride</a></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/?mode=threaded#post1731136"> Choisir le mode arborescent</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_1731136">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">05/02/2007,&nbsp;<span class="time">19h51</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1731136" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1731136" class="postcounter">#1</a><a id="postcount1731136" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<span class="username guest">Battosaiii</span>
+			
+			</div>
+			<span class="usertitle">
+				Invité(e)
+			</span>
+			
+			
+			
+			 
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> [DEBUTANT] soustraction en javascript ?
+				</span>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_1731136">
+						<blockquote class="postcontent restore ">
+							Salut,<br />
+La question peut paraitre con mais j'ai essaye<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:60px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">this</span>.randomByte = <span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span><span class="br0">&#41;</span> - <span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #FF0000;">&quot;128&quot;</span><span class="br0">&#41;</span></pre></td></tr></table></pre>
+</div>et aussi :<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:60px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">this</span>.randomByte = <span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span><span class="br0">&#41;</span> - <span style="color: #cc66cc;">128</span></pre></td></tr></table></pre>
+</div>et aussi :<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:60px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">this</span>.randomByte = <span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span><span class="br0">&#41;</span> + <span class="br0">&#40;</span>- <span style="color: #cc66cc;">128</span><span class="br0">&#41;</span></pre></td></tr></table></pre>
+</div>et aussi :<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:60px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">this</span>.randomByte = <span style="color: #cc66cc;">-128</span> + <span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span><span class="br0">&#41;</span></pre></td></tr></table></pre>
+</div>et aussi :<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:72px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="26"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">this</span>.randomByte =<span style="color: #0080ff;">parseInt</span><span class="br0">&#40;</span><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span><span class="br0">&#41;</span>  
+<span style="color: #0000ff;">this</span>.randomByte-=<span style="color: #cc66cc;">128</span></pre></td></tr></table></pre>
+</div>Absolument rien de tout ca ne marche !<br />
+<br />
+parseInt(this.rng.nextInt(255))  retoiurne une valeur int de 0 a 255<br />
+ quelau'un a une idee ?
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1731136" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_1731136" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=1731136" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_1731136" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1731136> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1731136> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1731618">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">05/02/2007,&nbsp;<span class="time">23h12</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1731618" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1731618" class="postcounter">#2</a><a id="postcount1731618" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u36505/auteur/" title="Auteur est déconnecté"><strong>Auteur</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="Auteur est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Expert éminent sénior
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-6-0.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="28 Q/R de FAQ rédigées" user="36505" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-traducteur.png" title="Traducteur - 1 traduction effectuée" user="36505" role="traductions" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-chathelper.png" title="Aide sur le Chat" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-trophee1.png" role="trophees" userid="36505" title="1 trophée reçu" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u36505/auteur/" title="Auteur est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/36505-auteur.gif?dateline=1218404116" alt="Avatar de Auteur" title="Avatar de Auteur" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/36505/Auteur"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>avril 2004</dd><dt>Messages</dt><dd>7&nbsp;494</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="36505" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="36505"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : avril 2004</div><div>Messages : 7&nbsp;494</div><div>Points : 10 619</div></div></div><dt>Points</dt><dd><span role="points" userid="36505">10 619</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1731618">
+						<blockquote class="postcontent restore ">
+							bonjour,<br />
+<br />
+peux-tu nous dire ce qu'est :<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:36px;"><span style="color: #0000ff;">this</span>.rng.<span style="color: #0080ff;">nextInt</span><span class="br0">&#40;</span><span style="color: #cc66cc;">255</span><span class="br0">&#41;</span></pre>
+</div><img src="https://www.developpez.net/forums/images/smilies/icon_question.gif" border="0" alt="" title=":question:" class="inlineimg" /><br />
+d'après mes recherches nextInt est une instruction Java et non Javascript.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1731618" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_1731618" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=1731618" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_1731618" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1731618> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1731618> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1732231">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">06/02/2007,&nbsp;<span class="time">10h54</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1732231" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1732231" class="postcounter">#3</a><a id="postcount1732231" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<span class="username guest">Battosaiii</span>
+			
+			</div>
+			<span class="usertitle">
+				Invité(e)
+			</span>
+			
+			
+			
+			 
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_1732231">
+						<blockquote class="postcontent restore ">
+							A l'aide de Rhino on peut inclure des objets java en javascript... mais l'interieur de parseInt n'a pas d'importance ...
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1732231" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_1732231" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=1732231" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_1732231" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1732231> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1732231> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_1732340">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">06/02/2007,&nbsp;<span class="time">11h19</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post1732340" href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#post1732340" class="postcounter">#4</a><a id="postcount1732340" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<span class="username guest">Battosaiii</span>
+			
+			</div>
+			<span class="usertitle">
+				Invité(e)
+			</span>
+			
+			
+			
+			 
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_1732340">
+						<blockquote class="postcontent restore ">
+							La solution nc'etait de faire : parseInt(this.rng.nextInt(255) - 128)
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_1732340" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_1732340" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=1732340" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_1732340" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1732340> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=1732340> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=1732340&amp;noquote=1 "class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Répondre à la discussion</a>
+
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+<div class="above_threadlist_controls toolsmenu"><center><table style="width: 75%"><tr><td><a href="http://javascript.developpez.com/" target="_blank">Actualités</a></td><td><a href="http://javascript.developpez.com/faq/" target="_blank">F.A.Q JS</a></td><td><a href="http://javascript.developpez.com/cours/" target="_blank">TUTORIELS JS</a></td><td><a href="http://javascript.developpez.com/telecharger/index/categorie/251/Sources-JavaScript" target="_blank">SOURCES JS</a></td><td><a href="http://javascript.developpez.com/exercices/" target="_blank">EXERCICES JS</a></td><td><a href="http://javascript.developpez.com/livres/" target="_blank">LIVRES JS</a></td><td><a href="http://javascript.developpez.com/quizz/" target="_blank">QUIZZ JS</a></td></tr></table></center></div>
+<div style="clear: both"></div>
+<div class="breadcrumb breadcrumb2">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f2000/javascript/">JavaScript</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f23/javascript/general-javascript/">Général JavaScript</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> [DEBUTANT] soustraction en javascript ?</span></li>
+
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="https://www.developpez.net/forums/d274746-precedent/javascript/general-javascript/debutant-soustraction-javascript/" rel="nofollow">Discussion précédente</a>
+			|
+			<a href="https://www.developpez.net/forums/d274746-suivant/javascript/general-javascript/debutant-soustraction-javascript/" rel="nofollow">Discussion suivante</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<center><div id="li45af5d" class="dvpb5" style="display: inline-block; width: 728px; height: 90px"></div><div id="gabarit_pub5"></div></center>
+<div id="gabarit_voiraussi"></div>
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Discussions similaires</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d722273/bases-donnees/ms-sql-server/developpement/debutant-soustraction-datetime-test-nullite-select/" title="Bonjours, je ne sais pas si...">[debutant]soustraction datetime &amp; test de nullité dans un select.</a></span>
+    <div class="starter_forum">
+      Par KilKennY dans le forum Développement
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 09/04/2009, <span class="time">18h11</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d454421/javascript/general-javascript/debutant-arbre-javascript/" title="Salut, 
+j'ai besoin d'un code...">[debutant] arbre en javascript</a></span>
+    <div class="starter_forum">
+      Par fafoula dans le forum Général JavaScript
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 06/12/2007, <span class="time">15h55</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d177260/javascript/general-javascript/debutant-mettre-2-javascript-page/" title="Bonjour, 
+Je tatonne à peine...">[Debutant] Mettre 2 javascript sur une page</a></span>
+    <div class="starter_forum">
+      Par hugo69 dans le forum Général JavaScript
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 8
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 06/07/2006, <span class="time">13h26</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d166874/javascript/general-javascript/debutant-2-0-javascript-recupere-asp-label-id-javascript/" title="Peut-on récupérer un élement...">[debutant][2.0][javascript]récupere un asp:label par id dans javascript</a></span>
+    <div class="starter_forum">
+      Par goussepi dans le forum Général JavaScript
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 16/06/2006, <span class="time">13h38</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d156244/javascript/general-javascript/debutant-utiliser-javascript-milieu-html/" title="Bonjour, 
+ 
+Désolée si la...">[debutant] utiliser le javascript au milieu du html</a></span>
+    <div class="starter_forum">
+      Par SanNash dans le forum Général JavaScript
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 30/05/2006, <span class="time">17h16</span>
+      </div>
+  </div>
+</li>
+			</ol>
+		</div>
+	</div>
+
+
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead options_correct">Partager</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer options_correct">
+				<h5 class="blocksubhead">Partager</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.viadeo.com/shareit/share/?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;title=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_viadeo.gif" alt="Envoyer la discussion sur Viadeo" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://twitter.com/timeline/home?status=%5BDEBUTANT%5D+soustraction+en+javascript+%3F+https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_twitter.png" alt="Envoyer la discussion sur Twitter" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;title=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_google.gif" alt="Envoyer la discussion sur Google" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_facebook.gif" alt="Envoyer la discussion sur Facebook" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://digg.com/submit?phrase=2&amp;url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;title=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_digg.gif" alt="Envoyer la discussion sur Digg" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://del.icio.us/post?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;title=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_delicious.gif" alt="Envoyer la discussion sur Delicious" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;t=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_myspace.gif" alt="Envoyer la discussion sur MySpace" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://bookmarks.yahoo.com/toolbar/savebm?opener=&amp;u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D274746&amp;t=%5BDEBUTANT%5D+soustraction+en+javascript+%3F" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_yahoo.gif" alt="Envoyer la discussion sur Yahoo" /></a>
+	
+</li></ul>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="https://www.developpez.net/forums/" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="https://www.developpez.net/forums/sendmessage.php" rel="nofollow" accesskey="9">Nous contacter</a></li>
+		<li><a href="https://www.developpez.com">Developpez.com</a></li>
+		
+		
+		
+		
+		
+		
+		<li><a href="https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/#top" onclick="document.location.hash='top'; return false;">Haut de page</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+</div>
+ 
+
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28115938-2']);
+  _gaq.push(['_setCustomVar', 1, 'rubrique', 'javascript', 3]);
+  _gaq.push(['_setCustomVar', 2, 'type', 'Autre', 3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<img src="https://compteur.developpez.com/compter-45" alt="" width="1" height="1"><img src="https://compteur.developpez.com/show_i.php/45/0" alt="" width="1" height="1"><img src="https://compt.developpez.com/compter-45" alt="" width="1" height="1"><script>$(function(){$("#vi45cn0n").load("/template/vi45cn0n"+'0'+".jpg");$("#li45af5d").load("/template/li45af5d"+'0'+".jpg");$("#mc45jm4f").load("/template/mc45jm4f"+'0'+".jpg");});</script>
+
+<script type="text/javascript">
+$(function() {
+	$("#gabarit_voiraussi").load("https://www.developpez.com/voiraussi/index/rubrique/45/");
+});
+</script>
+<div id="Ada9b0a84115b0f78B" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); visibility: hidden">
+	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 1rem 1.5rem; width: 32rem; border-radius: 0.5rem">
+		<span style="float: right; width: 1.5rem; line-height: 1.5rem; text-align: center; cursor: pointer; border-radius: 0.25rem; background: lightgray">&times;</span>
+		<p><b>Vous avez un bloqueur de publicit&eacute;s install&eacute;.</b></p>
+		<p>Le Club Developpez.com n'affiche que des publicit&eacute;s IT, discr&egrave;tes et non intrusives.</p>
+		<p>Afin que nous puissions continuer &agrave; vous fournir gratuitement du contenu de qualit&eacute;,
+	merci de nous soutenir en d&eacute;sactivant votre bloqueur de publicit&eacute;s sur Developpez.com.</p>
+	</div>
+</div>
+<script type="text/javascript" src="https://altsysimg.developpez.com/show_i.php?tstnew"></script>
+<script type="text/javascript">
+if (!document.getElementById("A143e81B") && document.cookie.indexOf("warnadb=") == -1) {
+	document.cookie = "warnadb=1;max-age=28800";
+	document.getElementById("Ada9b0a84115b0f78B").style.visibility = "visible";
+	document.querySelector("#Ada9b0a84115b0f78B span").addEventListener("click", function() {
+		document.getElementById("Ada9b0a84115b0f78B").style.visibility = "hidden";
+	});
+}</script></div>
+
+	</section>
+
+	<div id="gabarit_megaban_bas"><pub-megabanbas /></div>
+	<div id="gabarit_voiraussi"></div>
+	<div id="gabarit_encartemploi_desactive"></div>
+
+	<footer>
+
+	<div id="gabarit_responsable">
+				<a href="https://club.developpez.com/contacts/contribuer">Contacter</a> le responsable de la rubrique JavaScript
+			</div>
+
+	<ul id="gabarit_pied">
+		<li><a href="https://club.developpez.com/contacts/">Nous contacter</a>
+		<li><a href="https://www.developpez.com/participez/">Participez</a>
+	<li><a href="https://www.developpez.com/hebergement/">H&eacute;bergement</a>
+	<li><a href="https://www.developpez.com/advertising/">Publicit&eacute; / Advertising</a>
+	<li><a href="https://www.developpez.com/legal/">Informations l&eacute;gales</a>
+			<li>Partenaire : <a href="https://www.planethoster.com/fr/" target="_blank" rel="noopener">H&eacute;bergement Web</a>
+		</ul>
+
+<p id="gabarit_copyright">&copy; 2000-2022 - www.developpez.com</p>
+
+
+	</footer>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('https://www.developpez.net/forums/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html>•á¨¬      bmbmCû¤b‚H   –    O^partitionKey=%28https%2Cdeveloppez.net%29,:https://www.developpez.net/forums/d274746/javascript/general-javascript/debutant-soustraction-javascript/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Fri, 18 Feb 2022 11:25:59 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Content-Type: text/html; charset=ISO-8859-1
+ original-response-headers Date: Fri, 18 Feb 2022 11:25:59 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Set-Cookie: bb_sessionhash=560e66431b298dc1dec42cbba3d80f00; path=/; HttpOnly
+Set-Cookie: bb_lastvisit=1645183559; expires=Sat, 18-Feb-2023 11:25:59 GMT; path=/; secure
+Set-Cookie: bb_lastactivity=0; expires=Sat, 18-Feb-2023 11:25:59 GMT; path=/; secure
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+ ctid 1 uncompressed-len 0 net-response-time-onstart 2419 net-response-time-onstop 2817  l6

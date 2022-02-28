@@ -1,0 +1,566 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.7 [fr] (Win98; I) [Netscape]">
+   <meta name="Author" content="Isabelle Gautier">
+   <meta name="KeyWords" content="javascript, enseigner, exercices, qcm">
+   <title>QCM en javascript</title>
+<script language="JavaScript">
+
+ <!--// hide
+
+ // hide
+
+ /* GameQuiz v1.0 by Wizzz.
+
+    Copyright (c) of Wizzz, 1997.
+
+    Permission to use, edit, etc. granted as long as the head section is intact!
+
+    Modifications et ajouts par Didier Anselm, puis Isabelle Gautier
+
+ */
+ // initialisation des variables/ : les réponses sont un tableau "rep" de 10 valeurs, les questions faites un tableau "faite"
+ // le score est mis à zéro au départ
+
+
+ var rep = new Array;
+
+var faite = new Array;
+
+ var score = 0;
+
+
+
+ // rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ // initialisation des bonnes réponses
+ // valeurs à modifier (a b c ou d : sont les réponses justes, une par question rep[1] est la réponse à la question 1, etc..) 
+
+
+
+ rep[1] = "b";
+
+ rep[2] = "b";
+
+ rep[3] = "c";
+
+ rep[4] = "c";
+
+ rep[5] = "a";
+
+ rep[6] = "c";
+
+ rep[7] = "b";
+
+ rep[8] = "c";
+
+ rep[9] = "a";
+
+ rep[10] = "d";
+
+
+ // rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+ // les parties en bleu apparaissent en commentaire, elles peuvent être modifiées
+ // la fonction "engine" vérifie si la réponse est bonne ("question" est le numéro de la question,
+ // "reponse" est la réponse de l'utilisateur, il a un point de plus si elle est bonne, - 1 s'il a déjà répondu.
+
+ function truc(){
+ alert("c'est un point de vue");
+ }
+
+ function Engine(question, reponse) {
+
+         if (reponse != rep[question]) {
+
+                 if (!faite[question]) {
+
+                         faite[question] = -1;
+
+                         alert("Faux !!   La bonne réponse était en - " + rep[question] + " -");
+
+                         }
+
+                 else {
+
+                         alert("Tu as déjà répondu à cette question !");
+
+                         }
+
+                 }
+
+         else {
+
+                 if (!faite[question]) {
+
+                         faite[question] = -1;
+
+                         score++;
+
+                         alert("Bonne réponse !! ");
+
+                         }
+
+                 else { 
+
+                         alert("Tu as déjà répondu à cette question !");
+
+                         }
+
+                 }
+
+ }
+
+ // commentaires pour le résultat final
+
+ function NextLevel () {
+
+         if (score > 10) {
+
+                 alert("Tricheur !");
+
+                 }
+
+         if (score > 8 && score <= 10) {
+
+                 alert(score + "/10. " + "Un coup de maître !");
+
+                 }
+
+         if (score > 6 && score <= 8) {
+
+                 alert(score + "/10. " + "Bien, mais... pas parfait.");
+
+                 }
+
+
+
+         if (score >= 4 && score < 6) {
+
+                 alert(score + "/10. " + "Pas terrible... un autre essai ?");
+
+                 }
+
+         if (score < 4) {
+
+                 alert(score + "/10. " + "Il faut refaire l'exercice");
+
+                 }
+
+
+
+
+ // ======================================================
+
+ // ligne qui suit à modifier pour envoyer le formulaire
+
+ // (mais indiquez la méthode dans la balise du formulaire) :
+
+ // document.quest.submit()
+
+
+
+ // ligne qui suit pour vider le formulaire :
+
+ faite = new Array;
+
+ score = 0;
+
+ //ligne suivante à désactiver si IE3 ou -
+
+ document.quest.reset();
+
+ }
+
+
+
+
+
+ // -->
+
+ </script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000EE" vlink="#551A8B" alink="#FF0000" background="images/fond1.jpg">
+&nbsp; <br>
+<font face="Comic Sans MS">Exemple de QCM :</font>
+<p><form name="quest">
+<p>1- combien trouvez-vous de parties ?
+<br><input type="radio" name="1" value="a" onclick="Engine(1, this.value)"><font color="#FF0000">a.
+</font><font color="#000000">une</font>
+<br><input type="radio" name="1" value="b" onclick="Engine(1, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deux</font>
+<br><input type="radio" name="1" value="c" onclick="Engine(1, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">trois</font>
+<br><input type="radio" name="1" value="d" onclick="Engine(1, this.value)"><font color="#FF0000">d.
+</font><font color="#330033">quatre</font>
+<br><input type="radio" name="1" value="e" onclick="Engine(1, this.value)"><font color="#FF0000">e.
+</font><font color="#000000">cinq</font>
+<p>2- le plan-bateau a-t-il &eacute;t&eacute; choisi ?
+<br><input type="radio" name="2" value="a" onclick="Engine(2, this.value)"><font color="#FF0000">a.
+</font><font color="#000000">oui</font>
+<br><input type="radio" name="2" value="b" onclick="Engine(2, this.value)"><font color="#FF0000">b.
+</font><font color="#000000">non</font>
+<p>3- l'introduction comporte-t-elle :
+<br>une amorce ?
+<br><input type="radio" name="3" value="a" onclick="Engine(3, this.value)"><font color="#FF0000">a.
+</font><font color="#000000">oui.</font>
+<br><input type="radio" name="3" value="b" onclick="Engine(3, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">non.</font>
+<p>4- la d&eacute;finition des termes ?
+<br><input type="radio" name="4" value="a" onclick="Engine(4, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">oui.</font>
+<br><input type="radio" name="4" value="b" onclick="Engine(4, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">non.</font>
+<p>5- l'annonce du plan ?
+<br><input type="radio" name="5" value="a" onclick="Engine(5, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">oui.</font>
+<br><input type="radio" name="5" value="b" onclick="Engine(5, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">non.</font>
+<br>&nbsp;
+<p>6-
+<br><input type="radio" name="6" value="a" onclick="Engine(6, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">premi&egrave;re
+proposition.</font>
+<br><input type="radio" name="6" value="b" onclick="Engine(6, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deuxi&egrave;me
+proposition.</font>
+<br><input type="radio" name="6" value="c" onclick="Engine(6, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">troisi&egrave;me
+proposition</font>
+<br><input type="radio" name="6" value="d" onclick="Engine(6, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">quatri&egrave;me
+proposition</font>
+<br>&nbsp;
+<p>7- premi&egrave;re question
+<br><input type="radio" name="7" value="a" onclick="Engine(7, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">premi&egrave;re
+proposition.</font>
+<br><input type="radio" name="7" value="b" onclick="Engine(7, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deuxi&egrave;me
+proposition.</font>
+<br><input type="radio" name="7" value="c" onclick="Engine(7, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">troisi&egrave;me
+proposition</font>
+<br><input type="radio" name="7" value="d" onclick="Engine(7, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">quatri&egrave;me
+proposition</font> // la ligne ci-dessous saute une ligne
+<br>&nbsp;
+<p>8- premi&egrave;re question
+<br><input type="radio" name="8" value="a" onclick="Engine(8, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">premi&egrave;re
+proposition.</font>
+<br><input type="radio" name="8" value="b" onclick="Engine(8, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deuxi&egrave;me
+proposition.</font>
+<br><input type="radio" name="8" value="c" onclick="Engine(8, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">troisi&egrave;me
+proposition</font>
+<br><input type="radio" name="8" value="d" onclick="Engine(8, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">quatri&egrave;me
+proposition</font>
+<br>&nbsp;
+<p>9- premi&egrave;re question
+<br><input type="radio" name="9" value="a" onclick="Engine(9, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">premi&egrave;re
+proposition.</font>
+<br><input type="radio" name="9" value="b" onclick="Engine(9, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deuxi&egrave;me
+proposition.</font>
+<br><input type="radio" name="9" value="c" onclick="Engine(9, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">troisi&egrave;me
+proposition</font>
+<br><input type="radio" name="9" value="d" onclick="Engine(9, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">quatri&egrave;me
+proposition</font> // la ligne ci-dessous saute une ligne
+<br>&nbsp;
+<p>10 -premi&egrave;re question
+<br><input type="radio" name="10" value="a" onclick="Engine(10, this.value)"><font color="#FF0000">a.
+</font><font color="#330033">premi&egrave;re
+proposition.</font>
+<br><input type="radio" name="10" value="b" onclick="Engine(10, this.value)"><font color="#FF0000">b.
+</font><font color="#330033">deuxi&egrave;me
+proposition.</font>
+<br><input type="radio" name="10" value="c" onclick="Engine(10, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">troisi&egrave;me
+proposition</font>
+<br><input type="radio" name="10" value="d" onclick="Engine(10, this.value)"><font color="#FF0000">c.
+</font><font color="#330033">quatri&egrave;me
+proposition</font>
+<br>&nbsp;
+<p><input type="button" name="Resultats" value="Résultats"
+
+   onclick="NextLevel()">
+<br>&nbsp;
+<p></form>
+<p>
+<hr WIDTH="100%">
+<p><br>
+  <a NAME="code"></a> <font face="Comic Sans MS" size="2">Le script est en 2 parties 
+  : la premi&egrave;re &agrave; int&eacute;grer dans la partie &lt;head&gt;, la 
+  seconde dans la partie &lt;body&gt;</font></p>
+<p><font face="Comic Sans MS">Le Script suivant est &agrave; int&eacute;grer dans 
+  la partie head :</font> <br>
+  <font face="Comic Sans MS">Il permet de v&eacute;rifier les r&eacute;ponses 
+  et de compter le score.</font> <br>
+  <font face="Comic Sans MS"><font size=-1>Les explications sont en commentaire 
+  dans les lignes commen&ccedil;ant par //, lignes qui ne sont pas ex&eacute;cut&eacute;es.</font></font> 
+</p>
+<table BORDER COLS=1 WIDTH="100%" BGCOLOR="#FFFFCC" >
+  <tr>
+    <td BGCOLOR="#FFFFCC">&lt;head> <br>
+      &lt;script language="JavaScript">
+<p>&lt;!--// hide
+<p>// hide
+<p>/* GameQuiz v1.0 by Wizzz.
+<p>&nbsp;&nbsp; Copyright (c) of Wizzz, 1997.
+<p>&nbsp;&nbsp; Permission to use, edit, etc. granted as long as the head
+section is intact!
+<p>&nbsp;&nbsp; Modifications et ajouts par Didier Anselm, puis Isabelle
+Gautier
+<p>*/
+<br>// initialisation des variables/ : les r&eacute;ponses sont un tableau
+"rep" de 10 valeurs, les questions faites un tableau "faite"
+<br>// le score est mis &agrave; z&eacute;ro au d&eacute;part
+<br>&nbsp;
+<p>var rep = new Array;
+<p>var faite = new Array;
+<p>var score = 0;
+<br>&nbsp;
+<br>&nbsp;
+<p>// rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+<br>// initialisation des bonnes r&eacute;ponses
+<br>//<font color="#FF0000"> valeurs &agrave; modifier (a b c ou d</font>
+: sont les r&eacute;ponses justes, une par question rep[1] est la r&eacute;ponse
+&agrave; la question 1, etc..)&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>rep[1] = "<font color="#FF0000">b</font>";
+<p>rep[2] = "<font color="#FF0000">b</font>";
+<p>rep[3] = "<font color="#FF0000">c</font>";
+<p>rep[4] = "<font color="#FF0000">c</font>";
+<p>rep[5] = "<font color="#FF0000">a</font>";
+<p>rep[6] = "<font color="#FF0000">c</font>";
+<p>rep[7] = "<font color="#FF0000">b</font>";
+<p>rep[8] = "<font color="#FF0000">c</font>";
+<p>rep[9] = "<font color="#FF0000">a</font>";
+<p>rep[10] = "<font color="#FF0000">d</font>";
+<br>&nbsp;
+<p>// rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+<br>// les parties en bleu apparaissent en commentaire, elles peuvent &ecirc;tre
+modifi&eacute;es
+<br>// la fonction "engine" v&eacute;rifie si la r&eacute;ponse est bonne
+("question" est le num&eacute;ro de la question,
+<br>// "reponse" est la r&eacute;ponse de l'utilisateur, il a un point
+de plus si elle est bonne, - 1 s'il a d&eacute;j&agrave; r&eacute;pondu.
+<p>function truc(){
+<br>alert("<font color="#3333FF">c'est un point de vue</font>");
+<br>}
+<p>function Engine(question, reponse) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (reponse != rep[question])
+{
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (!faite[question]) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+faite[question] = -1;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("<font color="#3366FF">Faux !!&nbsp;&nbsp; La bonne r&eacute;ponse
+&eacute;tait en - </font>" + rep[question] + " -");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("<font color="#3333FF">Tu as d&eacute;j&agrave; r&eacute;pondu &agrave;
+cette question !</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (!faite[question]) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+faite[question] = -1;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+score++;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("<font color="#3333FF">Bonne r&eacute;ponse !!</font> ");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else {&nbsp;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("<font color="#3366FF">Tu as d&eacute;j&agrave; r&eacute;pondu &agrave;
+cette question !</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>}
+<p>// commentaires pour le r&eacute;sultat final
+<p>function NextLevel () {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (score > 10) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("<font color="#3366FF">Tricheur !</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (score > 8 &amp;&amp;
+score &lt;= 10) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(score + "/10. " + "<font color="#3333FF">Un coup de ma&icirc;tre
+!</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (score > 6 &amp;&amp;
+score &lt;= 8) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(score + "/10. " + "<font color="#3366FF">Bien, mais... pas parfait</font>.");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<br>&nbsp;
+<br>&nbsp;
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (score >= 4 &amp;&amp;
+score &lt; 6) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(score + "/10. " + "<font color="#3366FF">Pas terrible... un autre
+essai ?</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (score &lt; 4) {
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert(score + "/10. " + "<font color="#3333FF">Il faut refaire l'exercice</font>");
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>// ======================================================
+<p>// ligne qui suit &agrave; modifier pour envoyer le formulaire
+<p>// (mais indiquez la m&eacute;thode dans la balise du formulaire) :
+<p>// document.quest.submit()
+<br>&nbsp;
+<br>&nbsp;
+<p>// ligne qui suit pour vider le formulaire :
+<p>faite = new Array;
+<p>score = 0;
+<p>//ligne suivante &agrave; d&eacute;sactiver si IE3 ou -
+<p>document.quest.reset();
+<p>}
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<p>// -->
+<p>&lt;/script>
+<br>&lt;/head></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<p><font face="Comic Sans MS">HTML &agrave; int&eacute;grer dans la partie
+Body :</font>
+<br><font face="Comic Sans MS">1) cr&eacute;ation de la forme "quest"</font>
+<br>&nbsp;
+<table BORDER COLS=1 WIDTH="100%" BGCOLOR="#FFFFCC" >
+  <tr>
+    <td BGCOLOR="#FFFFCC">&lt;body> <br>
+      // la ligne suivante ouvre la "forme" quest
+<br>&lt;br>&lt;form name="quest"></td>
+</tr>
+</table>
+
+<p><font face="Comic Sans MS">2)&nbsp; ouverture d'un groupe de 4 boutons
+radio dont un seul peut &ecirc;tre coch&eacute; et analyse dela r&eacute;ponse</font>
+<br><font face="Comic Sans MS"><font size=-1>Les lignes suivantes sont
+&agrave; copier 10 fois, en rempla&ccedil;ant le "1" bleu par 2, puis 3,
+4, 5, 6, 7, 8 ,9, 10.</font></font>
+<br>Le bouton radio est cr&eacute;&eacute; de nom "1".
+<br>Il y a ici 4 r&eacute;ponses propos&eacute;es : a, b, c, d
+<br><font face="Comic Sans MS"><font size=-1>Les parties en rouge sont
+&agrave; modifier pour mettre vos questions et propositions de r&eacute;ponse</font></font>
+<br><font face="Comic Sans MS"><font size=-1>Vous pouvez mettre plus de
+4 propositions (il suffit de mettre comme "value"&nbsp; "e", etc...),</font></font>
+<br><font face="Comic Sans MS"><font size=-1>vous pouvez en mettre moins
+en supprimant les lignes correspondantes.</font></font>
+<br>Lorsque l'on clique sur un bouton radio, la fonction Engine ci-dessus
+compare la r&eacute;ponse &agrave; celle attendue
+<table BORDER COLS=1 WIDTH="100%" BGCOLOR="#FFFFCC" >
+  <tr>
+    <td BGCOLOR="#FFFFCC">&lt;p><font color="#FF0000">premi&egrave;re question</font> 
+      <br>
+      &lt;br>&lt;input type="radio" name="<font color="#3333FF">1</font>"
+value="a" onclick="Engine(<font color="#3366FF">1</font>, this.value)">&lt;font
+color="#FF0000">a.
+<br>&lt;/font>&lt;font color="#330033"><font color="#FF0000">premi&egrave;re
+proposition</font>.&lt;/font>
+<br>&lt;br>&lt;input type="radio" name="<font color="#3333FF">1</font>"
+value="b" onclick="Engine(<font color="#3366FF">1</font>, this.value)">&lt;font
+color="#FF0000">b.
+<br>&lt;/font>&lt;font color="#330033"><font color="#FF0000">deuxi&egrave;me
+proposition</font>.&lt;/font>
+<br>&lt;br>&lt;input type="radio" name="<font color="#3333FF">1</font>"
+value="c" onclick="Engine(<font color="#3366FF">1</font>, this.value)">&lt;font
+color="#FF0000">c.
+<br>&lt;/font>&lt;font color="#330033"><font color="#FF0000">troisi&egrave;me
+proposition</font>&lt;/font>
+<br>&lt;br>&lt;input type="radio" name="<font color="#3333FF">1</font>"
+value="d" onclick="Engine(<font color="#3366FF">1,</font> this.value)">&lt;font
+color="#FF0000">c.
+<br>&lt;/font>&lt;font color="#330033"><font color="#FF0000">quatri&egrave;me
+proposition</font>&lt;/font>
+<br>&lt;br>&amp;nbsp;</td>
+</tr>
+</table>
+&lt;br>&amp;nbsp;&nbsp; saute une ligne
+<p><font face="Comic Sans MS">3) obtenir le score</font>
+<br>&nbsp;Le bouton suivant permet de faire appara&icirc;tre le score final,
+donne un commentaire et efface les cases coch&eacute;es avec internet explorer
+5. Il faut fermer la "form" ouverte au d&eacute;but du "body" (&lt;/form>)
+<table BORDER COLS=1 WIDTH="100%" BGCOLOR="#FFFFCC" >
+  <tr>
+<td>
+<br>
+      &lt;p>&lt;input type="button" name="Resultats" value="R&eacute;sultats" 
+      onclick="NextLevel()"> <br>
+      &lt;br>&amp;nbsp; <br>
+      &lt;p>&lt;/form> <br>
+      &lt;/body></td>
+</tr>
+</table>
+
+<br>
+<br>
+&nbsp;
+<br>&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="100%" >
+<tr>
+    <td></td>
+    <td>
+      <div align="right"><a href="../index.htm">retour au sommaire</a></div>
+    </td>
+</tr>
+</table>
+
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
+Ê·õ0      beFbeHCû×bŸÆ   T    O^partitionKey=%28http%2Cfree.fr%29,:http://i.gautier.free.fr/jsprof/scripts/qcm.htm necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Mon, 21 Feb 2022 10:11:21 GMT
+Server: Apache/ProXad [Jan 23 2019 20:05:46]
+Last-Modified: Fri, 04 Apr 2003 12:21:18 GMT
+ETag: "69c92-522b-3e8d78be"
+Accept-Ranges: bytes
+Content-Length: 21035
+Content-Type: text/html
+ original-response-headers Date: Mon, 21 Feb 2022 10:11:21 GMT
+Server: Apache/ProXad [Jan 23 2019 20:05:46]
+Last-Modified: Fri, 04 Apr 2003 12:21:18 GMT
+ETag: "69c92-522b-3e8d78be"
+Connection: close
+Accept-Ranges: bytes
+Content-Length: 21035
+Content-Type: text/html
+ ctid 1 uncompressed-len 0 net-response-time-onstart 1102 net-response-time-onstop 1894   R+

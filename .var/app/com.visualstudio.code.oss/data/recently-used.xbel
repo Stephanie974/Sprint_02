@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/steph/sprint_04/day_01/starter_day01_L03/script.js" added="2022-02-21T06:49:35Z" modified="2022-02-22T07:17:05Z" visited="2022-02-21T06:49:35Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T07:17:05Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_01/starter_day01_random_L04/script.js" added="2022-02-21T06:59:30Z" modified="2022-02-21T06:59:30Z" visited="2022-02-21T06:59:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-21T06:59:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_01/starter_day01_L03" added="2022-02-22T07:13:02Z" modified="2022-02-22T07:13:02Z" visited="2022-02-22T07:13:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T07:13:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_01/starter_day01_conditions_L02/script.js" added="2022-02-22T07:17:23Z" modified="2022-02-22T07:17:23Z" visited="2022-02-22T07:17:23Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T07:17:23Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_01/starter_day01_random_L03/script.js" added="2022-02-22T07:19:53Z" modified="2022-02-22T07:19:53Z" visited="2022-02-22T07:19:54Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T07:19:53Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/day_02/index.html" added="2022-02-22T08:58:24Z" modified="2022-02-22T08:58:24Z" visited="2022-02-22T08:58:24Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T08:58:24Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/day_02/script.js" added="2022-02-22T08:58:49Z" modified="2022-02-22T08:58:49Z" visited="2022-02-22T08:58:50Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-22T08:58:49Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/array_01/countries.js" added="2022-02-24T10:05:41Z" modified="2022-02-24T10:05:41Z" visited="2022-02-24T10:05:42Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-24T10:05:41Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/array_01/web_techs.js" added="2022-02-24T10:06:30Z" modified="2022-02-24T10:06:30Z" visited="2022-02-24T10:06:30Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-24T10:06:30Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/array_01/array.html" added="2022-02-24T10:07:40Z" modified="2022-02-24T10:07:40Z" visited="2022-02-24T10:07:41Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-24T10:07:40Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/steph/sprint_04/day_02/array_01/main.js" added="2022-02-24T10:08:35Z" modified="2022-02-24T10:08:35Z" visited="2022-02-24T10:08:35.469875Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/javascript"/>
+        <bookmark:applications>
+          <bookmark:application name="code-oss" exec="&apos;code-oss %u&apos;" modified="2022-02-24T10:08:35Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

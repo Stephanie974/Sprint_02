@@ -1,0 +1,2265 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr" id="vbulletin_html">
+<head>
+<base href="https://www.developpez.net/forums/" /><!--[if IE]></base><![endif]-->
+	<link rel="amphtml" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="https://www.developpez.net/forums" />
+
+<meta name="generator" content="vBulletin 4.2.2" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+
+	<link rel="Shortcut Icon" href="https://www.developpez.net/forums/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+<!--
+	if (typeof YAHOO === 'undefined') // Load ALL YUI Local
+	{
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/yuiloader-dom-event/yuiloader-dom-event.js?v=422"><\/script>');
+		document.write('<script type="text/javascript" src="https://forum.developpez.be/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		var yuipath = 'https://forum.developpez.be/clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = false;
+	}
+	else	// Load Rest of YUI remotely (where possible)
+	{
+		var yuipath = 'clientscript/yui';
+		var yuicombopath = '';
+		var remoteyui = true;
+		if (!yuicombopath)
+		{
+			document.write('<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/yui/connection/connection-min.js?v=422"><\/script>');
+		}
+	}
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "https://forum.developpez.be/images/misc";
+	var IMGDIR_BUTTON = "https://forum.developpez.be/images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "422";
+	var BBURL = "https://www.developpez.net/forums";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "showthread.php?t=630265";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "https://www.developpez.net/forums/";
+// -->
+</script>
+<script type="text/javascript" src="https://forum.developpez.be/clientscript/vbulletin-core.js?v=422"></script>
+<script type="text/javascript" src="https://gabarit.developpez.be/scripts/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/anokha_showthread.js?1643642533"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" async="true">
+(function() {
+    var host = 'www.developpez.net';
+    var element = document.createElement('script');
+    var firstScript = document.getElementsByTagName('script')[0];
+    var url = 'https://quantcast.mgr.consensu.org'
+        .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
+    var uspTries = 0;
+    var uspTriesLimit = 3;
+    element.async = true;
+    element.type = 'text/javascript';
+    element.src = url;
+
+    firstScript.parentNode.insertBefore(element, firstScript);
+
+    function makeStub() {
+        var TCF_LOCATOR_NAME = '__tcfapiLocator';
+        var queue = [];
+        var win = window;
+        var cmpFrame;
+
+        function addFrame() {
+            var doc = win.document;
+            var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+            if (!otherCMP) {
+                if (doc.body) {
+                    var iframe = doc.createElement('iframe');
+
+                    iframe.style.cssText = 'display:none';
+                    iframe.name = TCF_LOCATOR_NAME;
+                    doc.body.appendChild(iframe);
+                } else {
+                    setTimeout(addFrame, 5);
+                }
+            }
+            return !otherCMP;
+        }
+
+        function tcfAPIHandler() {
+            var gdprApplies;
+            var args = arguments;
+
+            if (!args.length) {
+                return queue;
+            } else if (args[0] === 'setGdprApplies') {
+                if (
+                    args.length > 3 &&
+                    args[2] === 2 &&
+                    typeof args[3] === 'boolean'
+                ) {
+                    gdprApplies = args[3];
+                    if (typeof args[2] === 'function') {
+                        args[2]('set', true);
+                    }
+                }
+            } else if (args[0] === 'ping') {
+                var retr = {
+                    gdprApplies: gdprApplies,
+                    cmpLoaded: false,
+                    cmpStatus: 'stub'
+                };
+
+                if (typeof args[2] === 'function') {
+                    args[2](retr);
+                }
+            } else {
+                queue.push(args);
+            }
+        }
+
+        function postMessageEventHandler(event) {
+            var msgIsString = typeof event.data === 'string';
+            var json = {};
+
+            try {
+                if (msgIsString) {
+                    json = JSON.parse(event.data);
+                } else {
+                    json = event.data;
+                }
+            } catch (ignore) {}
+
+            var payload = json.__tcfapiCall;
+
+            if (payload) {
+                window.__tcfapi(
+                    payload.command,
+                    payload.version,
+                    function(retValue, success) {
+                        var returnMsg = {
+                            tcfapiReturn: {
+                                returnValue: retValue,
+                                success: success,
+                                callId: payload.callId
+                            }
+                        };
+                        if (msgIsString) {
+                            returnMsg = JSON.stringify(returnMsg);
+                        }
+                        if (event && event.source && event.source.postMessage) {
+							event.source.postMessage(returnMsg, '*');
+                        }
+                    },
+                    payload.parameter
+                );
+            }
+        }
+
+        while (win) {
+            try {
+                if (win.frames[TCF_LOCATOR_NAME]) {
+                    cmpFrame = win;
+                    break;
+                }
+            } catch (ignore) {}
+
+            if (win === window.top) {
+                break;
+            }
+            win = win.parent;
+        }
+        if (!cmpFrame) {
+            addFrame();
+            win.__tcfapi = tcfAPIHandler;
+            win.addEventListener('message', postMessageEventHandler, false);
+        }
+    };
+
+    if (typeof module !== 'undefined') {
+        module.exports = makeStub;
+    } else {
+        makeStub();
+    }
+
+    var uspStubFunction = function() {
+        var arg = arguments;
+        if (typeof window.__uspapi !== uspStubFunction) {
+            setTimeout(function() {
+                if (typeof window.__uspapi !== 'undefined') {
+                    window.__uspapi.apply(window.__uspapi, arg);
+                }
+            }, 500);
+        }
+    };
+
+    var checkIfUspIsReady = function() {
+        uspTries++;
+        if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+            console.warn('USP is not accessible');
+        } else {
+            clearInterval(uspInterval);
+        }
+    };
+
+    if (typeof window.__uspapi === 'undefined') {
+        window.__uspapi = uspStubFunction;
+        var uspInterval = setInterval(checkIfUspIsReady, 6000);
+    }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" src="/forums/clientscript/ano_votes.js?2"></script>
+
+
+
+	<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2" />
+	
+		<link rel="home" type="application/rss+xml" title="Forum du club des développeurs et IT Pro - Général VBA - Flux RSS" href="https://www.developpez.net/forums/external.php?type=RSS2&amp;forumids=289" />
+	
+
+
+<script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=bbcode.css,editor.css,popupmenu.css,reset-fonts.css,vbulletin.css,vbulletin-chrome.css,vbulletin-formcontrols.css," />
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=popupmenu-ie.css,vbulletin-ie.css,vbulletin-chrome-ie.css,vbulletin-formcontrols-ie.css,editor-ie.css" />
+	<![endif]-->
+
+	<script type="text/javascript" src="/template/scripts/gabarit-forum.js?1630596300"></script>
+	<link rel="stylesheet" type="text/css" href="/template/css/gabarit.css?1630596300" />
+	<link rel="stylesheet" type="text/css" href="https://forum.developpez.be/clientscript/kha_blogs.css" />
+
+	<!--[if lt IE 7]>
+	<script src="https://gabarit.developpez.be/ie7/IE7.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie6.css" />
+	<![endif]-->
+
+	<!--[if IE 7]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie7.css" />
+	<![endif]-->
+
+	<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="https://gabarit.developpez.be/gabarit-ie8.css" />
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="https://gabarit.developpez.be/kit/html5_ie.js"></script>
+	<![endif]-->
+
+<script type="text/javascript">
+sas_tmstp=Math.round(Math.random()*10000000000);sas_masterflag=1;
+function SmartAdServer(sas_pageid,sas_formatid,sas_target) {
+ if (sas_masterflag==1) {sas_masterflag=0;sas_master='M';} else {sas_master='S';};
+ document.write('<scr'+'ipt src="https://www.smartadserver.com/call/pubj/' + sas_pageid + '/' + sas_formatid + '/' + sas_master + '/' + sas_tmstp + '/' + escape(sas_target) + '?"></scr'+'ipt>');
+}
+</script>
+	<meta name="keywords" content="Trier,tableau,Sort,trier, tableau, sort, méthode, forum, réponse, mémoire, connais, proposée, bonjour, sollicite, quen, souhaite, recherche, silkyroad, chapitre, celle-ci, nest, souhaiterais, merci, utiliser, données, xiv-d, contenu, comment, combobox, ordre, alphabétique, cette, sapplique-t-elle, dimensions, deux, crois, trompe-je, avoir, bien, utilisant, effectuer, propositions, comme, parmi, trouvé, dimension, passer" />
+	<meta name="description" content="Je souhaite effectuer le tri d'un tableau() à une dimension en VBA. Je crois bien avoir vu passer une méthode sur le forum utilisant Sort . Me trompe-je ? ou cette méthode ne s'applique-t-elle qu'à un tableau à " />
+
+	<title> Trier un tableau() avec Sort - VBA</title>
+	<script type="application/ld+json">[{"@context":"https://schema.org","@type":"DiscussionForumPosting","@id":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/","headline":"Trier un tableau() avec Sort - VBA","image":"https://www.developpez.com/images/logos/office.png","datePublished":"2008-10-19T22:13:56+02:00","dateModified":"2012-10-02T14:01:58+02:00","discussionUrl":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/","sameAs":["https://twitter.com/Developpez","https://fr.linkedin.com/company/developpez.com","https://www.facebook.com/Developpez"],"articleSection":"Trier un tableau() avec Sort","articleBody":"Bonjour,<br />\r\nJe souhaite effectuer le tri d'un tableau() \u00e0 une dimension en VBA.<br />\r\nJe crois bien avoir vu passer une m\u00e9thode sur le forum utilisant <b>Sort</b>. <br />\r\nMe trompe-je ? ou cette m\u00e9thode ne s'applique-t-elle qu'\u00e0 un tableau \u00e0 deux dimensions ?<br />\r\nJe n'ai pas trouv\u00e9 de r\u00e9ponse ni dans la FAQ (parmi les 125 propositions \u00e0 &quot;tri*&quot; comme mot cl\u00e9... les 8 \u00e0 &quot;trier&quot; ou les 16 \u00e0 &quot;Sort&quot;) non plus qu'en recherche sur ce forum.<br />\r\nJe sollicite donc votre m\u00e9moire... <br />\r\n<br />\r\nJe connais la m\u00e9thode propos\u00e9e par SilkyRoad dans le chapitre &quot;Comment trier le contenu d'un ComboBox par ordre alphab\u00e9tique ?&quot; ou &quot;XIV-D. Trier les donn\u00e9es d'un tableau&quot;<br />\r\nCe n'est donc pas celle-ci que je souhaiterais utiliser.<br />\r\nMerci de votre r\u00e9ponse","author":{"@type":"Person","@id":"https://www.developpez.net/forums/u54261/ouskel-n-or/","name":"ouskel'n'or"},"publisher":{"@type":"Organization","name":"Developpez.com","logo":{"@type":"ImageObject","url":"https://www.developpez.com/logos/images_actu/logo-dvp-150x43-fond-blanc.png"}},"interactionStatistic":{"@type":"InteractionCounter","interactionType":"https://schema.org/ReplyAction","userInteractionCount":"6"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.developpez.net/forums/f289/logiciels/microsoft-office/general-vba/"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Forum","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/"},{"@type":"ListItem","position":2,"name":"Logiciels","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f1243/logiciels/"},{"@type":"ListItem","position":3,"name":"Microsoft Office","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f541/logiciels/microsoft-office/"},{"@type":"ListItem","position":4,"name":"G\u00e9n\u00e9ral VBA","item":"https://www.developpez.net/forums/https://www.developpez.net/forums/f289/logiciels/microsoft-office/general-vba/"}]},{"@context":"https://schema.org","@type":"ItemList","numberOfItems":6,"itemListElement":[{"@type":"Comment","position":1,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3714607","dateCreated":"2008-10-20T08:22:02+02:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u45719/pc75/","name":"pc75"},"text":"Bonjour,<br />\r\n<br />\r\nJe ne sais pas si c'est ce que tu recherches, mais j'ai trouv\u00e9 \u00e7a dans MSDN :<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<div class=\"bbcode_quote\">\r\n\t\t<div class=\"quote_container\">\r\n\t\t\t<div class=\"bbcode_quote_container\"></div>\r\n\t\t\t\r\n\t\t\t\tMicrosoft\u00ae JScript\u0099<br />\r\nsort, m\u00e9thode   R\u00e9f\u00e9rence du langage <br />\r\nVersion 2 <br />\r\n <br />\r\n<br />\r\nVoir aussi                  Application <br />\r\n<br />\r\n<br />\r\n--------------------------------------------------------------------------------<br />\r\n<br />\r\nDescription<br />\r\nTrie les \u00e9l\u00e9ments d'un objet Array. <br />\r\n<br />\r\nSyntaxe<br />\r\narrayobj.sort(sortfunction) <br />\r\nL'argument sortfunction correspond au nom de la fonction employ\u00e9e pour d\u00e9terminer l'ordre des \u00e9l\u00e9ments. S'il est omis, les \u00e9l\u00e9ments sont tri\u00e9s par ordre croissant de caract\u00e8re ASCII. <br />\r\n<br />\r\nNotes<br />\r\nLa m\u00e9thode sort trie l'objet Array existant. Aucun nouvel objet Array n'est cr\u00e9\u00e9 pendant l'ex\u00e9cution. <br />\r\nSi vous indiquez une fonction dans l'argument sortfunction, elle doit retourner l'une des valeurs suivantes : <br />\r\n<br />\r\nUne valeur n\u00e9gative si le premier argument transmis est inf\u00e9rieur au deuxi\u00e8me argument. <br />\r\nZ\u00e9ro si les deux arguments sont \u00e9quivalents. <br />\r\nUne valeur positive si le premier argument est sup\u00e9rieur au second. <br />\r\nL'exemple ci-dessous illustre l'utilisation de la m\u00e9thode sort : <br />\r\n<br />\r\nfunction SortDemo()<br />\r\n{<br />\r\n  var a, l;<br />\r\n  a = new Array(&quot;X&quot; ,&quot;y&quot; ,&quot;d&quot;, &quot;Z&quot;, &quot;v&quot;,&quot;m&quot;,&quot;r&quot;);<br />\r\n  l = a.sort();<br />\r\n  return(l);<br />\r\n}\r\n\t\t\t\r\n\t\t</div>\r\n\t</div>\r\n</div>"},{"@type":"Comment","position":2,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3718403","dateCreated":"2008-10-21T11:36:54+02:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u54261/ouskel-n-or/","name":"ouskel'n'or"},"text":"Merci pc75,<br />\r\nC'\u00e9tait bien la m\u00e9thode de mes souvenirs. H\u00e9las, si elle fonctionne en VB.Script, ce n'est pas le cas en VBA-Excel o\u00f9 Sort r\u00e9clame un objet range.<br />\r\n<br />\r\nMais j'ai r\u00e9solu mon probl\u00e8me gr\u00e2ce \u00e0 M\u00e9phistopheles qui propose un tri tr\u00e8s rapide qui me convient tr\u00e8s bien.<br />\r\nBonne journ\u00e9e<br />\r\n<br />\r\nJe laisse la discussion et mets r\u00e9solu, ta r\u00e9ponse pourait int\u00e9resser les v\u00e9b\u00e9scripteurs <img src=\"images/smilies/icon_wink.gif\" border=\"0\" alt=\"\" title=\";)\" class=\"inlineimg\" />"},{"@type":"Comment","position":3,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3730833","dateCreated":"2008-10-25T08:58:33+02:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u97256/philben/","name":"philben"},"text":"salut ouskel'nor,<br />\n<br />\n&lt;ShellSort&gt; est plus rapide que &lt;QuickSort r\u00e9cursif&gt; en VBA :<br />\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:204px;\"><table cellspacing=\"0\" cellpadding=\"0\"><tr><td valign=\"top\" width=\"33\"><div style=\"border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace\">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br />25<br />26<br />27<br />28<br />29<br /></div></td><td valign=\"top\"><pre style=\"margin: 0\">&nbsp;\n<span style=\"color: #0000ff;\">Public</span> <span style=\"color: #0000ff;\">Sub</span> ShellSortInteger<span class=\"br0\">&#40;</span><span style=\"color: #0000ff;\">ByRef</span> aTab<span class=\"br0\">&#40;</span><span class=\"br0\">&#41;</span> <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Integer</span><span class=\"br0\">&#41;</span>\n   <span style=\"color: #0000ff;\">Dim</span> i <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>, j <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>, lInc <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>, n <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>, lMin <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>\n   <span style=\"color: #0000ff;\">Dim</span> lLowerBound <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>, lUpperBound <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Long</span>\n   <span style=\"color: #0000ff;\">Dim</span> vRef <span style=\"color: #0000ff;\">As</span> <span style=\"color: #0000ff;\">Variant</span>\n&nbsp;\n   lLowerBound = LBound<span class=\"br0\">&#40;</span>aTab<span class=\"br0\">&#41;</span>\n   lUpperBound = UBound<span class=\"br0\">&#40;</span>aTab<span class=\"br0\">&#41;</span>\n   n = lUpperBound - lLowerBound + <span style=\"color: #cc66cc;\">1</span>\n   lInc = <span style=\"color: #cc66cc;\">1</span>\n&nbsp;\n   <span style=\"color: #0000ff;\">While</span> lInc &lt; n\n      lInc = lInc * <span style=\"color: #cc66cc;\">3</span> + <span style=\"color: #cc66cc;\">1</span>\n   <span style=\"color: #0000ff;\">Wend</span>\n   <span style=\"color: #0000ff;\">While</span> lInc &gt; <span style=\"color: #cc66cc;\">1</span>\n      lInc = lInc / <span style=\"color: #cc66cc;\">3</span>\n      lMin = lInc + lLowerBound\n      <span style=\"color: #0000ff;\">For</span> i = lMin <span style=\"color: #0000ff;\">To</span> lUpperBound\n         j = i\n         vRef = aTab<span class=\"br0\">&#40;</span>i<span class=\"br0\">&#41;</span>\n         <span style=\"color: #0000ff;\">Do</span> <span style=\"color: #0000ff;\">While</span> vRef &lt; aTab<span class=\"br0\">&#40;</span>j - lInc<span class=\"br0\">&#41;</span>\n            aTab<span class=\"br0\">&#40;</span>j<span class=\"br0\">&#41;</span> = aTab<span class=\"br0\">&#40;</span>j - lInc<span class=\"br0\">&#41;</span>\n            j = j - lInc\n            <span style=\"color: #0000ff;\">If</span> j &lt; lMin <span style=\"color: #0000ff;\">Then</span> <span style=\"color: #0000ff;\">Exit</span> <span style=\"color: #0000ff;\">Do</span>\n         <span style=\"color: #0000ff;\">Loop</span>\n         aTab<span class=\"br0\">&#40;</span>j<span class=\"br0\">&#41;</span> = vRef\n      <span style=\"color: #0000ff;\">Next</span> i\n   <span style=\"color: #0000ff;\">Wend</span>\n<span style=\"color: #0000ff;\">End</span> <span style=\"color: #0000ff;\">Sub</span></pre></td></tr></table></pre>\r\n</div>Philippe"},{"@type":"Comment","position":4,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3731645","dateCreated":"2008-10-25T22:43:47+02:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u54261/ouskel-n-or/","name":"ouskel'n'or"},"text":"ShellSortInteger Winner ! <img src=\"images/smilies/yaisse2.gif\" border=\"0\" alt=\"\" title=\":yaisse2:\" class=\"inlineimg\" /><br />\r\nTest\u00e9. 0,02 s pour ShellSortInteger contre 0,8 s pour QuiskSort. <br />\r\nPour faire plus rapide je devrai changer de micro <img src=\"images/smilies/icon_wink.gif\" border=\"0\" alt=\"\" title=\";)\" class=\"inlineimg\" /><br />\r\nMerci philben, j'adopte !"},{"@type":"Comment","position":5,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3763320","dateCreated":"2008-11-06T13:20:59+01:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u233907/_/","name":"-={-_-}=-"},"text":"C'est vrai que ShellSort est tres bien.<br />\r\nLe souci est que parfois, le tri n'est pas exact.<br />\r\nCela est particuli\u00e8rement le cas si ton Array \u00e0 trier contient tres peu de donn\u00e9es.<br />\r\n<br />\r\nPerso, j'utilise toujours ShellSort pour les array important sinon un Tri \u00e0 Bulle est amplement suffisant."},{"@type":"Comment","position":6,"url":"https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post6914973","dateCreated":"2012-10-02T14:01:58+02:00","upvoteCount":0,"downvoteCount":0,"author":{"@type":"Person","@id":"https://www.developpez.net/forums/u/-/","name":"Invit\u00e9"},"text":"<div class=\"bbcode_container\">\r\n\t<div class=\"bbcode_quote\">\r\n\t\t<div class=\"quote_container\">\r\n\t\t\t<div class=\"bbcode_quote_container\"></div>\r\n\t\t\t\r\n\t\t\t\t<div class=\"bbcode_postedby\">\r\n\t\t\t\t\t<img src=\"https://forum.developpez.be/images/misc/quote_icon.png\" alt=\"Citation\" /> Envoy\u00e9 par <strong>philben</strong>\r\n\t\t\t\t\t<a href=\"showthread.php?p=3730833#post3730833\" rel=\"nofollow\"><img class=\"inlineimg\" src=\"https://forum.developpez.be/images/buttons/viewpost-right.png\" alt=\"Voir le message\" /></a>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"message\">salut ouskel'nor,<br />\r\n<br />\r\n&lt;ShellSort&gt; est plus rapide que &lt;QuickSort r\u00e9cursif&gt; en VBA :</div>\r\n\t\t\t\r\n\t\t</div>\r\n\t</div>\r\n</div>Merci ! <img src=\"images/smilies/ccool.gif\" border=\"0\" alt=\"\" title=\":ccool:\" class=\"inlineimg\" /><br />\r\n<br />\r\nIl faut juste pr\u00e9ciser :<br />\r\n<br />\r\n<div class=\"bbcode_container\">\r\n\t<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\"><tr>\r\n\t<td style=\"border: 0; padding: 0; text-align: left\">Code  :</td>\r\n\t<td style=\"border: 0; padding: 0; text-align: right\"><a href=\"#\" onclick=\"return ano_selectionnerCode(this);\">S\u00e9lectionner tout</a> -\r\n\t<a href=\"#\" onclick=\"return ano_etendreCode(this);\">Visualiser dans une fen\u00eatre \u00e0 part</a></td></tr></table>\r\n\t<pre class=\"bbcode_code\" style=\"height:36px;\"><span style=\"color: #0000ff;\">option</span> base <span style=\"color: #cc66cc;\">1</span></pre>\r\n</div>Sinon la valeur du plus petit indice du tableau valait 0 chez moi (avec Excel 2007). Ca joue sur la valeur de LBound..."}]}]</script>
+	<link rel="canonical" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu.css,postlist.css,showthread.css,postbit.css,options.css,attachment.css,poll.css,lightbox.css" />
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=toolsmenu-ie.css,postlist-ie.css,showthread-ie.css,postbit-ie.css,poll-ie.css" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=additional.css" />
+
+	<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools.css,toolsmenu.css" />
+
+
+<!--[if lt IE 8]>
+<link rel="stylesheet" type="text/css" href="https://www.developpez.net/forums/css.php?styleid=7&amp;langid=2&amp;d=1638971131&amp;td=ltr&amp;sheet=projecttools-ie.css" />
+<![endif]-->
+</head>
+
+<body>
+
+	<header>
+
+	<div id="gabarit_b1">
+		<div id="gabarit_connexion">
+	<form>
+		<div><span>Identifiant</span><input type="text" class="form_input form-control" id="formloginConnexion" /><span>Mot de passe</span><input type="password" class="form_input form-control" id="formpassConnexion"/><input type="button" value="Connexion" id="formbuttonConnexion" class="btn btn-primary" /><div id="loadingConnexion" class="spinner-border text-light" role="status"><span class="sr-only">Loading...</span></div></div><a rel="nofollow" id="mdpoublier" href="http://www.developpez.net/forums/login.php?do=lostpw">Mot de passe oublié ?</a><a id="inscriptionConnexion" href="https://www.developpez.net/forums/inscription/" class="btn btn-primary">Je m'inscris ! (gratuit)</a>	
+	</form>
+</div>		<div id="gabarit-barreRecherche" style="display:none;"><form action="https://www.google.fr" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-8110924381468607:6449306375" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="12" />
+    <input type="submit" name="sa" value="Rechercher" />
+  </div>
+</form></div>
+<div id="gabarit-new-logo" role="gabarit-accueil">
+	<a href="https://www.developpez.com"><img src="/template/images/logo-dvp-h55.png" alt="logo dvp" width="48" height="55" /></a>
+	<a href="https://www.developpez.com"><span class="dvp"></span></a>
+	<span class="triangle"></span>
+</div>
+<div id="gabarit_recherche">
+	<div class="gabarit-btn-menu profil dn" role="gabarit-profil"></div>
+	<div class="gabarit-btn-menu profil dn" role="gabarit-connecter"><span></span><a id="gabaritRepereLogout" class="btn btn-primary"></a></div>
+	<div class="gabarit-btn-menu contacts" role="gabarit-contacts"></div>
+	<div class="gabarit-btn-menu recherche" role="gabarit-recherche"></div>
+</div>
+
+<div id="gabarit_superieur">
+	<nav>
+	<ul>
+		<li><a href="https://www.developpez.net/forums/" title="">Forums</a></li>
+		<li><a href="https://general.developpez.com/cours/" title="">Tutoriels</a></li>
+		<li><a href="https://general.developpez.com/faq/" title="">FAQ</a></li>
+		<li><a href="https://www.developpez.net/forums/blogs/" title="">Blogs</a></li>
+		<li><a href="https://chat.developpez.com/" title="">Chat</a></li>
+		<li><a href="https://www.developpez.com/newsletter/">Newsletter</a></li>
+		<li><a href="https://emploi.developpez.com/" title="">Emploi</a></li>
+		<li><a href="https://etudes.developpez.com/">Études</a></li>
+		<li><a href="https://droit.developpez.com/" title="">Droit</a></li>
+		<li><a href="https://club.developpez.com/">Club</a></li>
+	</ul>
+	</nav>
+</div>	</div>
+	<nav>
+
+<ul id="gabarit_menu" style="padding-left:56px;">
+	<li><a href="https://www.developpez.com" data-idrub="1" data-niv="1" style="padding:0;"><div id="gabarit_home"></div></a>
+			</li>
+	<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="1">DI/DSI Solutions d&#039;entreprise<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://solutions-entreprise.developpez.com" data-idrub="86" data-niv="2">DI/DSI Solutions d&#039;entreprise</a></li>
+				<li><a href="https://abbyy.developpez.com" data-idrub="147" data-niv="2">ABBYY</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://bpm.developpez.com" data-idrub="134" data-niv="2">BPM</a></li>
+				<li><a href="https://business-intelligence.developpez.com" data-idrub="61" data-niv="2">Business Intelligence</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://solutions-entreprise.developpez.com/erp-pgi/presentation-erp-pgi/" data-idrub="91" data-niv="2">ERP / PGI</a></li>
+				<li><a href="https://crm.developpez.com" data-idrub="92" data-niv="2">CRM</a></li>
+				<li><a href="https://sas.developpez.com" data-idrub="93" data-niv="2">SAS</a></li>
+				<li><a href="https://sap.developpez.com" data-idrub="106" data-niv="2">SAP</a></li>
+				<li><a href="https://www.developpez.net/forums/f1664/systemes/windows/windows-serveur/biztalk-server/" data-idrub="115" data-niv="2">Microsoft BizTalk Server</a></li>
+				<li><a href="https://talend.developpez.com" data-idrub="118" data-niv="2">Talend</a></li>
+				<li><a href="https://droit.developpez.com" data-idrub="132" data-niv="2">Droit informatique et entreprise</a></li>
+			</ul></li>
+	<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="1">Cloud<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://cloud-computing.developpez.com" data-idrub="103" data-niv="2">Cloud Computing</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+				<li><a href="https://ibmcloud.developpez.com" data-idrub="135" data-niv="2">IBM Cloud</a></li>
+			</ul></li>
+	<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="1">IA<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://intelligence-artificielle.developpez.com" data-idrub="143" data-niv="2">Intelligence artificielle</a></li>
+			</ul></li>
+	<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="1">ALM<!--<span class="gabarit_tooltip">Cycle de vie du logiciel</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://alm.developpez.com" data-idrub="42" data-niv="2">ALM</a></li>
+				<li><a href="https://agile.developpez.com" data-idrub="146" data-niv="2">Agile</a></li>
+				<li><a href="https://merise.developpez.com" data-idrub="43" data-niv="2">Merise</a></li>
+				<li><a href="https://uml.developpez.com" data-idrub="12" data-niv="2">UML</a></li>
+			</ul></li>
+	<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="1">Microsoft<!----></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://microsoft.developpez.com" data-idrub="150" data-niv="2">Microsoft</a></li>
+				<li><a href="https://dotnet.developpez.com" data-idrub="20" data-niv="2">.NET</a></li>
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://dotnet.developpez.com/aspnet/" data-idrub="83" data-niv="2">ASP.NET</a></li>
+				<li><a href="https://dotnet.developpez.com/csharp/" data-idrub="81" data-niv="2">C#</a></li>
+				<li><a href="https://dotnet.developpez.com/vbnet/" data-idrub="82" data-niv="2">VB.NET</a></li>
+				<li><a href="https://windows-azure.developpez.com" data-idrub="107" data-niv="2">Azure</a></li>
+			</ul></li>
+	<li><a href="https://java.developpez.com" data-idrub="4" data-niv="1">Java<!--<span class="gabarit_tooltip">Plateforme et langage Java</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://java.developpez.com" data-idrub="4" data-niv="2">Java</a></li>
+				<li><a href="https://javaweb.developpez.com" data-idrub="97" data-niv="2">Java Web</a></li>
+				<li><a href="https://spring.developpez.com" data-idrub="87" data-niv="2">Spring</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+			</ul></li>
+	<li><a href="https://web.developpez.com" data-idrub="8" data-niv="1">Dév. Web<!--<span class="gabarit_tooltip">Développement Web et Webmarketing</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://web.developpez.com" data-idrub="8" data-niv="2">Développement et hébergement Web</a></li>
+				<li><a href="https://ajax.developpez.com" data-idrub="85" data-niv="2">AJAX</a></li>
+				<li><a href="https://apache.developpez.com" data-idrub="71" data-niv="2">Apache</a></li>
+				<li><a href="https://asp.developpez.com" data-idrub="10" data-niv="2">ASP</a></li>
+				<li><a href="https://css.developpez.com" data-idrub="51" data-niv="2">CSS</a></li>
+				<li><a href="https://dart.developpez.com" data-idrub="125" data-niv="2">Dart</a></li>
+				<li><a href="https://flash.developpez.com" data-idrub="41" data-niv="2">Flash / Flex</a></li>
+				<li><a href="https://javascript.developpez.com" data-idrub="45" data-niv="2">JavaScript</a></li>
+				<li><a href="https://nodejs.developpez.com" data-idrub="141" data-niv="2">NodeJS</a></li>
+				<li><a href="https://php.developpez.com" data-idrub="9" data-niv="2">PHP</a></li>
+				<li><a href="https://ruby.developpez.com" data-idrub="53" data-niv="2">Ruby &amp; Rails</a></li>
+				<li><a href="https://typescript.developpez.com" data-idrub="127" data-niv="2">TypeScript</a></li>
+				<li><a href="https://web-semantique.developpez.com" data-idrub="111" data-niv="2">Web sémantique</a></li>
+				<li><a href="https://webmarketing.developpez.com" data-idrub="80" data-niv="2">Webmarketing</a></li>
+				<li><a href="https://xhtml.developpez.com" data-idrub="50" data-niv="2">(X)HTML</a></li>
+			</ul></li>
+	<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="1">EDI<!--<span class="gabarit_tooltip">Environnements de Développement Intégré</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://edi.developpez.com" data-idrub="90" data-niv="2">EDI</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://delphi.developpez.com" data-idrub="2" data-niv="2">Delphi</a></li>
+				<li><a href="https://eclipse.developpez.com" data-idrub="55" data-niv="2">Eclipse</a></li>
+				<li><a href="https://jetbrains.developpez.com" data-idrub="144" data-niv="2">JetBrains</a></li>
+				<li><a href="https://labview.developpez.com" data-idrub="72" data-niv="2">LabVIEW</a></li>
+				<li><a href="https://netbeans.developpez.com" data-idrub="66" data-niv="2">NetBeans</a></li>
+				<li><a href="https://matlab.developpez.com" data-idrub="58" data-niv="2">MATLAB</a></li>
+				<li><a href="https://scilab.developpez.com" data-idrub="120" data-niv="2">Scilab</a></li>
+				<li><a href="https://visualstudio.developpez.com" data-idrub="84" data-niv="2">Visual Studio</a></li>
+				<li><a href="https://wind.developpez.com" data-idrub="74" data-niv="2">WinDev</a></li>
+				<li><a href="https://vb.developpez.com" data-idrub="5" data-niv="2">Visual Basic 6</a></li>
+				<li><a href="https://lazarus.developpez.com" data-idrub="96" data-niv="2">Lazarus</a></li>
+				<li><a href="https://qt-creator.developpez.com" data-idrub="109" data-niv="2">Qt Creator</a></li>
+			</ul></li>
+	<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="1">Programmation<!--<span class="gabarit_tooltip">Programmation et langages de programmation applicatifs</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://programmation.developpez.com" data-idrub="119" data-niv="2">Programmation</a></li>
+				<li><a href="https://algo.developpez.com" data-idrub="47" data-niv="2">Débuter - Algorithmique</a></li>
+				<li><a href="https://jeux.developpez.com" data-idrub="38" data-niv="2">2D - 3D - Jeux</a></li>
+				<li><a href="https://asm.developpez.com" data-idrub="16" data-niv="2">Assembleur</a></li>
+				<li><a href="https://c.developpez.com" data-idrub="3" data-niv="2">C</a></li>
+				<li><a href="https://cpp.developpez.com" data-idrub="59" data-niv="2">C++</a></li>
+				<li><a href="https://d.developpez.com" data-idrub="123" data-niv="2">D</a></li>
+				<li><a href="https://go.developpez.com" data-idrub="124" data-niv="2">Go</a></li>
+				<li><a href="https://kotlin.developpez.com" data-idrub="145" data-niv="2">Kotlin</a></li>
+				<li><a href="https://objective-c.developpez.com" data-idrub="117" data-niv="2">Objective C</a></li>
+				<li><a href="https://pascal.developpez.com" data-idrub="7" data-niv="2">Pascal</a></li>
+				<li><a href="https://perl.developpez.com" data-idrub="29" data-niv="2">Perl</a></li>
+				<li><a href="https://python.developpez.com" data-idrub="27" data-niv="2">Python</a></li>
+				<li><a href="https://rust.developpez.com" data-idrub="137" data-niv="2">Rust</a></li>
+				<li><a href="https://swift.developpez.com" data-idrub="128" data-niv="2">Swift</a></li>
+				<li><a href="https://qt.developpez.com" data-idrub="65" data-niv="2">Qt</a></li>
+				<li><a href="https://xml.developpez.com" data-idrub="11" data-niv="2">XML</a></li>
+				<li><a href="https://general.developpez.com/cours/" data-idrub="21" data-niv="2">Autres</a></li>
+			</ul></li>
+	<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="1">SGBD<!--<span class="gabarit_tooltip">Systèmes de Gestion de Bases de Données</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://sgbd.developpez.com" data-idrub="13" data-niv="2">SGBD &amp; SQL</a></li>
+				<li><a href="https://4d.developpez.com" data-idrub="39" data-niv="2">4D</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://big-data.developpez.com" data-idrub="126" data-niv="2">Big Data</a></li>
+				<li><a href="https://data-science.developpez.com" data-idrub="151" data-niv="2">Data Science</a></li>
+				<li><a href="https://db2.developpez.com" data-idrub="36" data-niv="2">DB2</a></li>
+				<li><a href="https://firebird.developpez.com" data-idrub="73" data-niv="2">Firebird</a></li>
+				<li><a href="https://interbase.developpez.com" data-idrub="32" data-niv="2">InterBase</a></li>
+				<li><a href="https://mysql.developpez.com" data-idrub="31" data-niv="2">MySQL</a></li>
+				<li><a href="https://nosql.developpez.com" data-idrub="114" data-niv="2">NoSQL</a></li>
+				<li><a href="https://postgresql.developpez.com" data-idrub="33" data-niv="2">PostgreSQL</a></li>
+				<li><a href="https://oracle.developpez.com" data-idrub="25" data-niv="2">Oracle</a></li>
+				<li><a href="https://sybase.developpez.com" data-idrub="37" data-niv="2">Sybase</a></li>
+				<li><a href="https://sqlserver.developpez.com" data-idrub="34" data-niv="2">SQL-Server</a></li>
+				<li><a href="https://mongodb.developpez.com" data-idrub="148" data-niv="2">MongoDB</a></li>
+			</ul></li>
+	<li><a href="https://office.developpez.com" data-idrub="54" data-niv="1" class="gabarit_selection">Office<!--<span class="gabarit_tooltip">Bureautique pour l'entreprise</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://office.developpez.com" data-idrub="54" data-niv="2">Microsoft Office</a></li>
+				<li><a href="https://access.developpez.com" data-idrub="19" data-niv="2">Access</a></li>
+				<li><a href="https://excel.developpez.com" data-idrub="75" data-niv="2">Excel</a></li>
+				<li><a href="https://word.developpez.com" data-idrub="76" data-niv="2">Word</a></li>
+				<li><a href="https://outlook.developpez.com" data-idrub="77" data-niv="2">Outlook</a></li>
+				<li><a href="https://powerpoint.developpez.com" data-idrub="78" data-niv="2">PowerPoint</a></li>
+				<li><a href="https://sharepoint.developpez.com" data-idrub="79" data-niv="2">SharePoint</a></li>
+				<li><a href="https://project.developpez.com" data-idrub="99" data-niv="2">Microsoft Project</a></li>
+				<li><a href="https://openoffice-libreoffice.developpez.com" data-idrub="116" data-niv="2">OpenOffice &amp; LibreOffice</a></li>
+			</ul></li>
+	<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="1">Mobiles<!--<span class="gabarit_tooltip">Logiciels et matériels mobiles</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://mobiles.developpez.com" data-idrub="94" data-niv="2">Mobiles</a></li>
+				<li><a href="https://android.developpez.com" data-idrub="95" data-niv="2">Android</a></li>
+				<li><a href="https://ios.developpez.com" data-idrub="101" data-niv="2">iOS</a></li>
+			</ul></li>
+	<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="1">Systèmes<!--<span class="gabarit_tooltip">Logiciels et matériels systèmes</span>--></a>
+			<ul class="gabarit_sousmenu">
+				<li><a href="https://systeme.developpez.com" data-idrub="30" data-niv="2">Systèmes</a></li>
+				<li><a href="https://windows.developpez.com" data-idrub="17" data-niv="2">Windows</a></li>
+				<li><a href="https://linux.developpez.com" data-idrub="18" data-niv="2">Linux</a></li>
+				<li><a href="https://arduino.developpez.com" data-idrub="142" data-niv="2">Arduino</a></li>
+				<li><a href="https://securite.developpez.com" data-idrub="40" data-niv="2">Sécurité</a></li>
+				<li><a href="https://hardware.developpez.com" data-idrub="64" data-niv="2">Hardware</a></li>
+				<li><a href="https://hpc.developpez.com" data-idrub="139" data-niv="2">HPC</a></li>
+				<li><a href="https://mac.developpez.com" data-idrub="57" data-niv="2">Mac</a></li>
+				<li><a href="https://raspberry-pi.developpez.com" data-idrub="131" data-niv="2">Raspberry Pi</a></li>
+				<li><a href="https://reseau.developpez.com" data-idrub="70" data-niv="2">Réseau</a></li>
+				<li><a href="https://green-it.developpez.com" data-idrub="104" data-niv="2">Green IT</a></li>
+				<li><a href="https://embarque.developpez.com" data-idrub="110" data-niv="2">Systèmes embarqués</a></li>
+				<li><a href="https://virtualisation.developpez.com" data-idrub="108" data-niv="2">Virtualisation</a></li>
+			</ul></li>
+</ul>
+
+<ul id="gabarit_barre1"><li class="gabarit_selection"><a href="https://office.developpez.com">Office</a></li><li><a href="https://access.developpez.com">Access</a></li><li><a href="https://excel.developpez.com">Excel</a></li><li><a href="https://word.developpez.com">Word</a></li><li><a href="https://outlook.developpez.com">Outlook</a></li><li><a href="https://powerpoint.developpez.com">PowerPoint</a></li><li><a href="https://sharepoint.developpez.com">SharePoint</a></li><li><a href="https://project.developpez.com">MS Project</a></li><li><a href="https://openoffice-libreoffice.developpez.com">OpenOffice &amp; LibreOffice</a></li></ul>
+
+<div id="gabarit_barre2">
+	<a rel="nofollow" class="gabarit_social gabarit_twitter" href="http://twitter.com/Office_DVP" target="_blank" title="Retrouver Developpez sur Twitter"></a>
+	<a class="gabarit_social gabarit_rss" href="http://office.developpez.com/index/rss" target="_blank" title="Flux RSS"></a>
+	<ul>
+<li><a href="https://www.developpez.net/forums/f541/hardware-systemes-logiciels/microsoft-office/">FORUM OFFICE</a></li><li><a href="https://office.developpez.com/faq/">FAQ OFFICE</a></li><li><a href="https://office.developpez.com/cours/">TUTORIELS OFFICE</a></li><li><a href="https://office.developpez.com/livres/">LIVRES OFFICE</a></li><li><a href="http://vb.developpez.com/srcvba/">SOURCES VBA</a></li><li><a href="https://office.developpez.com/office2010/">OFFICE 2010</a></li>	</ul>
+</div>
+
+</nav>
+
+
+	</header>
+	<section>
+
+
+	<div class="contenuPage">
+
+
+<style type="text/css">
+	.body_wrapper { width: calc(100% - 214px) !important; }
+	#ano_colonne_droite { position: absolute; right: 20px; top: 415px; width: 160px; display: none; }
+	#ano_colonne_liens { background-color: #293a4e; border: 3px solid #293a4e; border-radius: .25rem .25rem 0 0; -webkit-border-radius: .25rem .25rem 0 0; padding-top: 20px; margin-bottom: 1rem; }
+	#ano_colonne_contenu { background: #fff; }
+	#ano_colonne_droite p { color: #5a7f97; text-align: center; padding: 4px 0.2rem; }
+	#ano_colonne_droite p:first-child { padding-top:16px; }
+	#ano_colonne_droite p:last-child { padding-bottom:16px; }
+	#ano_colonne_titre { background: none !important; height: 21px; line-height: 21px; position: absolute; top: 0; left: 0; width: 160px; color: #fff !important; padding: 0 !important; margin: 0; text-align:center !important; font-size:.8rem; text-shadow: 1px 1px 0px #385263; }
+</style>
+<div id="ano_colonne_droite">
+<div id="ano_colonne_liens">
+<div id="ano_colonne_titre">Navigation</div>
+<div id="ano_colonne_contenu">
+<p style="padding-top:10px; padding-bottom:0;"><b>Inscrivez-vous gratuitement</b><br />pour pouvoir participer, suivre les réponses en temps réel, voter pour les messages, poser vos propres questions et recevoir la newsletter<br /><br />
+<a href="https://www.developpez.net/forums/inscription/">
+<img src="https://www.developpez.com/images/dvp/inscris-bkgnone.png" />
+</a></p></div></div><div id="sx54ch4m" class="dvpb4" style="display: inline-block; width: 160px; height: 600px"></div><div id="gabarit_pub4"></div>
+</div>
+<script type="text/javascript">
+$(function() {
+	var bloc = $("#ano_colonne_droite");
+	var intr = false;
+	var y = $("#breadcrumb").offset().top;
+	bloc.css("top", y + "px").show();
+
+	$(window).on("scroll", function() {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+		if (scrollTop < y) {
+			if (intr) {
+				bloc.css("position", "");
+				bloc.css("top", y + "px");
+				intr = false;
+			}
+		} else {
+			if (! intr) {
+				bloc.css("position", "fixed");
+				bloc.css("top", "5px");
+				intr = true;
+			}
+		}
+	});
+});
+</script>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<div id="header" class="floatcontainer doc_header">
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="https://www.developpez.net/forums/inscription/" rel="nofollow">S'inscrire</a></li>
+			
+				<li><a rel="help" href="https://www.developpez.net/forums/faq.php">Aide</a></li>
+				<li>
+			<script type="text/javascript" src="https://www.developpez.net/forums/clientscript/vbulletin_md5.js?v=422"></script>
+			<form id="navbar_loginform" action="https://www.developpez.net/forums/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input type="text" class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Identifiant" />
+					<input type="password" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" />
+					<input type="text" class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Mot de passe" style="display:none;" />
+					<input type="hidden" name="cookieuser" value="1" />
+					<input type="submit" class="loginbutton" tabindex="104" value="S'identifier" title="Insérez votre identifiant et mot de passe dans les cases correspondantes pour vous connecter, ou cliquez sur le bouton « S'inscrire » pour créer un profil personnel." accesskey="s" />
+						</div>
+					</div>
+				</fieldset>
+
+				<input type="hidden" name="s" value="" />
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="login" />
+				<input type="hidden" name="vb_login_md5password" />
+				<input type="hidden" name="vb_login_md5password_utf" />
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'Identifiant')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#000000';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='Identifiant';
+					textbox.style.color='#777777';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		
+		
+	</div>
+	<hr />
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+		
+	
+		<li  id="vbtab_whatsnew">
+			<a class="navtab" href="https://www.developpez.net/forums/activity.php">Quoi de neuf ?</a>
+		</li>
+		
+		
+
+	
+		<li class="selected" id="vbtab_forum">
+			<a class="navtab" href="http://www.developpez.net/forums/">Forum</a>
+		</li>
+		
+		
+			<ul class="floatcontainer">
+				
+					
+						
+							<li id="vbflink_newposts"><a rel="nofollow" href="https://www.developpez.net/forums/search.php?do=getnew&amp;contenttype=vBForum_Post">Derniers messages</a></li>
+						
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_actions">
+							<a href="javascript://" class="popupctrl">Actions</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbalink_mfr"><a rel="nofollow" href="https://www.developpez.net/forums/forumdisplay.php?do=markread&amp;markreadhash=guest">Marquer les forums comme lus</a></li>
+								
+									<li id="vbqlink_posts"><a href="https://www.developpez.net/forums/search.php?do=getdaily&amp;contenttype=vBForum_Post">Messages du jour</a></li>
+								
+									<li id="link_mtg4_835"><a href="http://www.developpez.net/forums/project.php">Bugs & Suggestions</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						<li class="popupmenu" id="vbmenu_community">
+							<a href="javascript://" class="popupctrl">Réseau social</a>
+							<ul class="popupbody popuphover">
+								
+									<li id="vbclink_groups"><a href="https://www.developpez.net/forums/group.php">Groupes</a></li>
+								
+									<li id="vbflink_faq"><a href="https://www.developpez.net/forums/faq.php">FAQ forum</a></li>
+								
+									<li id="vbclink_members"><a href="https://www.developpez.net/forums/memberlist.php">Liste des utilisateurs</a></li>
+								
+									<li id="vbqlink_leaders"><a href="https://www.developpez.net/forums/showgroups.php">Voir l'équipe du site</a></li>
+								
+							</ul>
+						</li>
+					
+				
+					
+						
+							<li id="link_nde2_515"><a href="http://www.developpez.net/forums/blogs/">Blogs</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_calendar"><a href="https://www.developpez.net/forums/agenda/">Agenda</a></li>
+						
+					
+				
+					
+						
+							<li id="vbflink_newposts"><a target="_blank" href="http://chat.developpez.com/">Chat (7)</a></li>
+						
+					
+				
+					
+						
+							<li id="link_nta3_958"><a target="_blank" href="http://club.developpez.com/regles/">Règles</a></li>
+						
+					
+				
+			</ul>
+		
+
+	
+		<li  id="vbtab_blog">
+			<a class="navtab" href="https://www.developpez.net/forums/blogs/">Blogs</a>
+		</li>
+		
+		
+
+	
+		<li  id="vbtab_project">
+			<a class="navtab" href="https://www.developpez.net/forums/project.php">Projets</a>
+		</li>
+		
+		
+
+		
+	</ul>
+	
+		<div id="globalsearch" class="globalsearch">
+			<form action="https://www.developpez.net/forums/search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+				
+				<input type="hidden" name="securitytoken" value="guest" />
+				<input type="hidden" name="do" value="process" />
+				<span class="textboxcontainer"><span><input type="text" value="" name="query" class="textbox" tabindex="99"/></span></span>
+				<span class="buttoncontainer"><span><input type="image" class="searchbutton" src="https://forum.developpez.be/images/buttons/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100"/></span></span>
+			</form>
+			<ul class="navbar_advanced_search">
+				<li><a href="https://www.developpez.net/forums/search.php" accesskey="4">Recherche avancée</a></li>
+				
+			</ul>
+		</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/" accesskey="1"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" width="12" height="12" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f1243/logiciels/">Logiciels</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f541/logiciels/microsoft-office/">Microsoft Office</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f289/logiciels/microsoft-office/general-vba/">Général VBA</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Trier un tableau() avec Sort</span></li>
+
+	</ul>
+	<hr />
+</div>
+
+
+
+
+
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=6914973&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Répondre à la discussion</a>
+			<img style="display:none" id="progress_newreplylink_top" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+
+		
+		<div id="pagination_top" class="pagination_top">
+		
+
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+        <img src="https://www.developpez.com/images/logos/office.png" alt="VBA">
+        <span class="threadtitle threadtitle_anoheader">Discussion :</span>
+		<h1>
+			<span class="threadtitle"><a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/" title="Recharger cette page">Trier un tableau() avec Sort</a> <img src="https://forum.developpez.be/images/icone-resolu.png" title="Question résolue" alt=""> </span>
+		</h1>
+
+<br />Sujet :
+<h2>VBA</h2>
+
+
+<style type="text/css">.above_body { margin: -3px -.5rem .5rem; }</style><center style="margin-top: .5rem"><div id="gabarit_pub0"></div><div id="kp54wr0m" class="dvpb0" style="display: inline-block; width: 728px; height: 90px"></div></center>
+
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<span><a class="popupctrl" href="javascript://">Outils de la discussion</a></span>
+				<ul class="popupbody popuphover">
+					<li><a href="https://www.developpez.net/forums/i630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/" accesskey="3" rel="nofollow">Afficher une version imprimable</a></li>
+					
+					<li>
+						
+							<a href="https://www.developpez.net/forums/subscription.php?do=addsubscription&amp;t=630265" rel="nofollow">S'abonner à cette discussion&hellip;</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<span><a class="popupctrl" href="javascript://">Affichage</a></span>
+					<ul class="popupbody popuphover">
+						<li><label>Mode linéaire</label></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/?mode=hybrid"> Choisir le mode hybride</a></li>
+						<li><a rel="nofollow" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/?mode=threaded#post3714310"> Choisir le mode arborescent</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbitlegacy postbitim postcontainer old" id="post_3714310">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">19/10/2008,&nbsp;<span class="time">23h13</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3714310" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3714310" class="postcounter">#1</a><a id="postcount3714310" name="1"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté"><strong>ouskel'n'or</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="ouskel'n'or est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Inactif
+			</span>
+			
+				<span class="rank">&nbsp;</span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="8 Q/R de FAQ rédigées" user="54261" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-uploadeur.png" title="Posteur de sources - 3 sources postées" user="54261" role="uploads" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/54261-ouskel-n-or.gif?dateline=1214382779" alt="Avatar de ouskel'n'or" title="Avatar de ouskel'n'or" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/54261/ouskel-n-or"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>février 2005</dd><dt>Messages</dt><dd>12&nbsp;464</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="54261" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="54261"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : février 2005</div><div>Messages : 12&nbsp;464</div><div>Points : 15 274</div></div></div><dt>Points</dt><dd><span role="points" userid="54261">15 274</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+							
+							
+						
+						
+				<div class="content">
+					<div id="post_message_3714310">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br />
+Je souhaite effectuer le tri d'un tableau() à une dimension en VBA.<br />
+Je crois bien avoir vu passer une méthode sur le forum utilisant <b>Sort</b>. <br />
+Me trompe-je ? ou cette méthode ne s'applique-t-elle qu'à un tableau à deux dimensions ?<br />
+Je n'ai pas trouvé de réponse ni dans la FAQ (parmi les 125 propositions à &quot;tri*&quot; comme mot clé... les 8 à &quot;trier&quot; ou les 16 à &quot;Sort&quot;) non plus qu'en recherche sur ce forum.<br />
+Je sollicite donc votre mémoire... <br />
+<br />
+Je connais la méthode proposée par SilkyRoad dans le chapitre &quot;Comment trier le contenu d'un ComboBox par ordre alphabétique ?&quot; ou &quot;XIV-D. Trier les données d'un tableau&quot;<br />
+Ce n'est donc pas celle-ci que je souhaiterais utiliser.<br />
+Merci de votre réponse
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+					
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/" target="_blank">Cours et tutoriels pour apprendre Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/faq/" target="_blank">La FAQ Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://www.developpez.net/forums/f542/hardware-systemes-logiciels/microsoft-office/excel/" target="_blank">Le forum Excel</a> <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/?page=prog#prog" target="_blank">Cours et tutoriels pour apprendre VBA</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://bidou.developpez.com/article/VBA/" target="_blank">Cours complet pour le VBA de Microsoft Excel</a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3714310" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3714310" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3714310" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3714310" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3714310> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3714310> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_3714607">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">20/10/2008,&nbsp;<span class="time">09h22</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3714607" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3714607" class="postcounter">#2</a><a id="postcount3714607" name="2"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u45719/pc75/" title="pc75 est déconnecté"><strong>pc75</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="pc75 est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Expert confirmé
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-5-0.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="1 Q/R de FAQ rédigée" user="45719" role="faq" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u45719/pc75/" title="pc75 est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/45719-pc75.gif?dateline=1155815811" alt="Avatar de pc75" title="Avatar de pc75" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/45719/pc75"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>septembre 2004</dd><dt>Messages</dt><dd>3&nbsp;662</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="45719" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="45719"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Âge : 66</div><div>Localisation : France, Paris (Île de France)</div><div><br /><b>Informations forums :</b></div><div>Inscription : septembre 2004</div><div>Messages : 3&nbsp;662</div><div>Points : 4 047</div></div></div><dt>Points</dt><dd><span role="points" userid="45719">4 047</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_3714607">
+						<blockquote class="postcontent restore ">
+							Bonjour,<br />
+<br />
+Je ne sais pas si c'est ce que tu recherches, mais j'ai trouvé ça dans MSDN :<br />
+<br />
+<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				Microsoft® JScript™<br />
+sort, méthode   Référence du langage <br />
+Version 2 <br />
+ <br />
+<br />
+Voir aussi                  Application <br />
+<br />
+<br />
+--------------------------------------------------------------------------------<br />
+<br />
+Description<br />
+Trie les éléments d'un objet Array. <br />
+<br />
+Syntaxe<br />
+arrayobj.sort(sortfunction) <br />
+L'argument sortfunction correspond au nom de la fonction employée pour déterminer l'ordre des éléments. S'il est omis, les éléments sont triés par ordre croissant de caractère ASCII. <br />
+<br />
+Notes<br />
+La méthode sort trie l'objet Array existant. Aucun nouvel objet Array n'est créé pendant l'exécution. <br />
+Si vous indiquez une fonction dans l'argument sortfunction, elle doit retourner l'une des valeurs suivantes : <br />
+<br />
+Une valeur négative si le premier argument transmis est inférieur au deuxième argument. <br />
+Zéro si les deux arguments sont équivalents. <br />
+Une valeur positive si le premier argument est supérieur au second. <br />
+L'exemple ci-dessous illustre l'utilisation de la méthode sort : <br />
+<br />
+function SortDemo()<br />
+{<br />
+  var a, l;<br />
+  a = new Array(&quot;X&quot; ,&quot;y&quot; ,&quot;d&quot;, &quot;Z&quot;, &quot;v&quot;,&quot;m&quot;,&quot;r&quot;);<br />
+  l = a.sort();<br />
+  return(l);<br />
+}
+			
+		</div>
+	</div>
+</div>
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/" target="_blank">Cours et tutoriels pour apprendre Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/faq/" target="_blank">La FAQ Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://www.developpez.net/forums/f542/hardware-systemes-logiciels/microsoft-office/excel/" target="_blank">Le forum Excel</a> <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/?page=prog#prog" target="_blank">Cours et tutoriels pour apprendre VBA</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://bidou.developpez.com/article/VBA/" target="_blank">Cours complet pour le VBA de Microsoft Excel</a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3714607" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3714607" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3714607" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3714607" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3714607> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3714607> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_3718403">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">21/10/2008,&nbsp;<span class="time">12h36</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3718403" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3718403" class="postcounter">#3</a><a id="postcount3718403" name="3"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté"><strong>ouskel'n'or</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="ouskel'n'or est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Inactif
+			</span>
+			
+				<span class="rank">&nbsp;</span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="8 Q/R de FAQ rédigées" user="54261" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-uploadeur.png" title="Posteur de sources - 3 sources postées" user="54261" role="uploads" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/54261-ouskel-n-or.gif?dateline=1214382779" alt="Avatar de ouskel'n'or" title="Avatar de ouskel'n'or" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/54261/ouskel-n-or"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>février 2005</dd><dt>Messages</dt><dd>12&nbsp;464</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="54261" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="54261"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : février 2005</div><div>Messages : 12&nbsp;464</div><div>Points : 15 274</div></div></div><dt>Points</dt><dd><span role="points" userid="54261">15 274</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_3718403">
+						<blockquote class="postcontent restore ">
+							Merci pc75,<br />
+C'était bien la méthode de mes souvenirs. Hélas, si elle fonctionne en VB.Script, ce n'est pas le cas en VBA-Excel où Sort réclame un objet range.<br />
+<br />
+Mais j'ai résolu mon problème grâce à Méphistopheles qui propose un tri très rapide qui me convient très bien.<br />
+Bonne journée<br />
+<br />
+Je laisse la discussion et mets résolu, ta réponse pourait intéresser les vébéscripteurs <img src="https://www.developpez.net/forums/images/smilies/icon_wink.gif" border="0" alt="" title=";)" class="inlineimg" />
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/" target="_blank">Cours et tutoriels pour apprendre Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/faq/" target="_blank">La FAQ Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://www.developpez.net/forums/f542/hardware-systemes-logiciels/microsoft-office/excel/" target="_blank">Le forum Excel</a> <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/?page=prog#prog" target="_blank">Cours et tutoriels pour apprendre VBA</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://bidou.developpez.com/article/VBA/" target="_blank">Cours complet pour le VBA de Microsoft Excel</a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3718403" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3718403" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3718403" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3718403" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3718403> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3718403> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_3730833">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">25/10/2008,&nbsp;<span class="time">09h58</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3730833" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3730833" class="postcounter">#4</a><a id="postcount3730833" name="4"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u97256/philben/" title="philben est déconnecté"><strong>philben</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="philben est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre chevronné
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/etoiles-3-5.png" alt="" border="" /></span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="1 Q/R de FAQ rédigée" user="97256" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-blogueur.png" title="55 billets blog publiés sur Developpez" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-trophee1.png" role="trophees" userid="97256" title="1 trophée reçu" /></div>
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/97256/philben"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>avril 2006</dd><dt>Messages</dt><dd>1&nbsp;399</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="97256" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="97256"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : avril 2006</div><div>Messages : 1&nbsp;399</div><div>Points : 2 221</div></div></div><dt>Points</dt><dd><span role="points" userid="97256">2 221</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_3730833">
+						<blockquote class="postcontent restore ">
+							salut ouskel'nor,<br />
+<br />
+&lt;ShellSort&gt; est plus rapide que &lt;QuickSort récursif&gt; en VBA :<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:204px;"><table cellspacing="0" cellpadding="0"><tr><td valign="top" width="33"><div style="border: 1px dashed gray; padding-left: 5px; padding-right: 5px; margin-right: 5px; text-align: right; font-family: monospace">1<br />2<br />3<br />4<br />5<br />6<br />7<br />8<br />9<br />10<br />11<br />12<br />13<br />14<br />15<br />16<br />17<br />18<br />19<br />20<br />21<br />22<br />23<br />24<br />25<br />26<br />27<br />28<br />29<br /></div></td><td valign="top"><pre style="margin: 0">&nbsp;
+<span style="color: #0000ff;">Public</span> <span style="color: #0000ff;">Sub</span> ShellSortInteger<span class="br0">&#40;</span><span style="color: #0000ff;">ByRef</span> aTab<span class="br0">&#40;</span><span class="br0">&#41;</span> <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Integer</span><span class="br0">&#41;</span>
+   <span style="color: #0000ff;">Dim</span> i <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>, j <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>, lInc <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>, n <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>, lMin <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>
+   <span style="color: #0000ff;">Dim</span> lLowerBound <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>, lUpperBound <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Long</span>
+   <span style="color: #0000ff;">Dim</span> vRef <span style="color: #0000ff;">As</span> <span style="color: #0000ff;">Variant</span>
+&nbsp;
+   lLowerBound = LBound<span class="br0">&#40;</span>aTab<span class="br0">&#41;</span>
+   lUpperBound = UBound<span class="br0">&#40;</span>aTab<span class="br0">&#41;</span>
+   n = lUpperBound - lLowerBound + <span style="color: #cc66cc;">1</span>
+   lInc = <span style="color: #cc66cc;">1</span>
+&nbsp;
+   <span style="color: #0000ff;">While</span> lInc &lt; n
+      lInc = lInc * <span style="color: #cc66cc;">3</span> + <span style="color: #cc66cc;">1</span>
+   <span style="color: #0000ff;">Wend</span>
+   <span style="color: #0000ff;">While</span> lInc &gt; <span style="color: #cc66cc;">1</span>
+      lInc = lInc / <span style="color: #cc66cc;">3</span>
+      lMin = lInc + lLowerBound
+      <span style="color: #0000ff;">For</span> i = lMin <span style="color: #0000ff;">To</span> lUpperBound
+         j = i
+         vRef = aTab<span class="br0">&#40;</span>i<span class="br0">&#41;</span>
+         <span style="color: #0000ff;">Do</span> <span style="color: #0000ff;">While</span> vRef &lt; aTab<span class="br0">&#40;</span>j - lInc<span class="br0">&#41;</span>
+            aTab<span class="br0">&#40;</span>j<span class="br0">&#41;</span> = aTab<span class="br0">&#40;</span>j - lInc<span class="br0">&#41;</span>
+            j = j - lInc
+            <span style="color: #0000ff;">If</span> j &lt; lMin <span style="color: #0000ff;">Then</span> <span style="color: #0000ff;">Exit</span> <span style="color: #0000ff;">Do</span>
+         <span style="color: #0000ff;">Loop</span>
+         aTab<span class="br0">&#40;</span>j<span class="br0">&#41;</span> = vRef
+      <span style="color: #0000ff;">Next</span> i
+   <span style="color: #0000ff;">Wend</span>
+<span style="color: #0000ff;">End</span> <span style="color: #0000ff;">Sub</span></pre></td></tr></table></pre>
+</div>Philippe
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3730833" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3730833" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3730833" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3730833" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3730833> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3730833> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_3731645">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">25/10/2008,&nbsp;<span class="time">23h43</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3731645" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3731645" class="postcounter">#5</a><a id="postcount3731645" name="5"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté"><strong>ouskel'n'or</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="ouskel'n'or est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Inactif
+			</span>
+			
+				<span class="rank">&nbsp;</span>
+			
+			<div style="text-align: center; margin-bottom: 4px"><img src="https://www.developpez.net/forums/images/ranks/embleme-faq.png" title="8 Q/R de FAQ rédigées" user="54261" role="faq" /> <img src="https://www.developpez.net/forums/images/ranks/embleme-uploadeur.png" title="Posteur de sources - 3 sources postées" user="54261" role="uploads" /></div>
+			
+			
+			<a class="postuseravatar" href="https://www.developpez.net/forums/u54261/ouskel-n-or/" title="ouskel'n'or est déconnecté">
+				<img src="https://www.developpez.net/forums/avatars/54261-ouskel-n-or.gif?dateline=1214382779" alt="Avatar de ouskel'n'or" title="Avatar de ouskel'n'or" />
+			</a>
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/54261/ouskel-n-or"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>février 2005</dd><dt>Messages</dt><dd>12&nbsp;464</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="54261" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="54261"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : février 2005</div><div>Messages : 12&nbsp;464</div><div>Points : 15 274</div></div></div><dt>Points</dt><dd><span role="points" userid="54261">15 274</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow has_after_content">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_3731645">
+						<blockquote class="postcontent restore ">
+							ShellSortInteger Winner ! <img src="https://www.developpez.net/forums/images/smilies/yaisse2.gif" border="0" alt="" title=":yaisse2:" class="inlineimg" /><br />
+Testé. 0,02 s pour ShellSortInteger contre 0,8 s pour QuiskSort. <br />
+Pour faire plus rapide je devrai changer de micro <img src="https://www.developpez.net/forums/images/smilies/icon_wink.gif" border="0" alt="" title=";)" class="inlineimg" /><br />
+Merci philben, j'adopte !
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="after_content">
+				
+				
+				
+				
+					<blockquote class="signature restore"><div class="signaturecontainer"><img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/" target="_blank">Cours et tutoriels pour apprendre Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/faq/" target="_blank">La FAQ Excel</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://www.developpez.net/forums/f542/hardware-systemes-logiciels/microsoft-office/excel/" target="_blank">Le forum Excel</a> <br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://excel.developpez.com/cours/?page=prog#prog" target="_blank">Cours et tutoriels pour apprendre VBA</a><br />
+<img src="https://www.developpez.net/forums/images/smilies/fleche.gif" border="0" alt="" title=":fleche:" class="inlineimg" /> <a href="http://bidou.developpez.com/article/VBA/" target="_blank">Cours complet pour le VBA de Microsoft Excel</a></div></blockquote>
+				
+				
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3731645" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3731645" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3731645" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3731645" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3731645> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3731645> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_3763320">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">06/11/2008,&nbsp;<span class="time">14h20</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post3763320" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3763320" class="postcounter">#6</a><a id="postcount3763320" name="6"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<div class="popupmenu memberaction">
+	<a class="username offline " href="https://www.developpez.net/forums/u233907/_/" title="-={-_-}=- est déconnecté"><strong>-={-_-}=-</strong></a>
+	
+</div>
+				<img class="inlineimg onlinestatus" src="https://forum.developpez.be/images/statusicon/user-offline.png" alt="-={-_-}=- est déconnecté" border="0" />
+
+			
+			</div>
+			<span class="usertitle">
+				Membre régulier
+			</span>
+			
+				<span class="rank"><img src="https://www.developpez.net/forums/images/ranks/nv-carres-3.png" alt="" border="" /></span>
+			
+			
+			
+			 
+			
+				<hr />
+				<dl class="userinfo_extra">
+					<div style="float: left; width: 154px"><div><img src="/forums/images/drapeaux/france.gif" title="France" />   <a href="https://www.developpez.com/user/profil/233907/"><img src="/forums/images/ranks/pro.png" alt="Profil pro" /></a> </div><dt>Inscrit en</dt><dd>avril 2008</dd><dt>Messages</dt><dd>150</dd></div><div style="float: right; margin-top: 5px"><img src="/forums/images/profil-etendu.gif" title="Plus de détails..." role="profiletendu" userid="233907" /></div><div style="clear: both"></div><div style="display: none" role="profiletendu" userid="233907"><div class="kha_titleBar">Détails du profil<img style="float: right; cursor: pointer" src="/forums/images/buttons/cross.gif" /></div><div class="kha_content"><div><b>Informations personnelles :</b></div><div>Localisation : France</div><div><br /><b>Informations forums :</b></div><div>Inscription : avril 2008</div><div>Messages : 150</div><div>Points : 100</div></div></div><dt>Points</dt><dd><span role="points" userid="233907">100</span></dd>
+				</dl>
+				
+				
+				<div class="imlinks">
+					    
+				</div>
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+				<div class="content">
+					<div id="post_message_3763320">
+						<blockquote class="postcontent restore ">
+							C'est vrai que ShellSort est tres bien.<br />
+Le souci est que parfois, le tri n'est pas exact.<br />
+Cela est particulièrement le cas si ton Array à trier contient tres peu de données.<br />
+<br />
+Perso, j'utilise toujours ShellSort pour les array important sinon un Tri à Bulle est amplement suffisant.
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_3763320" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_3763320" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=3763320" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_3763320" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3763320> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=3763320> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+<li class="postbitlegacy postbitim postcontainer old" id="post_6914973">
+<!-- see bottom of postbit.css for .userinfo .popupmenu styles -->
+
+	<div class="posthead" style="">
+			<span class="postdate old">
+				
+					<span class="date">02/10/2012,&nbsp;<span class="time">15h01</span></span>
+				
+			</span>
+			<span class="nodecontrols">
+				
+					<a name="post6914973" href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post6914973" class="postcounter">#7</a><a id="postcount6914973" name="7"></a>
+				
+				
+				
+			</span>
+	</div>
+	<div class="postdetails" style="">
+		<div class="userinfo" style="">
+			<div class="username_container">
+			
+				<span class="username guest">Invité</span>
+			
+			</div>
+			<span class="usertitle">
+				Invité(e)
+			</span>
+			
+			
+			
+			 
+			
+		</div>
+		<div class="postbody">
+			<div class="postrow">
+				
+				
+				<span class="title icon">
+					<img src="https://www.developpez.net/forums/images/icons/icon1.png" alt="Par défaut" /> 
+				</span>
+				
+
+
+						
+						
+							
+						
+				<div class="content">
+					<div id="post_message_6914973">
+						<blockquote class="postcontent restore ">
+							<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img src="https://forum.developpez.be/images/misc/quote_icon.png" alt="Citation" /> Envoyé par <strong>philben</strong>
+					<a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#post3730833" rel="nofollow"><img class="inlineimg" src="https://forum.developpez.be/images/buttons/viewpost-right.png" alt="Voir le message" /></a>
+				</div>
+				<div class="message">salut ouskel'nor,<br />
+<br />
+&lt;ShellSort&gt; est plus rapide que &lt;QuickSort récursif&gt; en VBA :</div>
+			
+		</div>
+	</div>
+</div>Merci ! <img src="https://www.developpez.net/forums/images/smilies/ccool.gif" border="0" alt="" title=":ccool:" class="inlineimg" /><br />
+<br />
+Il faut juste préciser :<br />
+<br />
+<div class="bbcode_container">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0"><tr>
+	<td style="border: 0; padding: 0; text-align: left">Code  :</td>
+	<td style="border: 0; padding: 0; text-align: right"><a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#" onclick="return ano_selectionnerCode(this);">Sélectionner tout</a> -
+	<a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#" onclick="return ano_etendreCode(this);">Visualiser dans une fenêtre à part</a></td></tr></table>
+	<pre class="bbcode_code" style="height:36px;"><span style="color: #0000ff;">option</span> base <span style="color: #cc66cc;">1</span></pre>
+</div>Sinon la valeur du plus petit indice du tableau valait 0 chez moi (avec Excel 2007). Ca joue sur la valeur de LBound...
+						</blockquote>
+					</div>
+
+					
+				</div>
+			</div>
+			
+			<div class="cleardiv"></div>
+		</div>
+	</div>
+		<div class="postfoot">
+			<!-- <div class="postfoot_container"> -->
+			<div class="textcontrols floatcontainer">
+				<span class="postcontrols">
+					<img style="display:none" id="progress_6914973" src="https://forum.developpez.be/images/misc/progress.gif" alt="" />
+					
+					
+					
+						<a id="qrwq_6914973" class="newreply" href="https://www.developpez.net/forums/newreply.php?do=newreply&amp;p=6914973" rel="nofollow" title="Répondre avec citation"><img id="quoteimg_6914973" src="https://www.developpez.net/forums/clear.gif" alt="Répondre avec citation" />  Répondre avec citation</a> 
+					
+					
+					
+<span class="seperator">&nbsp;</span><a title="Connectez-vous pour voter" style="background: url(https://forum.developpez.be/images/buttons/poucehautgris.png) no-repeat scroll left center transparent; cursor: pointer" p=6914973> 0</a><span class="seperator sepmarge">&nbsp;</span><a title="Connectez-vous pour voter"  style="background: url(https://forum.developpez.be/images/buttons/poucebasgris.png) no-repeat scroll left center transparent; cursor: pointer" p=6914973> 0</a>
+				</span>
+				<span class="postlinking">
+					
+						
+					
+
+					
+					
+					
+					
+
+					
+					
+
+					
+					
+					
+					
+					
+				</span>
+			<!-- </div> -->
+			</div>
+		</div>
+	<hr />
+</li>
+
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a rel="nofollow" href="https://www.developpez.net/forums/newreply.php?p=6914973&amp;noquote=1 "class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Répondre à la discussion</a>
+<div style="position: absolute; left: 390px; padding-top: 5px; color: green; font-weight: bold; font-size: 12pt">Cette discussion est résolue.</div>
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		
+	</div>
+</div>
+
+<div class="above_threadlist_controls toolsmenu"><center><table style="width: 75%"><tr><td><a href="http://office.developpez.com/" target="_blank">Actualités</a></td><td><a href="http://office.developpez.com/faq/" target="_blank">FAQs OFFICE</a></td><td><a href="http://office.developpez.com/cours/" target="_blank">TUTORIELS OFFICE</a></td><td><a href="http://office.developpez.com/livres/" target="_blank">LIVRES OFFICE</a></td><td><a href="http://vb.developpez.com/srcvba/" target="_blank">SOURCES VBA</a></td><td><a href="http://office.developpez.com/office2010/" target="_blank">OFFICE 2010</a></td></tr></table></center></div>
+<div style="clear: both"></div>
+<div class="breadcrumb breadcrumb2">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="/forums/"><img src="https://forum.developpez.be/images/misc/navbit-home2.png" alt="Accueil" /></a></li>
+		
+	<li class="navbit"><a href="https://www.developpez.net/forums/">Forum</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f1243/logiciels/">Logiciels</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f541/logiciels/microsoft-office/">Microsoft Office</a></li>
+
+	<li class="navbit"><a href="https://www.developpez.net/forums/f289/logiciels/microsoft-office/general-vba/">Général VBA</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> Trier un tableau() avec Sort</span></li>
+
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>&laquo;</strong>
+			<a href="https://www.developpez.net/forums/d630265-precedent/logiciels/microsoft-office/general-vba/trier-tableau-sort/" rel="nofollow">Discussion précédente</a>
+			|
+			<a href="https://www.developpez.net/forums/d630265-suivant/logiciels/microsoft-office/general-vba/trier-tableau-sort/" rel="nofollow">Discussion suivante</a>
+			<strong>&raquo;</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<center><div id="ml54ev5j" class="dvpb5" style="display: inline-block; width: 728px; height: 90px"></div><div id="gabarit_pub5"></div></center>
+<div id="gabarit_voiraussi"></div>
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Discussions similaires</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d884698/logiciels/microsoft-office/word/vba-word/trier-tableau-2-lignes-header/" title="Bonjour, 
+ 
+ayant parcouru en...">Trier un tableau avec 2 lignes en header</a></span>
+    <div class="starter_forum">
+      Par janfi75008 dans le forum VBA Word
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 8
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 02/03/2010, <span class="time">16h23</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d803693/dotnet/langages/csharp/trier-list-sort-by-group-by/" title="Bonjour, 
+voici mon problème....">Trier un List avec Sort by et Group By</a></span>
+    <div class="starter_forum">
+      Par Cedric33 dans le forum C#
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 9
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 05/09/2009, <span class="time">18h53</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d674162/dotnet/langages/csharp/csharp-trier-tableau-icomparable/" title="Salut, 
+je n'arrive pas à...">[C#] Trier un tableau avec IComparable</a></span>
+    <div class="starter_forum">
+      Par gilles81 dans le forum C#
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 17/01/2009, <span class="time">22h46</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d492158/environnements-developpement/matlab/trier-sort-tableau-structure/" title="Bonjour,  
+ 
+Je cherche à...">Trier avec sort ou autre dans un tableau de structure</a></span>
+    <div class="starter_forum">
+      Par lilyla dans le forum MATLAB
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 4
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 19/02/2008, <span class="time">14h46</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <span><a href="https://www.developpez.net/forums/d417705/autres-langages/general-visual-basic-6-vbscript/vbscript/trier-tableau-vbscript/" title="Bonjour à tous, 
+ 
+Je suis...">Comment trier un tableau avec VBScript ?</a></span>
+    <div class="starter_forum">
+      Par djokerta dans le forum VBScript
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Réponses:</span> 3
+      <div class="starter_forum">
+        <span class="shade">Dernier message:</span> 27/09/2007, <span class="time">21h44</span>
+      </div>
+  </div>
+</li>
+			</ol>
+		</div>
+	</div>
+
+
+	
+	
+	
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead options_correct">Partager</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer options_correct">
+				<h5 class="blocksubhead">Partager</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.viadeo.com/shareit/share/?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;title=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_viadeo.gif" alt="Envoyer la discussion sur Viadeo" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://twitter.com/timeline/home?status=Trier+un+tableau%28%29+avec+Sort+https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_twitter.png" alt="Envoyer la discussion sur Twitter" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;title=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_google.gif" alt="Envoyer la discussion sur Google" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_facebook.gif" alt="Envoyer la discussion sur Facebook" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://digg.com/submit?phrase=2&amp;url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;title=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_digg.gif" alt="Envoyer la discussion sur Digg" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://del.icio.us/post?url=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;title=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_delicious.gif" alt="Envoyer la discussion sur Delicious" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://www.myspace.com/Modules/PostTo/Pages/?u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;t=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_myspace.gif" alt="Envoyer la discussion sur MySpace" /></a>
+	
+</li><li class="smallfont">
+	
+		<a rel="nofollow" href="http://bookmarks.yahoo.com/toolbar/savebm?opener=&amp;u=https%3A%2F%2Fwww.developpez.net%2Fforums%2Fshowthread.php%3Ft%3D630265&amp;t=Trier+un+tableau%28%29+avec+Sort" target="socialbookmark"><img src="https://forum.developpez.be/images/misc/bookmarksite_yahoo.gif" alt="Envoyer la discussion sur Yahoo" /></a>
+	
+</li></ul>
+			</div>
+		</div>
+		
+		
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="https://www.developpez.net/forums/" method="get" id="footer_select" class="footer_select">
+
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="https://www.developpez.net/forums/sendmessage.php" rel="nofollow" accesskey="9">Nous contacter</a></li>
+		<li><a href="https://www.developpez.com">Developpez.com</a></li>
+		
+		
+		
+		
+		
+		
+		<li><a href="https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/#top" onclick="document.location.hash='top'; return false;">Haut de page</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	
+</div>
+ 
+
+</div>
+<!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28115938-2']);
+  _gaq.push(['_setCustomVar', 1, 'rubrique', 'microsoft-office', 3]);
+  _gaq.push(['_setCustomVar', 2, 'type', 'Autre', 3]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<img src="https://compteur.developpez.com/compter-54" alt="" width="1" height="1"><img src="https://compteur.developpez.com/show_i.php/54/0" alt="" width="1" height="1"><img src="https://compt.developpez.com/compter-54" alt="" width="1" height="1"><script>$(function(){$("#kp54wr0m").load("/template/kp54wr0m"+'0'+".jpg");$("#ml54ev5j").load("/template/ml54ev5j"+'0'+".jpg");$("#sx54ch4m").load("/template/sx54ch4m"+'0'+".jpg");});</script>
+
+<script type="text/javascript">
+$(function() {
+	$("#gabarit_voiraussi").load("https://www.developpez.com/voiraussi/index/rubrique/54/");
+});
+</script>
+<div id="Acecab585335ba741a462B" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); visibility: hidden">
+	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 1rem 1.5rem; width: 32rem; border-radius: 0.5rem">
+		<span style="float: right; width: 1.5rem; line-height: 1.5rem; text-align: center; cursor: pointer; border-radius: 0.25rem; background: lightgray">&times;</span>
+		<p><b>Vous avez un bloqueur de publicit&eacute;s install&eacute;.</b></p>
+		<p>Le Club Developpez.com n'affiche que des publicit&eacute;s IT, discr&egrave;tes et non intrusives.</p>
+		<p>Afin que nous puissions continuer &agrave; vous fournir gratuitement du contenu de qualit&eacute;,
+	merci de nous soutenir en d&eacute;sactivant votre bloqueur de publicit&eacute;s sur Developpez.com.</p>
+	</div>
+</div>
+<script type="text/javascript" src="https://altsysimg.developpez.com/show_i.php?tstnew"></script>
+<script type="text/javascript">
+if (!document.getElementById("A1de322B") && document.cookie.indexOf("warnadb=") == -1) {
+	document.cookie = "warnadb=1;max-age=28800";
+	document.getElementById("Acecab585335ba741a462B").style.visibility = "visible";
+	document.querySelector("#Acecab585335ba741a462B span").addEventListener("click", function() {
+		document.getElementById("Acecab585335ba741a462B").style.visibility = "hidden";
+	});
+}</script></div>
+
+	</section>
+
+	<div id="gabarit_megaban_bas"><pub-megabanbas /></div>
+	<div id="gabarit_voiraussi"></div>
+	<div id="gabarit_encartemploi_desactive"></div>
+
+	<footer>
+
+	<div id="gabarit_responsable">
+			Responsables b&eacute;n&eacute;voles de la rubrique Office :
+		<a href="http://www.developpez.net/forums/u27262/pierre-fauconnier/" target="_blank">Pierre Fauconnier</a> -
+		<a href="http://www.developpez.net/forums/u24198/arkham46/" target="_blank">Arkham46</a> -						<script>
+		document.write("<a href=\"");
+		document.write("znvygb:bssvpr@erqnpgvba-qrirybccrm.pbz".replace(/[A-Z]/gi, c =>
+    "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"[
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".indexOf(c)]));
+		document.write("\">Contacter par email</a>");
+</script>
+			</div>
+
+	<ul id="gabarit_pied">
+		<li><a href="https://club.developpez.com/contacts/">Nous contacter</a>
+		<li><a href="https://www.developpez.com/participez/">Participez</a>
+	<li><a href="https://www.developpez.com/hebergement/">H&eacute;bergement</a>
+	<li><a href="https://www.developpez.com/advertising/">Publicit&eacute; / Advertising</a>
+	<li><a href="https://www.developpez.com/legal/">Informations l&eacute;gales</a>
+			<li>Partenaire : <a href="https://www.planethoster.com/fr/" target="_blank" rel="noopener">H&eacute;bergement Web</a>
+		</ul>
+
+<p id="gabarit_copyright">&copy; 2000-2022 - www.developpez.com</p>
+
+
+	</footer>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+window.orig_onload = window.onload;
+window.onload = function() {
+var cpost=document.location.hash.substring(1);var cpost2='';if(cpost && (typeof fetch_object != 'undefined')){ var ispost=cpost.substring(0,4)=='post';if(ispost)cpost2='post_'+cpost.substring(4);if((cobj = fetch_object(cpost))||(cobj = fetch_object(cpost2))){cobj.scrollIntoView(true);}else if(ispost){cpostno = cpost.substring(4,cpost.length);if(parseInt(cpostno)>0){location.replace('https://www.developpez.net/forums/showthread.php?p='+cpostno);};} }
+
+if(typeof window.orig_onload == "function") window.orig_onload();
+}
+
+//]]>
+</script>
+</body>
+</html>~)ö³      bÝbÝ‡CüÔ¼bÝ	   ‘    O^partitionKey=%28https%2Cdeveloppez.net%29,:https://www.developpez.net/forums/d630265/logiciels/microsoft-office/general-vba/trier-tableau-sort/ necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Date: Wed, 23 Feb 2022 07:06:48 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Content-Type: text/html; charset=ISO-8859-1
+ original-response-headers Date: Wed, 23 Feb 2022 07:06:48 GMT
+Server: Apache/2.4.38 (Debian)
+X-Powered-By: PHP/5.3.29
+Cache-Control: private
+Pragma: private
+Set-Cookie: bb_sessionhash=a9f034c7536e064cd639ea5e1191a590; path=/; HttpOnly
+Set-Cookie: bb_lastvisit=1645183559; expires=Thu, 23-Feb-2023 07:06:48 GMT; path=/; secure
+Set-Cookie: bb_lastactivity=0; expires=Thu, 23-Feb-2023 07:06:48 GMT; path=/; secure
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=ISO-8859-1
+ ctid 1 uncompressed-len 0 net-response-time-onstart 2995 net-response-time-onstop 3643  Ø
