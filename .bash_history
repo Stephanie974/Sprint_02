@@ -537,3 +537,22 @@ git commit
 git status
 git push
 git status
+echo "# sprint_05" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Stephanie974/sprint_05.git
+git push -u origin main
+cd sprint_05
+git status
+git add
+git add .
+git status
+git add -A
+git status
+git commit
+git status
+cd..
+cd ..
+git status

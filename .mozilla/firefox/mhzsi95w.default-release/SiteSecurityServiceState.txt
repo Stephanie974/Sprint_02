@@ -13,7 +13,7 @@ espresso-pa.clients6.google.com^partitionKey=%28http%2Cgoogle.com%29:HSTS	19	190
 pub.phyks.me^partitionKey=%28http%2Cphyks.me%29:HSTS	1	19009	1658125939864,1,1,2
 support.microsoft.com^partitionKey=%28http%2Cmicrosoft.com%29:HSTS	3	19027	1644059705414,1,1,2
 www.javascript.com^partitionKey=%28http%2Cjavascript.com%29:HSTS	0	19009	1673954117254,1,1,2
-collector.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	12	19051	2277167741551,1,0,2
+collector.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	12	19051	2277168259361,1,0,2
 addons-pa.clients6.google.com^partitionKey=%28http%2Cgoogle.com%29:HSTS	22	19048	1656651511373,1,1,2
 fr.wikipedia.org^partitionKey=%28http%2Cwikipedia.org%29:HSTS	2	19039	1751382113213,1,1,2
 www.freecodecamp.org^partitionKey=%28http%2Cfreecodecamp.org%29:HSTS	0	19039	1676528976404,1,1,2
@@ -31,7 +31,7 @@ tecpro-digital.com^partitionKey=%28http%2Ctecpro-digital.com%29:HSTS	0	19044	167
 emojipedia.org^partitionKey=%28http%2Cemojipedia.org%29:HSTS	0	19027	1644062069036,1,0,2
 cdn-0.hotexamples.com^partitionKey=%28http%2Chotexamples.com%29:HSTS	0	19041	1676706073704,1,1,2
 miro.medium.com^partitionKey=%28http%2Cmedium.com%29:HSTS	3	19045	1661078855645,1,1,2
-firefox.settings.services.mozilla.com:HSTS	35	19051	1677561863898,1,0,2
+firefox.settings.services.mozilla.com:HSTS	35	19051	1677565661607,1,0,2
 lipsum.com^partitionKey=%28http%2Clipsum.com%29:HSTS	0	18996	1672823796485,1,1,2
 medium.com^partitionKey=%28http%2Cmedium.com%29:HSTS	3	19045	1661079242258,1,1,2
 services.addons.mozilla.org:HSTS	33	19051	1677559917650,1,0,2
@@ -52,7 +52,7 @@ blog.typing.com^partitionKey=%28http%2Ctyping.com%29:HSTS	0	19048	1661319512106,
 api-gateway.trello.com^partitionKey=%28http%2Ctrello.com%29:HSTS	8	19038	1707982110112,1,0,2
 clc.stackoverflow.com^partitionKey=%28http%2Cstackoverflow.com%29:HSTS	6	19047	1648291463068,1,0,2
 static-cse.canva.com^partitionKey=%28http%2Ccanva.com%29:HSTS	0	19017	1674621916524,1,1,2
-alive.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565223195,1,0,2
+alive.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565741041,1,0,2
 images.search.yahoo.com^partitionKey=%28http%2Cyahoo.com%29:HSTS	3	19027	1675509842118,1,0,2
 www.wix.com^partitionKey=%28http%2Cwix.com%29:HSTS	0	19009	1673955193190,1,0,2
 cdn.futura-sciences.com^partitionKey=%28http%2Cfutura-sciences.com%29:HSTS	0	19044	1708510356614,1,0,2
@@ -70,14 +70,14 @@ query1.finance.yahoo.com^partitionKey=%28http%2Cyahoo.com%29:HSTS	6	19048	166131
 static.studytonight.com^partitionKey=%28http%2Cstudytonight.com%29:HSTS	0	19044	1676959507088,1,1,2
 document-export.canva.com^partitionKey=%28http%2Ccanva.com%29:HSTS	1	19023	1675142032310,1,1,2
 pcsoft.fr^partitionKey=%28http%2Cpcsoft.fr%29:HSTS	0	19038	1676452538990,1,1,2
-contile.services.mozilla.com:HSTS	35	19051	1677564601960,1,0,2
+contile.services.mozilla.com:HSTS	35	19051	1677565502229,1,0,2
 www.delftstack.com^partitionKey=%28http%2Cdelftstack.com%29:HSTS	5	19047	1677238911071,1,0,2
 status.discord.com^partitionKey=%28http%2Cdiscord.com%29:HSTS	0	19039	1676523744786,1,1,2
 www.espace-citoyens.net^partitionKey=%28http%2Cespace-citoyens.net%29:HSTS	0	19025	1706854020055,1,1,2
 mail.google.com^partitionKey=%28http%2Cgoogle.com%29:HSTS	15	19044	1656303483105,1,1,2
 inspiredwebdev.com^partitionKey=%28http%2Cinspiredwebdev.com%29:HSTS	0	19033	1655379052040,1,1,2
 www.educba.com^partitionKey=%28http%2Ceducba.com%29:HSTS	0	19039	1676529686626,1,1,2
-api.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565227609,1,1,2
+api.github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565741804,1,1,2
 jigsaw.w3.org^partitionKey=%28http%2Cw3.org%29:HSTS	0	19016	1658572528830,1,1,2
 www.canva.com^partitionKey=%28http%2Ccanva.com%29:HSTS	3	19023	1675142034648,1,1,2
 www.futura-sciences.com^partitionKey=%28http%2Cfutura-sciences.com%29:HSTS	0	19044	1645524741192,1,0,2
@@ -112,7 +112,7 @@ track.canva.com^partitionKey=%28http%2Ccanva.com%29:HSTS	0	19019	1674815611395,1
 facebook.com^partitionKey=%28http%2Cfacebook.com%29:HSTS	0	19025	1659330240692,1,1,2
 upload.canva.com^partitionKey=%28http%2Ccanva.com%29:HSTS	1	19020	1674883933720,1,1,2
 voix.larousse.fr^partitionKey=%28http%2Clarousse.fr%29:HSTS	0	19003	1657434769858,1,1,2
-github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565222667,1,1,2
+github.com^partitionKey=%28http%2Cgithub.com%29:HSTS	24	19051	1677565760460,1,1,2
 api.atlassian.com^partitionKey=%28http%2Catlassian.com%29:HSTS	0	18995	1956550095823,1,1,2
 docs.microsoft.com^partitionKey=%28http%2Cmicrosoft.com%29:HSTS	2	19030	1675766570611,1,1,2
 framablog.org^partitionKey=%28http%2Cframablog.org%29:HSTS	0	18999	1673067745621,1,1,2

@@ -97,7 +97,7 @@ user_pref("extensions.webcompat.perform_injections", true);
 user_pref("extensions.webcompat.perform_ua_overrides", true);
 user_pref("extensions.webextensions.ExtensionStorageIDB.migrated.screenshots@mozilla.org", true);
 user_pref("extensions.webextensions.uuids", "{\"doh-rollout@mozilla.org\":\"c860c19b-02a8-4636-b42e-8310c7120962\",\"formautofill@mozilla.org\":\"d3a3578d-6f1f-4d38-99b6-e415d122c3ed\",\"pictureinpicture@mozilla.org\":\"e0b9f106-fa8a-494c-9511-5ca9a6781d05\",\"proxy-failover@mozilla.com\":\"8121be7c-c733-43b2-b136-1a04066801e7\",\"screenshots@mozilla.org\":\"61fd58c4-bf30-4ac8-b810-b212728c686e\",\"webcompat-reporter@mozilla.org\":\"6bda8773-baf8-4f19-8c25-ab0ba212bf1f\",\"webcompat@mozilla.org\":\"32648093-1e33-4b05-8e5b-cb1c42e53078\",\"default-theme@mozilla.org\":\"aeb4db0d-9624-4cca-a098-c7a694032224\",\"yahoo-fr@search.mozilla.org\":\"5ae138f7-c414-4103-b1dc-fbd3f7cf5619\",\"startpage-fr@search.mozilla.org\":\"7d8dcace-e7a7-46d3-a8c8-78f578854814\",\"duckduckgo@search.mozilla.org\":\"000a0fe0-f332-4297-8950-1ccdea883896\",\"wikipedia@search.mozilla.org\":\"d24de70e-db49-4786-88f4-a32d080a9394\",\"addons-search-detection@mozilla.com\":\"dd683403-01b6-4919-949f-187442364895\"}");
-user_pref("fission.experiment.max-origins.last-disqualified", 1646029222);
+user_pref("fission.experiment.max-origins.last-disqualified", 1646029740);
 user_pref("fission.experiment.max-origins.last-qualified", 1646026663);
 user_pref("fission.experiment.max-origins.qualified", false);
 user_pref("fission.experiment.startupEnrollmentStatus", 4);
